@@ -1,0 +1,9 @@
+---
+title: "Home"
+---
+
+# Sebastian Murk
+
+Welcome to my academic website.
+
+This is the first working draft. I will add research, publications, news, conference travel, and photos here.

@@ -1,0 +1,20 @@
+project:
+  type: website
+  output-dir: docs
+  resources:
+    - CNAME
+    - .nojekyll
+
+website:
+  title: "Sebastian Murk"
+  site-url: https://sebastianmurk.com
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+
+format:
+  html:
+    toc: false
