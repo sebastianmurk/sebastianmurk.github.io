@@ -1,0 +1,92 @@
+---
+title: "Publications"
+---
+
+## Preprints
+
+(@) M Hotta, <u>S Murk</u>, DR Terno<br>
+Classical-quantum gravity as quantum gravity in disguise<br>
+[2506.15291](https://doi.org/10.48550/arXiv.2506.15291) · [YouTube](https://www.youtube.com/watch?v=2mq6KgKvl1I)
+
+## Reviews
+
+(@) RB Mann, <u>S Murk</u>, DR Terno<br>
+Black holes and their horizons in semiclassical and modified theories of gravity [2112.06515](https://doi.org/10.48550/arXiv.2112.06515)<br>
+Int. J. Mod. Phys. D **31** (09), 2230015 (2022) · [10.1142/S0218271822300154](https://doi.org/10.1142/S0218271822300154)
+
+## Invited Articles
+
+(@) <u>S Murk</u><br>
+Nomen non est omen: Why it is too soon to identify ultra-compact objects as black holes [2210.03750](https://doi.org/10.48550/arXiv.2210.03750)<br>
+*Selected Honorable Mention in the 2023 Gravity Research Foundation Essay Competition*<br>
+Int. J. Mod. Phys. D **32** (14), 2342012 (2023) · [10.1142/S0218271823420129](https://doi.org/10.1142/S0218271823420129)
+
+(@) PK Dahal, <u>S Murk</u>, DR Terno<br>
+Semiclassical black holes and horizon singularities [2110.00722](https://doi.org/10.48550/arXiv.2110.00722)<br>
+*Invited contribution to the special topic collection "Celebrating Sir Roger Penrose's Nobel Prize"*<br>
+AVS Quantum Sci. **4** (1), 015606 (2022) · [10.1116/5.0073598](https://doi.org/10.1116/5.0073598)
+
+## Regular Articles
+
+(@) RA Hennigar, D Kubizňák, <u>S Murk</u>, I Soranidis*<br>
+Thermodynamics of regular black holes in anti-de Sitter space [2505.11623](https://doi.org/10.48550/arXiv.2505.11623)<br>
+J. High Energy Phys. **2025** (11), 121 (2025) · [10.1007/JHEP11(2025)121](https://doi.org/10.1007/JHEP11(2025)121)
+
+(@) <u>S Murk</u>, DR Terno, R Vadapalli<br>
+Gravity-induced birefringence in spherically symmetric spacetimes [2408.02729](https://doi.org/10.48550/arXiv.2408.02729) · [Code](https://github.com/s-murk/2408.02729)<br>
+Phys. Rev. D **111** (4), 044001 (2025) · [10.1103/PhysRevD.111.044001](https://doi.org/10.1103/PhysRevD.111.044001)
+
+(@) A Hahn, <u>S Murk</u>, S Singh, GK Brennen<br>
+Categorical quantum volume operator [2406.02111](https://doi.org/10.48550/arXiv.2406.02111)<br>
+Phys. Rev. D **110** (8), 086013 (2024) · [10.1103/PhysRevD.110.086013](https://doi.org/10.1103/PhysRevD.110.086013)
+
+(@) <u>S Murk</u>, I Soranidis*<br>
+Light rings and causality for nonsingular ultracompact objects sourced by nonlinear electrodynamics [2406.07957](https://doi.org/10.48550/arXiv.2406.07957) · [Code](https://github.com/s-murk/2406.07957)<br>
+Phys. Rev. D **110** (4), 044064 (2024) · [10.1103/PhysRevD.110.044064](https://doi.org/10.1103/PhysRevD.110.044064)
+
+(@) M Hotta, <u>S Murk</u><br>
+Probability vector representation of the Schrödinger equation and Leggett-Garg-type experiments [2312.16281](https://doi.org/10.48550/arXiv.2312.16281) · [Code](https://github.com/s-murk/2312.16281)<br>
+*Machine learning code selected as “Staff Pick” in the Wolfram Community Forum*: [link](https://community.wolfram.com/groups/-/m/t/3104397)<br>
+Phys. Rev. A **109** (6), 062224 (2024) · [10.1103/PhysRevA.109.062224](https://doi.org/10.1103/PhysRevA.109.062224)
+
+(@) <u>S Murk</u>, I Soranidis*<br>
+Kinematic and energy properties of dynamical regular black holes [2309.06002](https://doi.org/10.48550/arXiv.2309.06002)<br>
+Phys. Rev. D **108** (12), 124007 (2023) · [10.1103/PhysRevD.108.124007](https://doi.org/10.1103/PhysRevD.108.124007)
+
+(@) <u>S Murk</u>, I Soranidis*<br>
+Regular black holes and the first law of black hole mechanics [2304.05421](https://doi.org/10.48550/arXiv.2304.05421)<br>
+Phys. Rev. D **108** (4), 044002 (2023) · [10.1103/PhysRevD.108.044002](https://doi.org/10.1103/PhysRevD.108.044002)
+
+(@) RB Mann, <u>S Murk</u>, DR Terno<br>
+Surface gravity and the information loss problem [2109.13939](https://doi.org/10.48550/arXiv.2109.13939)<br>
+Phys. Rev. D **105** (12), 124032 (2022) · [10.1103/PhysRevD.105.124032](https://doi.org/10.1103/PhysRevD.105.124032)
+
+(@) <u>S Murk</u><br>
+Physical black holes in fourth-order gravity [2110.14973](https://doi.org/10.48550/arXiv.2110.14973) · [Code](https://github.com/s-murk/2110.14973)<br>
+Phys. Rev. D **105** (4), 044051 (2022) · [10.1103/PhysRevD.105.044051](https://doi.org/10.1103/PhysRevD.105.044051)
+
+(@) <u>S Murk</u>, DR Terno<br>
+Spherically symmetric black holes in metric gravity [2012.11209](https://doi.org/10.48550/arXiv.2012.11209)<br>
+Phys. Rev. D **104** (6), 064048 (2021) · [10.1103/PhysRevD.104.064048](https://doi.org/10.1103/PhysRevD.104.064048)
+
+(@) <u>S Murk</u>, DR Terno<br>
+Universal properties of the near-horizon geometry [2010.03784](https://doi.org/10.48550/arXiv.2010.03784)<br>
+Phys. Rev. D **103** (6), 064082 (2021) · [10.1103/PhysRevD.103.064082](https://doi.org/10.1103/PhysRevD.103.064082)
+
+(@) V Baccetti, <u>S Murk</u>, DR Terno<br>
+Black hole evaporation and semiclassical thin shell collapse [1812.07727](https://doi.org/10.48550/arXiv.1812.07727)<br>
+Phys. Rev. D **100** (6), 064054 (2019) · [10.1103/PhysRevD.100.064054](https://doi.org/10.1103/PhysRevD.100.064054)
+
+(@) V Baccetti, RB Mann, <u>S Murk</u>, DR Terno<br>
+Energy-momentum tensor and metric near the Schwarzschild sphere [1811.04495](https://doi.org/10.48550/arXiv.1811.04495)<br>
+Phys. Rev. D **99** (12), 124014 (2019) · [10.1103/PhysRevD.99.124014](https://doi.org/10.1103/PhysRevD.99.124014)
+
+## Conference Proceedings
+
+(@) <u>S Murk</u><br>
+Constraining modified gravity theories with physical black holes [2111.00776](https://doi.org/10.48550/arXiv.2111.00776)<br>
+Proc. of the 16<sup>th</sup> Marcel Grossmann Meeting, pp. 1351--1358 (2023) · [10.1142/9789811269776_0109](https://doi.org/10.1142/9789811269776_0109)
+
+(@) <u>S Murk</u>, DR Terno<br>
+Physical black holes in semiclassical gravity [2110.12761](https://doi.org/10.48550/arXiv.2110.12761)<br>
+Proc. of the 16<sup>th</sup> Marcel Grossmann Meeting, pp. 1196--1211 (2023) · [10.1142/9789811269776_0095](https://doi.org/10.1142/9789811269776_0095)
