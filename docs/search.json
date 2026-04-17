@@ -54,5 +54,75 @@
     "title": "Home",
     "section": "",
     "text": "Sebastian Murk\nWelcome to my academic website.\nThis is the first working draft. I will add research, publications, news, conference travel, and photos here."
+  },
+  {
+    "objectID": "travel/index.html",
+    "href": "travel/index.html",
+    "title": "Travel",
+    "section": "",
+    "text": "This page will contain an interactive map of conferences, workshops, and research visits."
+  },
+  {
+    "objectID": "news/index.html",
+    "href": "news/index.html",
+    "title": "News",
+    "section": "",
+    "text": "This page will contain news and updates on preprints, publications, conference attendance, and related activities."
+  },
+  {
+    "objectID": "publications/index.html",
+    "href": "publications/index.html",
+    "title": "Publications",
+    "section": "",
+    "text": "M Hotta, S Murk, DR Terno Classical-quantum gravity as quantum gravity in disguise 2506.15291 · YouTube"
+  },
+  {
+    "objectID": "publications/index.html#preprints",
+    "href": "publications/index.html#preprints",
+    "title": "Publications",
+    "section": "",
+    "text": "M Hotta, S Murk, DR Terno Classical-quantum gravity as quantum gravity in disguise 2506.15291 · YouTube"
+  },
+  {
+    "objectID": "publications/index.html#review-articles",
+    "href": "publications/index.html#review-articles",
+    "title": "Publications",
+    "section": "Review articles",
+    "text": "Review articles"
+  },
+  {
+    "objectID": "publications/index.html#invited-articles",
+    "href": "publications/index.html#invited-articles",
+    "title": "Publications",
+    "section": "Invited Articles",
+    "text": "Invited Articles\n\nS Murk Nomen non est omen: Why it is too soon to identify ultra-compact objects as black holes 2210.03750 Selected Honorable Mention in the 2023 Gravity Research Foundation Essay Competition Int. J. Mod. Phys. D 32 (14), 2342012 (2023) · 10.1142/S0218271823420129\nPK Dahal, S Murk, DR Terno Semiclassical black holes and horizon singularities 2110.00722 Invited contribution to the special topic collection “Celebrating Sir Roger Penrose’s Nobel Prize” AVS Quantum Sci. 4 (1), 015606 (2022) · 10.1116/5.0073598"
+  },
+  {
+    "objectID": "publications/index.html#regular-articles",
+    "href": "publications/index.html#regular-articles",
+    "title": "Publications",
+    "section": "Regular Articles",
+    "text": "Regular Articles\n\nRA Hennigar, D Kubizňák, S Murk, I Soranidis* Thermodynamics of regular black holes in anti-de Sitter space 2505.11623 J. High Energy Phys. 2025 (11), 121 (2025) · 10.1007/JHEP11(2025)121\nS Murk, DR Terno, R Vadapalli Gravity-induced birefringence in spherically symmetric spacetimes 2408.02729 · Code Phys. Rev. D 111 (4), 044001 (2025) · 10.1103/PhysRevD.111.044001\nA Hahn, S Murk, S Singh, GK Brennen Categorical quantum volume operator 2406.02111 Phys. Rev. D 110 (8), 086013 (2024) · 10.1103/PhysRevD.110.086013\nS Murk, I Soranidis* Light rings and causality for nonsingular ultracompact objects sourced by nonlinear electrodynamics 2406.07957 · Code Phys. Rev. D 110 (4), 044064 (2024) · 10.1103/PhysRevD.110.044064\nM Hotta, S Murk Probability vector representation of the Schrödinger equation and Leggett-Garg-type experiments 2312.16281 · Code Machine learning code selected as “Staff Pick” in the Wolfram Community Forum: link Phys. Rev. A 109 (6), 062224 (2024) · 10.1103/PhysRevA.109.062224\nS Murk, I Soranidis* Kinematic and energy properties of dynamical regular black holes 2309.06002 Phys. Rev. D 108 (12), 124007 (2023) · 10.1103/PhysRevD.108.124007\nS Murk, I Soranidis* Regular black holes and the first law of black hole mechanics 2304.05421 Phys. Rev. D 108 (4), 044002 (2023) · 10.1103/PhysRevD.108.044002\nRB Mann, S Murk, DR Terno Surface gravity and the information loss problem 2109.13939 Phys. Rev. D 105 (12), 124032 (2022) · 10.1103/PhysRevD.105.124032\nS Murk Physical black holes in fourth-order gravity 2110.14973 · Code Phys. Rev. D 105 (4), 044051 (2022) · 10.1103/PhysRevD.105.044051\nS Murk, DR Terno Spherically symmetric black holes in metric gravity 2012.11209 Phys. Rev. D 104 (6), 064048 (2021) · 10.1103/PhysRevD.104.064048\nS Murk, DR Terno Universal properties of the near-horizon geometry 2010.03784 Phys. Rev. D 103 (6), 064082 (2021) · 10.1103/PhysRevD.103.064082\nV Baccetti, S Murk, DR Terno Black hole evaporation and semiclassical thin shell collapse 1812.07727 Phys. Rev. D 100 (6), 064054 (2019) · 10.1103/PhysRevD.100.064054\nV Baccetti, RB Mann, S Murk, DR Terno Energy-momentum tensor and metric near the Schwarzschild sphere 1811.04495 Phys. Rev. D 99 (12), 124014 (2019) · 10.1103/PhysRevD.99.124014"
+  },
+  {
+    "objectID": "publications/index.html#conference-proceedings",
+    "href": "publications/index.html#conference-proceedings",
+    "title": "Publications",
+    "section": "Conference Proceedings",
+    "text": "Conference Proceedings\n\nS Murk Constraining modified gravity theories with physical black holes 2111.00776 Proc. of the 16th Marcel Grossmann Meeting, pp. 1351–1358 (2023) · 10.1142/9789811269776_0109\nS Murk, DR Terno Physical black holes in semiclassical gravity 2110.12761 Proc. of the 16th Marcel Grossmann Meeting, pp. 1196–1211 (2023) · 10.1142/9789811269776_0095"
+  },
+  {
+    "objectID": "photos/index.html",
+    "href": "photos/index.html",
+    "title": "Photos",
+    "section": "",
+    "text": "This page will contain selected photos from my travels and other non-research material."
+  },
+  {
+    "objectID": "publications/index.html#reviews",
+    "href": "publications/index.html#reviews",
+    "title": "Publications",
+    "section": "Reviews",
+    "text": "Reviews\n\nRB Mann, S Murk, DR Terno Black holes and their horizons in semiclassical and modified theories of gravity 2112.06515 Int. J. Mod. Phys. D 31 (09), 2230015 (2022) · 10.1142/S0218271822300154"
   }
 ]
