@@ -4,7 +4,7 @@ body-class: research-page
 ---
 
 <p class="page-subtitle">
-Selected themes from my research on black holes and quantum information.
+Themes from my research on black holes and quantum information.
 </p>
 
 My research focuses primarily on black holes. While the existence of dark compact objects has been established beyond reasonable doubt, their precise physical nature remains unclear. Current observational data is remarkably well described by the Schwarzschild/Kerr paradigm, but does not by itself themselves determine whether these objects possess the horizon structure, interior, or singularities associated with the classical black hole solutions of Einstein's general relativity.

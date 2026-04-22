@@ -2,7 +2,9 @@
 title: "News"
 ---
 
-Selected updates on my research, publication highlights, conferences, seminars, and related activities.
+<p class="page-subtitle">
+Updates on my research, publication highlights, conferences, seminars, and related activities.
+</p>
 
 <div class="news-list">
 
