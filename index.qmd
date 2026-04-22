@@ -1,9 +1,52 @@
 ---
-title: "Home"
+pagetitle: "Sebastian Murk"
+body-class: home-page
+page-layout: full
 ---
 
-# Sebastian Murk
+<div class="home-wide">
 
-Welcome to my academic website.
+<div class="home-intro-grid">
 
-This is the first working draft. I will add research, publications, news, conference travel, and photos here.
+<div class="home-name" role="heading" aria-level="1">Sebastian Murk</div>
+
+<div class="home-portrait-panel">
+<img class="home-portrait-photo" src="/assets/home_images/sebastianmurkphoto.jpg" alt="Portrait of Sebastian Murk">
+</div>
+
+<div class="home-bio home-intro">
+<p>I am a theoretical physicist in the Faculty of Mathematics and Physics at Charles University in Prague. My research lies at the intersection of gravitational physics and quantum information theory, with particular emphasis on dynamical black holes in semiclassical and modified theories of gravity.</p>
+
+<p>I obtained my PhD in 2022 under the supervision of <span class="nobr">Prof Daniel R. Terno</span> and <span class="nobr">Prof Gavin K. Brennen</span> at Macquarie University and the Sydney Quantum Academy, Australia. Before moving to the Czech Republic, I was a Postdoctoral Research Fellow at the Okinawa Institute of Science and Technology, Japan.</p>
+</div>
+
+</div>
+
+<div class="home-actions-wide">
+
+<p class="home-publications-text">All of my publications are available for free on arXiv. You can access them using your favourite publication database:</p>
+
+<div class="profile-links publication-links" aria-label="Publication profiles">
+<a class="profile-link profile-link-arxiv" aria-label="arXiv" href="https://arxiv.org/a/0000-0001-7296-0420.html" target="_blank" rel="noopener"><img class="profile-icon profile-icon-arxiv" src="/assets/icons/arxiv.svg" alt="" aria-hidden="true"></a>
+
+<a class="profile-link" href="https://scholar.google.com/citations?hl=en&amp;user=cduZz1QAAAAJ" target="_blank" rel="noopener"><img class="profile-icon" src="/assets/icons/googlescholar.png" alt="" aria-hidden="true"><span>Google Scholar</span></a>
+
+<a class="profile-link" href="https://inspirehep.net/authors/1742414" target="_blank" rel="noopener"><img class="profile-icon" src="/assets/icons/inspire.png" alt="" aria-hidden="true"><span>INSPIRE HEP</span></a>
+
+<a class="profile-link" href="https://orcid.org/0000-0001-7296-0420" target="_blank" rel="noopener"><img class="profile-icon" src="/assets/icons/orcid.png" alt="" aria-hidden="true"><span>ORCID</span></a>
+
+<a class="profile-link" href="https://www.researchgate.net/profile/Sebastian-Murk" target="_blank" rel="noopener"><img class="profile-icon" src="/assets/icons/researchgate.png" alt="" aria-hidden="true"><span>ResearchGate</span></a>
+</div>
+
+<p class="linkedin-line">
+<span>Occasionally, I also write about my research on LinkedIn:</span>
+<a class="profile-link inline-profile-link" href="https://linkedin.com/in/sebastianmurk" target="_blank" rel="noopener"><img class="profile-icon" src="/assets/icons/linkedin-square.png" alt="" aria-hidden="true"><span>LinkedIn</span></a>
+</p>
+
+</div>
+
+<div class="home-leiden-full">
+<img src="/assets/home_images/leidenefe.jpg" alt="Sebastian Murk standing in front of the Einstein field equations mural in Leiden.">
+</div>
+
+</div>

@@ -1,0 +1,1238 @@
+/*-- scss:defaults --*/
+
+$font-family-sans-serif: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$body-bg: #fdfdfc;
+$body-color: #24282f;
+$link-color: #2d6f9f;
+$navbar-bg: #4e7599;
+$navbar-fg: #f8fbff;
+$navbar-hl: #ffffff;
+$headings-font-weight: 650;
+$font-size-root: 17px;
+
+/*-- scss:defaults --*/
+
+$primary: #26418d;
+$link-color: #26418d;
+
+$navbar-bg: #40536a;
+$navbar-fg: #f5f7fb;
+$navbar-hl: #ffffff;
+
+/*-- scss:rules --*/
+
+/* Darker site blue: RGB(38, 65, 141) = #26418d */
+
+:root {
+  --site-blue: #26418d;
+  --site-blue-dark: #1f3575;
+  --site-blue-hover: #304fa5;
+}
+
+/* Navbar */
+
+.navbar {
+  background-color: var(--site-blue) !important;
+  border-bottom: 1px solid rgba(31, 53, 117, 0.38);
+}
+
+.navbar .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link.active {
+  color: #ffffff !important;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.34);
+}
+
+/* Links */
+
+a {
+  color: var(--site-blue);
+}
+
+a:hover {
+  color: var(--site-blue-dark);
+}
+
+/* Profile/action button accents */
+
+.profile-link:hover,
+.profile-link:focus,
+.pub-action:hover,
+.pub-action:focus,
+.talk-action:hover,
+.talk-action:focus,
+.news-links a:hover,
+.news-links a:focus {
+  color: var(--site-blue);
+  border-color: rgba(38, 65, 141, 0.32);
+  box-shadow: 0 0.28rem 0.85rem rgba(38, 65, 141, 0.08);
+}
+
+/* Basic typography */
+
+body {
+  font-family: "Source Serif 4", Georgia, Cambria, "Times New Roman", serif;
+  font-kerning: normal;
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar,
+.profile-link {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+main.content {
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.65;
+}
+
+.quarto-title-block .title {
+  font-size: 2.05rem;
+  letter-spacing: -0.025em;
+}
+
+h1, h2 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.home-intro {
+  max-width: 790px;
+}
+
+.home-intro p {
+  margin-bottom: 1.15rem;
+}
+
+.justified {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.nobr {
+  white-space: nowrap;
+}
+
+/* Profile-link buttons */
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 0.75rem;
+  margin: 0.75rem 0 1.65rem;
+}
+
+.profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.42rem 0.68rem;
+  border: 1px solid rgba(47, 64, 83, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: #2f4053;
+  font-weight: 550;
+  line-height: 1.25;
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(20, 30, 40, 0.04);
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.profile-link:hover,
+.profile-link:focus {
+  border-color: rgba(78, 117, 153, 0.42);
+  background: rgba(78, 117, 153, 0.08);
+  color: #1d4f73;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(20, 30, 40, 0.07);
+}
+
+.profile-link:focus-visible {
+  outline: 2px solid rgba(45, 111, 159, 0.45);
+  outline-offset: 3px;
+}
+
+/* 
+   Icon handling:
+   - The displayed icon box is fixed.
+   - Large source files are scaled down.
+   - Different file dimensions are handled automatically.
+   - Extra transparent/white padding inside an image file will still make the visible logo look smaller.
+*/
+
+.profile-icon,
+.profile-link img {
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+  object-position: center;
+  display: inline-block;
+  flex: 0 0 1.25rem;
+}
+
+/* Optional helper classes for icons that look too small or too wide. 
+   Add these classes in index.qmd only if needed, e.g.
+   <img class="profile-icon profile-icon-large" ...>
+*/
+
+.profile-icon-large {
+  transform: scale(1.14);
+}
+
+.profile-icon-small {
+  transform: scale(0.9);
+}
+
+.profile-icon-wide {
+  width: 1.65rem;
+  flex-basis: 1.65rem;
+}
+
+/* Navbar centering on desktop */
+
+@media (min-width: 992px) {
+  .navbar .navbar-collapse {
+    justify-content: center;
+  }
+
+  .navbar .navbar-nav {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* Slightly tighter layout on small screens */
+
+@media (max-width: 575px) {
+  main.content {
+    line-height: 1.58;
+  }
+
+  .quarto-title-block .title {
+    font-size: 1.8rem;
+  }
+
+  .profile-links {
+    gap: 0.55rem 0.55rem;
+  }
+
+  .profile-link {
+    padding: 0.38rem 0.6rem;
+  }
+}
+
+/* Fine-tuning for profile icons and navbar */
+
+/* Keep each profile button on one line. */
+.profile-link {
+  white-space: nowrap;
+}
+
+/* Standard icon sizing. */
+.profile-icon,
+.profile-link img {
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+  object-position: center;
+  display: inline-block;
+  flex: 0 0 1.25rem;
+}
+
+/* arXiv is a wider wordmark, so give it a wider icon box. */
+.profile-icon-arxiv {
+  width: 1.9rem;
+  flex-basis: 1.9rem;
+  transform: scale(1.15);
+  transform-origin: center;
+}
+
+/* Put the LinkedIn sentence and button on the same line when space allows. */
+.linkedin-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 2rem 0 1.65rem;
+}
+
+.inline-profile-link {
+  margin: 0;
+}
+
+.navbar .navbar-nav .nav-link {
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding-left: 0.85rem;
+  padding-right: 0.85rem;
+}
+
+/* Slightly more vertical breathing room in the navbar. */
+.navbar {
+  min-height: 4.2rem;
+}
+
+.profile-link {
+  white-space: nowrap;
+}
+
+.profile-link img.profile-icon-arxiv {
+  width: 3.15rem;
+  height: 1.35rem;
+  flex: 0 0 3.15rem;
+  transform: scale(1.05);
+  transform-origin: center;
+}
+
+.publication-links {
+  margin-bottom: 0.65rem;
+}
+
+.linkedin-line {
+  margin-top: 0.4rem;
+  margin-bottom: 1.65rem;
+}
+
+/* Publication action links: YouTube, Code, etc. */
+
+.pub-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28em;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.pub-action i {
+  display: inline-block;
+  font-size: 0.95em;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.pub-action:hover,
+.pub-action:focus {
+  text-decoration: underline;
+}
+
+/* Slightly enlarge the YouTube icon so it reads clearly. */
+.pub-action-youtube i {
+  font-size: 1.08em;
+}
+
+/* The file-code icon should stay subtle. */
+.pub-action-code i {
+  font-size: 0.98em;
+}
+
+/* News / Updates page */
+
+.news-list {
+  display: grid;
+  gap: 1.15rem;
+  margin-top: 1.35rem;
+}
+
+.news-item {
+  padding: 1.05rem 1.2rem;
+  border: 1px solid rgba(47, 64, 83, 0.14);
+  border-left: 4px solid rgba(78, 117, 153, 0.55);
+  border-radius: 0.95rem;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 1px 3px rgba(20, 30, 40, 0.04);
+}
+
+.news-date {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: rgba(36, 40, 47, 0.62);
+}
+
+.news-title {
+  margin: 0 0 0.55rem;
+  padding-bottom: 0;
+  border-bottom: none;
+  font-size: 1.18rem;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.news-item p {
+  margin-top: 0;
+  margin-bottom: 0.65rem;
+}
+
+.news-item p:last-child {
+  margin-bottom: 0;
+}
+
+.news-links {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.94rem;
+  font-weight: 500;
+}
+
+.news-links a {
+  white-space: nowrap;
+}
+
+/* News / Updates page */
+
+.news-list {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.35rem;
+}
+
+.news-item {
+  padding: 1.05rem 1.2rem;
+  border: 1px solid rgba(47, 64, 83, 0.14);
+  border-left: 4px solid rgba(78, 117, 153, 0.55);
+  border-radius: 0.95rem;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 1px 3px rgba(20, 30, 40, 0.04);
+}
+
+.news-date {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: rgba(36, 40, 47, 0.62);
+}
+
+.news-title {
+  margin: 0 0 0.55rem;
+  padding-bottom: 0;
+  border-bottom: none;
+  font-size: 1.18rem;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.news-item p {
+  margin-top: 0;
+  margin-bottom: 0.65rem;
+}
+
+.news-item p:last-child {
+  margin-bottom: 0;
+}
+
+.news-links {
+  margin-top: 0.75rem;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.94rem;
+  font-weight: 500;
+}
+
+.news-links a {
+  white-space: nowrap;
+}
+
+/* Static news images */
+
+.news-image {
+  margin: 0.85rem 0 0.75rem;
+}
+
+.news-image img {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(47, 64, 83, 0.14);
+  box-shadow: 0 2px 8px rgba(20, 30, 40, 0.08);
+}
+
+.video-preview {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  margin: 0.85rem 0 0.75rem;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(47, 64, 83, 0.16);
+  background: #111;
+  box-shadow: 0 2px 8px rgba(20, 30, 40, 0.08);
+  text-decoration: none;
+}
+
+.video-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  opacity: 0.92;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.video-preview:hover img,
+.video-preview:focus img {
+  opacity: 0.78;
+  transform: scale(1.015);
+}
+
+.video-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4rem;
+  height: 4rem;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.62);
+  color: #fff;
+  font-size: 1.65rem;
+  line-height: 1;
+  padding-left: 0.12rem;
+}
+
+.video-label {
+  position: absolute;
+  left: 0.85rem;
+  bottom: 0.75rem;
+  padding: 0.28rem 0.48rem;
+  border-radius: 0.35rem;
+  background: rgba(0, 0, 0, 0.68);
+  color: #fff;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.page-subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: #4f5965;
+  max-width: 52rem;
+  margin-top: -0.4rem;
+  margin-bottom: 1.1rem;
+}
+
+.research-figure {
+  margin: 2.1rem auto 2.8rem;
+}
+
+.research-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: white;
+  border-radius: 0.35rem;
+}
+
+.research-figure figcaption {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #5f6873;
+  margin-top: 0.7rem;
+}
+
+.research-figure-narrow {
+  max-width: 760px;
+}
+
+.research-figure-wide {
+  max-width: 1050px;
+}
+
+/* Research page width */
+
+.research-page #quarto-document-content {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* General research figures */
+
+.research-page .research-figure {
+  margin: 1.9rem auto 2.6rem;
+}
+
+.research-page .research-figure img {
+  display: block;
+  height: auto;
+  background: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.research-page .research-figure figcaption {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #5f6873;
+  margin-top: 0.7rem;
+}
+
+/* Tall Carter–Penrose diagram: do not scale to full width */
+
+.research-page .research-figure-cp {
+  max-width: 560px;
+}
+
+.research-page .research-figure-cp img {
+  width: auto !important;
+  max-width: 100%;
+  max-height: 480px;
+}
+
+.research-page .research-figure-cp figcaption {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.research-page .research-figure-wide {
+  width: min(1040px, calc(100vw - 3rem));
+  max-width: none;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.research-page .research-figure-wide img {
+  width: 100%;
+}
+
+/* Mobile behaviour */
+
+@media (max-width: 700px) {
+  .research-page #quarto-document-content {
+    max-width: 100%;
+  }
+
+  .research-page .research-figure-cp {
+    max-width: 100%;
+  }
+
+  .research-page .research-figure-cp img {
+    width: 100% !important;
+    max-height: none;
+  }
+
+  .research-page .research-figure-wide {
+    width: 100%;
+    margin-left: auto;
+    transform: none;
+  }
+}
+
+figure.research-figure.research-figure-cp {
+  width: min(430px, 100%);
+  max-width: 430px;
+  margin: 1.7rem auto 2.4rem;
+}
+
+figure.research-figure.research-figure-cp img.cp-diagram-img {
+  display: block;
+  width: min(430px, 100%) !important;
+  max-width: 430px !important;
+  height: auto !important;
+  max-height: none !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figure.research-figure.research-figure-cp figcaption {
+  max-width: 430px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Wide horizontal research figure */
+
+figure.research-figure.research-figure-wide {
+  width: min(690px, calc(100vw - 3rem));
+  max-width: none;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+figure.research-figure.research-figure-wide img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 700px) {
+  figure.research-figure.research-figure-cp,
+  figure.research-figure.research-figure-cp img.cp-diagram-img {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  figure.research-figure.research-figure-wide {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    transform: none;
+  }
+}
+
+/* Quantum-gravity string-diagram figure */
+
+/* Quantum-gravity figure: caption wider than image */
+
+figure.research-figure.research-figure-qg {
+  width: min(780px, calc(100vw - 3rem));
+  max-width: none;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 1.8rem;
+  margin-bottom: 2.6rem;
+}
+
+figure.research-figure.research-figure-qg img {
+  display: block;
+  width: min(640px, 100%) !important;
+  max-width: 640px !important;
+  height: auto !important;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+}
+
+figure.research-figure.research-figure-qg figcaption {
+  width: 100%;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Talks page */
+
+body.talks-page #quarto-document-content {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.talks-page .page-subtitle {
+  max-width: 52rem;
+  margin-bottom: 2rem;
+}
+
+body.talks-page .talk-year-section {
+  margin-top: 2.2rem;
+}
+
+body.talks-page .talk-year-section h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin-bottom: 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(40, 48, 58, 0.12);
+}
+
+.talk-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.35rem 1.45rem;
+  margin-bottom: 2.4rem;
+}
+
+.talk-card {
+  background: #ffffff;
+  border: 1px solid rgba(40, 48, 58, 0.12);
+  border-radius: 0.55rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0.15rem 0.65rem rgba(20, 30, 40, 0.04);
+}
+
+.talk-preview {
+  position: relative;
+  display: flex;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: #eef2f5;
+  overflow: hidden;
+}
+
+.talk-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.talk-preview-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.talk-play {
+  position: absolute;
+  z-index: 2;
+  width: 3.1rem;
+  height: 3.1rem;
+  border-radius: 50%;
+  background: rgba(20, 30, 40, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.talk-play::before {
+  content: "";
+  display: block;
+  margin-left: 0.18rem;
+  border-left: 0.9rem solid #ffffff;
+  border-top: 0.58rem solid transparent;
+  border-bottom: 0.58rem solid transparent;
+}
+
+.talk-preview-placeholder {
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 1rem;
+  text-align: center;
+  background:
+    linear-gradient(135deg, rgba(78, 117, 153, 0.11), rgba(78, 117, 153, 0.04));
+  color: #28303a;
+}
+
+.talk-preview-kicker {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #26418d;
+}
+
+.talk-preview-text {
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 650;
+  line-height: 1.3;
+  max-width: 82%;
+}
+
+.talk-card-body {
+  padding: 1rem 1.05rem 1.1rem;
+}
+
+.talk-date {
+  font-family: "Inter", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 650;
+  color: #26418d;
+  margin-bottom: 0.45rem;
+}
+
+.talk-title {
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.32;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.55rem;
+}
+
+.talk-event {
+  font-size: 0.96rem;
+  line-height: 1.38;
+  margin-bottom: 0.25rem;
+}
+
+.talk-location {
+  font-size: 0.91rem;
+  line-height: 1.38;
+  color: #5f6873;
+  margin-bottom: 0.8rem;
+}
+
+.talk-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0;
+}
+
+.talk-action {
+  font-family: "Inter", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 650;
+  line-height: 1;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.42rem 0.72rem;
+  border: 1px solid rgba(78, 117, 153, 0.35);
+  color: #365f84;
+  background: rgba(78, 117, 153, 0.06);
+}
+
+.talk-action:hover {
+  text-decoration: none;
+  background: rgba(78, 117, 153, 0.12);
+}
+
+@media (max-width: 850px) {
+  body.talks-page #quarto-document-content {
+    max-width: 100%;
+  }
+
+  .talk-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.talk-card-body > :last-child {
+  margin-bottom: 0;
+}
+
+/* Talks page */
+
+body.talks-page #quarto-document-content {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.talks-page .page-subtitle {
+  max-width: 52rem;
+  margin-bottom: 2rem;
+}
+
+body.talks-page .talk-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.35rem 1.25rem;
+  margin-bottom: 2.4rem;
+}
+
+@media (max-width: 950px) {
+  body.talks-page #quarto-document-content {
+    max-width: 100%;
+  }
+
+  body.talks-page .talk-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Talks page: widen the talk sections themselves */
+
+.talk-year-section {
+  width: min(880px, calc(100vw - 3rem)) !important;
+  max-width: none !important;
+  margin-left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+.talk-year-section .talk-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 1.35rem 1.35rem !important;
+}
+
+/* Collapse safely on tablets/mobile */
+
+@media (max-width: 980px) {
+  .talk-year-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    transform: none !important;
+  }
+
+  .talk-year-section .talk-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Home page: final portrait, links, and Leiden image layout */
+
+body.home-page #title-block-header,
+body.home-page .quarto-title-block {
+  display: none !important;
+}
+
+body.home-page main.content,
+body.home-page #quarto-document-content {
+  max-width: none;
+}
+
+.home-wide {
+  --portrait-width: 191px;
+  --home-gap: 1.35rem;
+
+  width: min(1080px, calc(100vw - 2rem));
+  margin: 0 auto;
+  padding-top: 0rem;
+}
+
+body.home-page main.content,
+body.home-page #quarto-document-content {
+  max-width: none;
+  padding-top: 0 !important;
+}
+
+.home-intro-grid {
+  display: grid;
+  grid-template-columns: var(--portrait-width) minmax(0, 1fr);
+  grid-template-areas:
+    ". name"
+    "portrait bio";
+  column-gap: var(--home-gap);
+  row-gap: 0.66rem;
+  align-items: start;
+}
+
+.home-name {
+  grid-area: name;
+  display: block !important;
+  visibility: visible !important;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(2rem, 3vw, 2.45rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: #252a32;
+}
+
+.home-portrait-panel {
+  grid-area: portrait;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  /* Tiny downward adjustment to align better with the bio text */
+  padding-top: 0.30rem;
+}
+
+.home-portrait-photo {
+  display: block;
+  width: var(--portrait-width);
+  height: auto !important;
+  max-width: 100%;
+  border-radius: 16px;
+  object-fit: initial;
+  object-position: initial;
+  background: #ffffff;
+  border: 1px solid rgba(78, 117, 153, 0.13);
+  box-shadow: 0 0.55rem 1.35rem rgba(28, 47, 64, 0.085);
+}
+
+.home-bio {
+  grid-area: bio;
+  max-width: 780px;
+  min-width: 0;
+}
+
+.home-bio p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.home-bio p:last-child {
+  margin-bottom: 0;
+}
+
+.home-actions-wide {
+  margin-top: 1.08rem;
+  max-width: 100%;
+}
+
+.home-publications-text {
+  margin-top: 0;
+  margin-bottom: 0.62rem;
+}
+
+.home-actions-wide .publication-links {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.56rem;
+  max-width: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.home-actions-wide .linkedin-line {
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 0.46rem;
+  margin-bottom: 0;
+}
+
+.profile-link-arxiv {
+  padding-left: 0.74rem;
+  padding-right: 0.74rem;
+}
+
+.profile-link-arxiv .profile-icon-arxiv {
+  margin-right: 0;
+}
+
+.home-leiden-full {
+  width: min(100%, 590px);
+  margin: 1.42rem auto 0;
+}
+
+.home-leiden-full img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  border: 1px solid rgba(78, 117, 153, 0.13);
+  box-shadow: 0 0.6rem 1.55rem rgba(28, 47, 64, 0.07);
+}
+
+/* Allow profile buttons to wrap before they become cramped */
+
+@media (max-width: 1020px) {
+  .home-actions-wide .publication-links {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile layout */
+
+@media (max-width: 767px) {
+  .home-wide {
+    --portrait-width: 168px;
+    --home-gap: 1.2rem;
+
+    width: min(100%, calc(100vw - 1.4rem));
+    padding-top: 1.1rem;
+  }
+
+  .home-intro-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "portrait"
+      "bio";
+    row-gap: 0.95rem;
+  }
+
+  .home-name {
+    text-align: center;
+  }
+
+  .home-portrait-panel {
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .home-portrait-photo {
+    border-radius: 16px;
+  }
+
+  .home-bio {
+    max-width: 38rem;
+    margin: 0 auto;
+  }
+
+  .home-actions-wide {
+    max-width: 38rem;
+    margin: 1.15rem auto 0;
+  }
+
+  .home-publications-text {
+    text-align: center;
+  }
+
+  .home-actions-wide .publication-links,
+  .home-actions-wide .linkedin-line {
+    justify-content: center;
+  }
+
+  .home-actions-wide .linkedin-line {
+    text-align: center;
+  }
+
+  .home-leiden-full {
+    width: min(100%, 540px);
+    margin-top: 1.45rem;
+  }
+
+  .home-leiden-full img {
+    border-radius: 14px;
+  }
+}
+
+/* Navbar colour: muted shirt-like slate blue */
+
+:root {
+  --site-blue: #26418d;
+  --site-blue-dark: #1f3575;
+  --site-blue-hover: #304fa5;
+
+  --navbar-blue: #3a4d63;
+  --navbar-blue-dark: #344557;
+}
+
+.navbar {
+  background-color: var(--navbar-blue) !important;
+  border-bottom: 1px solid rgba(52, 69, 87, 0.55);
+}
+
+.navbar .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link.active {
+  color: #ffffff !important;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Slight visual correction for the Leiden photo */
+
+@media (min-width: 768px) {
+  .home-leiden-full {
+    transform: translateX(-1.7rem);
+  }
+}

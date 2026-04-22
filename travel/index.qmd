@@ -1,5 +1,0 @@
----
-title: "Travel"
----
-
-This page will contain an interactive map of conferences, workshops, and research visits.
