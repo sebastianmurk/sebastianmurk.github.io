@@ -1,0 +1,325 @@
+---
+title: "Talks"
+body-class: talks-page
+---
+
+<p class="page-subtitle">
+Selected recordings and slides from conference presentations, workshops, and seminars.
+</p>
+
+```{=html}
+<section class="talk-year-section" aria-labelledby="talks-2025">
+  <h2 id="talks-2025">2025</h2>
+
+  <div class="talk-grid">
+
+    <article class="talk-card">
+      <a class="talk-preview talk-preview-image"
+         href="https://youtu.be/UOE1d95je1I?t=1860"
+         target="_blank"
+         rel="noopener"
+         aria-label="Watch video: Light rings and causality for nonsingular ultracompact objects sourced by nonlinear electrodynamics">
+        <img src="https://img.youtube.com/vi/UOE1d95je1I/hqdefault.jpg"
+             alt=""
+             loading="lazy">
+        <span class="talk-play" aria-hidden="true"></span>
+      </a>
+
+      <div class="talk-card-body">
+        <p class="talk-date">14–18 July 2025</p>
+        <h3 class="talk-title">Light rings and causality for nonsingular ultracompact objects sourced by nonlinear electrodynamics</h3>
+        <p class="talk-event">24th International Conference on General Relativity and Gravitation (GR24)</p>
+        <p class="talk-location">University of Glasgow, Scotland, UK</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<section class="talk-year-section" aria-labelledby="talks-2024">
+  <h2 id="talks-2024">2024</h2>
+
+  <div class="talk-grid">
+
+    <article class="talk-card">
+      <a class="talk-preview talk-preview-placeholder talk-preview-slides"
+         href="https://indico.mpp.mpg.de/event/9815/page/363-contributions"
+         target="_blank"
+         rel="noopener"
+         aria-label="Open slides: Kinematic and thermodynamic properties of dynamical regular black holes">
+        <span class="talk-preview-kicker">Slides</span>
+        <span class="talk-preview-text">Black Holes &amp; Cosmology 2024</span>
+      </a>
+
+      <div class="talk-card-body">
+        <p class="talk-date">11–15 March 2024</p>
+        <h3 class="talk-title">Kinematic and thermodynamic properties <br> of dynamical regular black holes</h3>
+        <p class="talk-event">Black Holes &amp; Cosmology 2024</p>
+        <p class="talk-location">University of The Bahamas, Nassau, The Bahamas</p>
+        <p class="talk-actions">
+          <a class="talk-action talk-action-slides"
+             href="https://indico.mpp.mpg.de/event/9815/page/363-contributions"
+             target="_blank"
+             rel="noopener">Slides</a>
+        </p>
+      </div>
+    </article>
+
+
+    <article class="talk-card">
+      <a class="talk-preview talk-preview-placeholder talk-preview-video"
+         href="https://www2.yukawa.kyoto-u.ac.jp/~gc2024/records/240228-11_Murk.mp4"
+         target="_blank"
+         rel="noopener"
+         aria-label="Watch video: Kinematic and thermodynamic properties of dynamical regular black holes">
+        <span class="talk-preview-kicker">Recording</span>
+        <span class="talk-preview-text">Gravity and Cosmology 2024</span>
+      </a>
+
+      <div class="talk-card-body">
+        <p class="talk-date">29 January – 1 March 2024</p>
+        <h3 class="talk-title">Kinematic and thermodynamic properties <br> of dynamical regular black holes</h3>
+        <p class="talk-event">Long-term workshop “Gravity and Cosmology 2024”</p>
+        <p class="talk-location">Yukawa Institute for Theoretical Physics,<br> Kyoto University, Kyoto, Japan</p>
+        <p class="talk-actions">
+          <a class="talk-action talk-action-video"
+             href="https://www2.yukawa.kyoto-u.ac.jp/~gc2024/records/240228-11_Murk.mp4"
+             target="_blank"
+             rel="noopener">Video</a>
+          <a class="talk-action talk-action-slides"
+             href="https://www2.yukawa.kyoto-u.ac.jp/~gc2024/slides/240228-11_Murk.pdf"
+             target="_blank"
+             rel="noopener">Slides</a>
+        </p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<section class="talk-year-section" aria-labelledby="talks-2023">
+  <h2 id="talks-2023">2023</h2>
+
+  <div class="talk-grid">
+
+    <article class="talk-card">
+      <a class="talk-preview talk-preview-image"
+         href="https://youtu.be/SPSRSEsC15c"
+         target="_blank"
+         rel="noopener"
+         aria-label="Watch video: Regular black holes and the first law of black hole mechanics">
+        <img src="https://img.youtube.com/vi/SPSRSEsC15c/hqdefault.jpg"
+             alt=""
+             loading="lazy">
+        <span class="talk-play" aria-hidden="true"></span>
+      </a>
+
+      <div class="talk-card-body">
+        <p class="talk-date">10–14 July 2023</p>
+        <h3 class="talk-title">Regular black holes and the <br> first law of black hole mechanics</h3>
+        <p class="talk-event">Quantum Gravity 2023</p>
+        <p class="talk-location">Radboud University, Nijmegen, Netherlands</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<section class="talk-year-section" aria-labelledby="talks-2022">
+  <h2 id="talks-2022">2022</h2>
+
+  <div class="talk-grid">
+
+    <article class="talk-card">
+      <a class="talk-preview talk-preview-image"
+         href="https://youtu.be/CspDKCukR0w"
+         target="_blank"
+         rel="noopener"
+         aria-label="Watch video: Surface gravity and the information loss problem">
+        <img src="https://img.youtube.com/vi/CspDKCukR0w/hqdefault.jpg"
+             alt=""
+             loading="lazy">
+        <span class="talk-play" aria-hidden="true"></span>
+      </a>
+
+      <div class="talk-card-body">
+        <p class="talk-date">5–9 September 2022</p>
+        <h3 class="talk-title">Surface gravity and <br> the information loss problem</h3>
+        <p class="talk-event">RQI North Online</p>
+        <p class="talk-location">Virtual conference organized by the International Society for Relativistic Quantum Information</p>
+      </div>
+    </article>
+
+
+    <article class="talk-card">
+      <a class="talk-preview talk-preview-image"
+         href="https://youtu.be/U-V-FDyFOxI"
+         target="_blank"
+         rel="noopener"
+         aria-label="Watch video: Black holes and their horizons in semiclassical and modified theories of gravity">
+        <img src="https://img.youtube.com/vi/U-V-FDyFOxI/hqdefault.jpg"
+             alt=""
+             loading="lazy">
+        <span class="talk-play" aria-hidden="true"></span>
+      </a>
+
+      <div class="talk-card-body">
+        <p class="talk-date">14 July 2022</p>
+        <h3 class="talk-title">Black holes and their horizons in semi- <br> classical and modified theories of gravity</h3>
+        <p class="talk-event">Seminar — Sydney Consortium for <br> Particle Physics and Cosmology (CPPC)</p>
+        <p class="talk-location">Joint seminar series of the University of Sydney and the University of New South Wales</p>
+      </div>
+    </article>
+
+
+    <article class="talk-card">
+      <a class="talk-preview talk-preview-placeholder talk-preview-video"
+         href="https://www.koushare.com/video/videodetail/30603"
+         target="_blank"
+         rel="noopener"
+         aria-label="Watch video: Physical black holes in modified theories of gravity">
+        <span class="talk-preview-kicker">Recording</span>
+        <span class="talk-preview-text">GR23 Parallel Session A3</span>
+      </a>
+
+      <div class="talk-card-body">
+        <p class="talk-date">3–8 July 2022</p>
+        <h3 class="talk-title">Physical black holes in <br> modified theories of gravity</h3>
+        <p class="talk-event">23rd International Conference on General Relativity and Gravitation (GR23)</p>
+        <p class="talk-location">Parallel Session A3 — Alternative and modified theories of gravity; Institute of Theoretical Physics, Chinese Academy of Sciences, Liyang, China</p>
+        <p class="talk-actions">
+          <a class="talk-action talk-action-video"
+             href="https://www.koushare.com/video/videodetail/30603"
+             target="_blank"
+             rel="noopener">Video</a>
+          <a class="talk-action talk-action-slides"
+             href="http://gr23beijing.com/uploads/2022/07/122231011955.pdf"
+             target="_blank"
+             rel="noopener">Slides</a>
+        </p>
+      </div>
+    </article>
+
+
+    <article class="talk-card">
+      <a class="talk-preview talk-preview-placeholder talk-preview-slides"
+         href="http://gr23beijing.com/uploads/2022/06/252200149506.pdf"
+         target="_blank"
+         rel="noopener"
+         aria-label="Open slides: Generalisations of surface gravity <br> to dynamical apparent horizons">
+        <span class="talk-preview-kicker">Slides</span>
+        <span class="talk-preview-text">GR23 Parallel Session D4</span>
+      </a>
+
+      <div class="talk-card-body">
+        <p class="talk-date">3–8 July 2022</p>
+        <h3 class="talk-title">Generalisations of surface gravity <br> to dynamical apparent horizons</h3>
+        <p class="talk-event">23rd International Conference on General Relativity and Gravitation (GR23)</p>
+        <p class="talk-location">Parallel Session D4 — Quantum fields in curved spacetime and quantum gravity phenomenology; Institute of Theoretical Physics, Chinese Academy of Sciences, Liyang, China</p>
+        <p class="talk-actions">
+          <a class="talk-action talk-action-slides"
+             href="http://gr23beijing.com/uploads/2022/06/252200149506.pdf"
+             target="_blank"
+             rel="noopener">Slides</a>
+        </p>
+      </div>
+    </article>
+
+
+    <article class="talk-card">
+      <a class="talk-preview talk-preview-image"
+         href="https://youtu.be/izEncHhAF6E"
+         target="_blank"
+         rel="noopener"
+         aria-label="Watch video: Paradoxes before the paradox: surface gravity and the information loss problem">
+        <img src="https://img.youtube.com/vi/izEncHhAF6E/hqdefault.jpg"
+             alt=""
+             loading="lazy">
+        <span class="talk-play" aria-hidden="true"></span>
+      </a>
+
+      <div class="talk-card-body">
+        <p class="talk-date">23–27 May 2022</p>
+        <h3 class="talk-title">Paradoxes before the paradox: surface gravity and the information loss problem</h3>
+        <p class="talk-event">QFT in Curved Spacetimes Workshop</p>
+        <p class="talk-location">Organized by J. Arrechea, V. Boyanov, A. Ferreiro, G. García-Moreno, and S. Pla</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<section class="talk-year-section" aria-labelledby="talks-2021">
+  <h2 id="talks-2021">2021</h2>
+
+  <div class="talk-grid">
+
+    <article class="talk-card">
+      <a class="talk-preview talk-preview-image"
+         href="https://youtu.be/FRNGJKhiw7c?t=3129"
+         target="_blank"
+         rel="noopener"
+         aria-label="Watch video: Constraining modified gravity theories with physical black holes">
+        <img src="https://img.youtube.com/vi/FRNGJKhiw7c/hqdefault.jpg"
+             alt=""
+             loading="lazy">
+        <span class="talk-play" aria-hidden="true"></span>
+      </a>
+
+      <div class="talk-card-body">
+        <p class="talk-date">5–10 July 2021</p>
+        <h3 class="talk-title">Constraining modified gravity theories <br> with physical black holes</h3>
+        <p class="talk-event">16th Marcel Grossmann Meeting</p>
+        <p class="talk-location">Session BH3 — Black holes in alternative theories of gravity; organized by the International Center for Relativistic Astrophysics Network (ICRANET)</p>
+      </div>
+    </article>
+
+
+    <article class="talk-card">
+      <a class="talk-preview talk-preview-image"
+         href="https://youtu.be/fiv_MH-N2kw"
+         target="_blank"
+         rel="noopener"
+         aria-label="Watch video: Physical black holes in semiclassical gravity">
+        <img src="https://img.youtube.com/vi/fiv_MH-N2kw/hqdefault.jpg"
+             alt=""
+             loading="lazy">
+        <span class="talk-play" aria-hidden="true"></span>
+      </a>
+
+      <div class="talk-card-body">
+        <p class="talk-date">5–10 July 2021</p>
+        <h3 class="talk-title">Physical black holes <br> in semiclassical gravity</h3>
+        <p class="talk-event">16th Marcel Grossmann Meeting</p>
+        <p class="talk-location">Session BH1 — Theoretical and observational studies of astrophysical black holes; organized by the International Center for Relativistic Astrophysics Network (ICRANET)</p>
+      </div>
+    </article>
+
+
+    <article class="talk-card">
+      <a class="talk-preview talk-preview-image"
+         href="https://youtu.be/8dz193pQhp8?t=2511"
+         target="_blank"
+         rel="noopener"
+         aria-label="Watch video: Spherically symmetric black holes in semiclassical and modified gravity">
+        <img src="https://img.youtube.com/vi/8dz193pQhp8/hqdefault.jpg"
+             alt=""
+             loading="lazy">
+        <span class="talk-play" aria-hidden="true"></span>
+      </a>
+
+      <div class="talk-card-body">
+        <p class="talk-date">28 January – 25 February 2021</p>
+        <h3 class="talk-title">Spherically symmetric black holes <br> in semiclassical and modified gravity</h3>
+        <p class="talk-event">RQI-Online 2021</p>
+        <p class="talk-location">Virtual conference series organized by the Interna- <br> tional Society for Relativistic Quantum Information</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+```

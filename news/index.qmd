@@ -2,4 +2,85 @@
 title: "News"
 ---
 
-This page will contain news and updates on preprints, publications, conference attendance, and related activities.
+Selected updates on my research, publication highlights, conferences, seminars, and related activities.
+
+<div class="news-list">
+
+<article class="news-item">
+  <time class="news-date" datetime="2025-11-20">20 November 2025</time>
+
+  <h2 class="news-title">
+    Article published in <em>Journal of High Energy Physics</em>
+  </h2>
+
+  <p>
+    Our article <em>&ldquo;Thermodynamics of regular black holes in anti-de Sitter space&rdquo;</em> <br> is now published in <em>Journal of High Energy Physics</em>.
+  </p>
+
+  <figure class="news-image">
+    <img
+      src="/assets/news_images/JHEP11(2025)121.png"
+      alt="First page of the JHEP article Thermodynamics of regular black holes in anti-de Sitter space"
+      loading="lazy">
+  </figure>
+
+  <p class="news-links">
+    <a href="https://arxiv.org/abs/2505.11623">arXiv:2505.11623</a>
+    <span aria-hidden="true">·</span>
+    <a href="https://doi.org/10.1007/JHEP11(2025)121">J. High Energy Phys. <strong>2025</strong> (11), 121 (2025)</a>
+  </p>
+</article>
+
+<article class="news-item">
+  <time class="news-date" datetime="2025-09-22">22 September 2025</time>
+
+  <h2 class="news-title">
+    Article selected as Editor&rsquo;s Pick in <em>International Journal of Modern Physics D</em>
+  </h2>
+
+  <p>
+    My invited article <em>&ldquo;Nomen non est omen: Why it is too soon to identify ultra-compact objects as black holes&rdquo;</em> was selected as an Editor&rsquo;s Pick by the <em>International Journal of Modern Physics D</em>.
+  </p>
+
+  <figure class="news-image">
+    <img
+      src="/assets/news_images/IJMPD_EditorPick.png"
+      alt="Editor&rsquo;s Pick card for Nomen non est omen in International Journal of Modern Physics D"
+      loading="lazy">
+  </figure>
+
+  <p class="news-links">
+    <a href="https://arxiv.org/abs/2210.03750">arXiv:2210.03750</a>
+    <span aria-hidden="true">·</span>
+    <a href="https://doi.org/10.1142/S0218271823420129">Int. J. Mod. Phys. D **32** (14), 2342012 (2023)</a>
+  </p>
+</article>
+
+<article class="news-item">
+  <time class="news-date" datetime="2025-09-17">17 September 2025</time>
+
+  <h2 class="news-title">
+    Preprint featured in Dr. Blitz&rsquo;s peer-review series
+  </h2>
+
+  <p>
+    Our preprint <em>&ldquo;Classical-quantum gravity as quantum gravity in disguise&rdquo;</em>, was featured in Episode #22 of Dr. Blitz&rsquo;s peer-review series. Thank you for the comprehensive walkthrough!
+  </p>
+
+  <a class="video-preview" href="https://www.youtube.com/watch?v=2mq6KgKvl1I" aria-label="Watch Dr. Blitz peer-review video on YouTube">
+    <img
+      src="https://img.youtube.com/vi/2mq6KgKvl1I/hqdefault.jpg"
+      alt="Video thumbnail for Dr. Blitz peer-review episode on classical-quantum systems breaking conservation laws"
+      loading="lazy">
+    <span class="video-play" aria-hidden="true">▶</span>
+    <span class="video-label">Watch on YouTube</span>
+  </a>
+
+  <p class="news-links">
+    <a href="https://arxiv.org/abs/2506.15291">arXiv:2506.15291</a>
+    <span aria-hidden="true">·</span>
+    <a href="https://www.youtube.com/watch?v=2mq6KgKvl1I">YouTube</a>
+  </p>
+</article>
+
+</div>

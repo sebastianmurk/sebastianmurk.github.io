@@ -2,4 +2,8 @@
 title: "Photos"
 ---
 
-This page will contain selected photos from my travels and other non-research material.
+<p class="page-subtitle">
+A small collection of photos from my travels.
+</p>
+
+Rumor has it that if you return to this page in a few days, photos will appear 👀
