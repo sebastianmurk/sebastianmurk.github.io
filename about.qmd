@@ -7,7 +7,7 @@ body-class: research-page
 Themes from my research on black holes and quantum information.
 </p>
 
-My research focuses primarily on black holes. While the existence of dark compact objects has been established beyond reasonable doubt, their precise physical nature remains unclear. Current observational data is remarkably well described by the Schwarzschild/Kerr paradigm, but does not by itself themselves determine whether these objects possess the horizon structure, interior, or singularities associated with the classical black hole solutions of Einstein's general relativity.
+My research focuses primarily on black holes. While the existence of dark compact objects has been established beyond reasonable doubt, their precise physical nature remains unclear. Current observational data is remarkably well described by the Schwarzschild/Kerr paradigm, but does not by itself determine whether these objects possess the horizon structure, interior, or singularities associated with the classical black hole solutions of Einstein's general relativity.
 
 A useful way to sharpen this question is to ask what distinguishes a genuine "horizonful" black hole from an ultracompact object whose exterior gravitational field is nearly indistinguishable from that of a black hole. Much of my work approaches this problem from the near-horizon region outward. I study the conditions under which trapped regions and apparent horizons can form, remain regular, and evolve consistently in semiclassical and modified theories of gravity.
 
@@ -47,7 +47,7 @@ Distinguishing black holes from their alternatives ultimately requires observabl
 
 ## Quantum gravity, quantum information, and foundations
 
-Alongside my work on black holes, I am interested quantum information theory, emergence of spacetime, measurement/tomography, and quantum foundations. This includes categorical and discrete descriptions of quantum geometry, formal aspects of quantum mechanics, and classical-quantum dynamics. These projects are connected by a common question: which features of classical physics can emerge from quantum or generalised probabilistic descriptions, and which consistency conditions force us to revise the classical spacetime picture? This broader perspective feeds back into black hole physics, where horizons, observers, backreaction, and information are inseparable.
+Alongside my work on black holes, I am interested in quantum information theory, emergence of spacetime, measurement/tomography, and quantum foundations. This includes categorical and discrete descriptions of quantum geometry, formal aspects of quantum mechanics, and classical-quantum dynamics. These projects are connected by a common question: which features of classical physics can emerge from quantum or generalised probabilistic descriptions, and which consistency conditions force us to revise the classical spacetime picture? This broader perspective feeds back into black hole physics, where horizons, observers, backreaction, and information are inseparable.
 
 <figure class="research-figure research-figure-qg">
   <img src="/assets/research_figures/stringdiagram.png"
