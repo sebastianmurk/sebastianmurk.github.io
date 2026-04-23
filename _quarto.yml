@@ -19,7 +19,7 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: about.qmd
+      - href: research/index.qmd
         text: Research
       - href: publications/index.qmd
         text: Publications
