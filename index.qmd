@@ -1,6 +1,6 @@
 ---
 pagetitle: "Sebastian Murk"
-body-class: home-page
+body-classes: home-page
 page-layout: full
 ---
 

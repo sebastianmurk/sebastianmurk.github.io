@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-7ee8a4d5ee2c74853299e4daf394e607.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-0dc45bc4461c5e1fe52fd064a240db6a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -109,36 +109,379 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Photos</h1>
-</div>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="photos-title title display-7">
+Photos
+</h1></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
+<style>
+body.photos-page main.content,
+body.photos-page #quarto-document-content {
+  max-width: none;
+}
 
+.photos-shell {
+  --photos-width: 930px;
+  --photos-gap-x: 1.55rem;
+  --photos-gap-y: 1.75rem;
 
-</header>
+  width: min(var(--photos-width), calc(100vw - 2rem));
+  margin: 0 auto;
+  padding-top: 0rem;
+}
 
+.photos-title {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 2.05rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: #252a32;
+}
 
-<p class="page-subtitle">
+.photos-subtitle {
+  margin: 0.45rem 0 0;
+  color: #4f5965;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.photos-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--photos-gap-y) var(--photos-gap-x);
+  margin-top: 2rem;
+}
+
+.photo-card {
+  min-width: 0;
+  margin: 0;
+}
+
+.photo-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 0.8rem;
+  background: #f2f2f0;
+  box-shadow: 0 0.12rem 0.7rem rgba(0, 0, 0, 0.08);
+  cursor: zoom-in;
+  line-height: 0;
+}
+
+.photo-button:hover .photo-image,
+.photo-button:focus .photo-image {
+  transform: scale(1.025);
+}
+
+.photo-button:focus-visible {
+  outline: 3px solid rgba(38, 65, 141, 0.45);
+  outline-offset: 4px;
+}
+
+.photo-image {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 180ms ease;
+}
+
+.photo-card figcaption {
+  margin-top: 0.55rem;
+  padding: 0;
+  line-height: 1.25;
+}
+
+.photo-caption {
+  display: block;
+  padding: 0;
+  font-family: "Source Serif 4", Georgia, Cambria, "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 450;
+  line-height: 1.18;
+  color: #3f3f3f;
+}
+
+.photo-place {
+  display: block;
+  margin-top: 0.08rem;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.86rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.005em;
+  color: #707070;
+}
+
+@media (max-width: 900px) {
+  .photos-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .photos-shell {
+    --photos-gap-y: 1.3rem;
+
+    width: min(100%, calc(100vw - 1.4rem));
+    padding-top: 1.1rem;
+  }
+
+  .photos-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-lightbox {
+    padding: 1rem;
+  }
+
+  .photo-lightbox-image {
+    max-height: 76vh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-image {
+    transition: none;
+  }
+
+  .photo-button:hover .photo-image,
+  .photo-button:focus .photo-image {
+    transform: none;
+  }
+}
+</style>
+<div class="photos-shell">
+
+<p class="photos-subtitle">
 A small collection of photos from my travels.
 </p>
-<p>Rumor has it that if you return to this page in a few days, photos will appear 👀</p>
+<div class="photos-gallery" aria-label="Travel photo gallery">
+<figure class="photo-card figure">
+<button class="photo-button" type="button" data-full="/assets/photos/large/coastline-okinawa-jp.webp" aria-label="Open larger image: Northern Okinawa coastline">
+<img class="photo-image figure-img" src="../assets/photos/thumbs/coastline-okinawa-jp.webp" alt="Northern Okinawa coastline" width="1000" height="811" loading="eager" decoding="async">
+</button>
+<figcaption>
+<span class="photo-caption">Northern Okinawa coastline</span> <span class="photo-place">Ginama, Okinawa, Japan</span>
+</figcaption>
+</figure>
+<figure class="photo-card figure">
+<button class="photo-button" type="button" data-full="/assets/photos/large/sagi-pond-jp.webp" aria-label="Open larger image: Reflections at Sagi Pond">
+<img class="photo-image figure-img" src="../assets/photos/thumbs/sagi-pond-jp.webp" alt="Reflections at Sagi Pond" width="1000" height="750" loading="eager" decoding="async">
+</button>
+<figcaption>
+<span class="photo-caption">Reflections at Sagi Pond</span> <span class="photo-place">Sagi Pond, Japan</span>
+</figcaption>
+</figure>
+<figure class="photo-card figure">
+<button class="photo-button" type="button" data-full="/assets/photos/large/cherry-blossoms-okinawa-jp.webp" aria-label="Open larger image: Spring arrives early in pink">
+<img class="photo-image figure-img" src="../assets/photos/thumbs/cherry-blossoms-okinawa-jp.webp" alt="Cherry blossoms in Okinawa, Japan" width="750" height="1000" loading="eager" decoding="async">
+</button>
+<figcaption>
+<span class="photo-caption">Spring arrives early in pink</span> <span class="photo-place">Mt. Yaedake, Okinawa, Japan</span>
+</figcaption>
+</figure>
+<figure class="photo-card figure">
+<button class="photo-button" type="button" data-full="/assets/photos/large/nakijin-okinawa-jp.webp" aria-label="Open larger image: Evening light through the trees">
+<img class="photo-image figure-img" src="../assets/photos/thumbs/nakijin-okinawa-jp.webp" alt="Evening light through the trees in Nakijin, Okinawa, Japan" width="720" height="900" loading="lazy" decoding="async">
+</button>
+<figcaption>
+<span class="photo-caption">Evening light through the trees</span> <span class="photo-place">Nakijin, Okinawa, Japan</span>
+</figcaption>
+</figure>
+<figure class="photo-card figure">
+<button class="photo-button" type="button" data-full="/assets/photos/large/deer-nara-jp.webp" aria-label="Open larger image: A gentle soul guards the local shrine">
+<img class="photo-image figure-img" src="../assets/photos/thumbs/deer-nara-jp.webp" alt="Deer at a shrine in Nara, Japan" width="787" height="900" loading="lazy" decoding="async">
+</button>
+<figcaption>
+<span class="photo-caption">A gentle soul guards the local shrine</span> <span class="photo-place">Nara, Japan</span>
+</figcaption>
+</figure>
+<figure class="photo-card figure">
+<button class="photo-button" type="button" data-full="/assets/photos/large/blue-mountains-nsw-au.webp" aria-label="Open larger image: Hiking near Wentworth Falls">
+<img class="photo-image figure-img" src="../assets/photos/thumbs/blue-mountains-nsw-au.webp" alt="Hiking near Wentworth Falls in the Blue Mountains, New South Wales" width="800" height="1000" loading="lazy" decoding="async">
+</button>
+<figcaption>
+<span class="photo-caption">Hiking near Wentworth Falls</span> <span class="photo-place">Blue Mountains, NSW</span>
+</figcaption>
+</figure>
+<figure class="photo-card figure">
+<button class="photo-button" type="button" data-full="/assets/photos/large/booti-booti-national-park-nsw-au.webp" aria-label="Open larger image: A quiet curve of coast">
+<img class="photo-image figure-img" src="../assets/photos/thumbs/booti-booti-national-park-nsw-au.webp" alt="A quiet curve of coast at Booti Booti National Park, New South Wales" width="1000" height="755" loading="lazy" decoding="async">
+</button>
+<figcaption>
+<span class="photo-caption">A quiet curve of coast</span> <span class="photo-place">Booti Booti National Park, NSW</span>
+</figcaption>
+</figure>
+<figure class="photo-card figure">
+<button class="photo-button" type="button" data-full="/assets/photos/large/byron-bay-nsw-au.webp" aria-label="Open larger image: Last light over the beach">
+<img class="photo-image figure-img" src="../assets/photos/thumbs/byron-bay-nsw-au.webp" alt="Last light over the beach at Byron Bay, New South Wales" width="1000" height="750" loading="lazy" decoding="async">
+</button>
+<figcaption>
+<span class="photo-caption">Last light over the beach</span> <span class="photo-place">Byron Bay, NSW</span>
+</figcaption>
+</figure>
+<figure class="photo-card figure">
+<button class="photo-button" type="button" data-full="/assets/photos/large/wallis-lake-nsw-au.webp" aria-label="Open larger image: Soft dusk over the lake">
+<img class="photo-image figure-img" src="../assets/photos/thumbs/wallis-lake-nsw-au.webp" alt="Soft dusk over Wallis Lake, New South Wales" width="1000" height="750" loading="lazy" decoding="async">
+</button>
+<figcaption>
+<span class="photo-caption">Soft dusk over the lake</span> <span class="photo-place">Wallis Lake, NSW</span>
+</figcaption>
+</figure>
+<figure class="photo-card figure">
+<button class="photo-button" type="button" data-full="/assets/photos/large/quokka-rottnest-island-wa-au.webp" aria-label="Open larger image: An inquisitive island local">
+<img class="photo-image figure-img" src="../assets/photos/thumbs/quokka-rottnest-island-wa-au.webp" alt="Quokka on Rottnest Island, Western Australia" width="800" height="1000" loading="lazy" decoding="async">
+</button>
+<figcaption>
+<span class="photo-caption">An inquisitive island local</span> <span class="photo-place">Rottnest Island, WA</span>
+</figcaption>
+</figure>
+<figure class="photo-card figure">
+<button class="photo-button" type="button" data-full="/assets/photos/large/outback-road-au.webp" aria-label="Open larger image: Road to the horizon">
+<img class="photo-image figure-img" src="../assets/photos/thumbs/outback-road-au.webp" alt="Outback road in Australia" width="1000" height="750" loading="lazy" decoding="async">
+</button>
+<figcaption>
+<span class="photo-caption">Road to the horizon</span> <span class="photo-place">Outback, Australia</span>
+</figcaption>
+</figure>
+<figure class="photo-card figure">
+<button class="photo-button" type="button" data-full="/assets/photos/large/outback-sunset-au.webp" aria-label="Open larger image: Sunset over open country">
+<img class="photo-image figure-img" src="../assets/photos/thumbs/outback-sunset-au.webp" alt="Outback sunset in Australia" width="1000" height="750" loading="lazy" decoding="async">
+</button>
+<figcaption>
+<span class="photo-caption">Sunset over the plains</span> <span class="photo-place">Outback, Australia</span>
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="photo-lightbox" class="photo-lightbox" role="dialog" aria-modal="true" aria-label="Expanded photo" hidden="">
+<button class="photo-lightbox-close" type="button" aria-label="Close enlarged photo">×</button>
+<figure class="photo-lightbox-figure figure">
+<img class="photo-lightbox-image figure-img" id="photo-lightbox-image" src="" alt="">
+<figcaption class="photo-lightbox-caption" id="photo-lightbox-caption">
+</figcaption>
+</figure>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const lightbox = document.getElementById("photo-lightbox");
+  const lightboxImage = document.getElementById("photo-lightbox-image");
+  const lightboxCaption = document.getElementById("photo-lightbox-caption");
+
+  if (!lightbox || !lightboxImage || !lightboxCaption) {
+    return;
+  }
+
+  /*
+    Move the overlay out of the Quarto content container.
+    This prevents the navbar/page stacking context from sitting above the close button.
+  */
+  if (lightbox.parentElement !== document.body) {
+    document.body.appendChild(lightbox);
+  }
+
+  const closeButton = lightbox.querySelector(".photo-lightbox-close");
+  const photoButtons = document.querySelectorAll(".photo-button");
+
+  let lastFocusedElement = null;
+
+  function escapeHtml(text) {
+    return text.replace(/[&<>"']/g, function (character) {
+      return {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+      }[character];
+    });
+  }
+
+  function focusWithoutScrolling(element) {
+    if (!element || typeof element.focus !== "function") {
+      return;
+    }
+
+    try {
+      element.focus({ preventScroll: true });
+    } catch (error) {
+      element.focus();
+    }
+  }
+
+  function openLightbox(button) {
+    const card = button.closest(".photo-card");
+    const image = button.querySelector(".photo-image");
+    const captionElement = card.querySelector(".photo-caption");
+    const placeElement = card.querySelector(".photo-place");
+
+    const caption = captionElement ? captionElement.textContent.trim() : "";
+    const place = placeElement ? placeElement.textContent.trim() : "";
+
+    lastFocusedElement = document.activeElement;
+
+    lightboxImage.src = button.dataset.full;
+    lightboxImage.alt = image.alt;
+    lightboxCaption.innerHTML =
+      '<span class="photo-lightbox-caption-main">' + escapeHtml(caption) + '</span>' +
+      '<span class="photo-lightbox-place">' + escapeHtml(place) + '</span>';
+
+    lightbox.hidden = false;
+    document.body.classList.add("photo-lightbox-open");
+    focusWithoutScrolling(closeButton);
+  }
+
+  function closeLightbox() {
+    lightbox.hidden = true;
+    lightboxImage.removeAttribute("src");
+    lightboxImage.alt = "";
+    lightboxCaption.textContent = "";
+    document.body.classList.remove("photo-lightbox-open");
+
+    if (lastFocusedElement) {
+      focusWithoutScrolling(lastFocusedElement);
+    }
+  }
+
+  photoButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      openLightbox(button);
+    });
+  });
+
+  closeButton.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", function (event) {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (!lightbox.hidden && event.key === "Escape") {
+      closeLightbox();
+    }
+  });
+});
+</script>
 
 
 

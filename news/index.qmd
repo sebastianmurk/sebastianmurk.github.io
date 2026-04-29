@@ -9,6 +9,22 @@ Updates on my research, publication highlights, conferences, seminars, and relat
 <div class="news-list">
 
 <article class="news-item">
+  <time class="news-date" datetime="2026-04-28">28 April 2026</time>
+
+  <h2 class="news-title">
+    Something is brewing... stay tuned!
+  </h2>
+
+  <figure class="news-image" style="width: 96%; max-width: 100%; margin: 1rem auto 0;">
+    <img
+      src="/assets/news_images/mokapot.webp"
+      alt="Moka pot on a stovetop with steam rising"
+      loading="lazy"
+      style="display: block; width: 100%; height: auto;">
+  </figure>
+</article>
+
+<article class="news-item">
   <time class="news-date" datetime="2025-11-20">20 November 2025</time>
 
   <h2 class="news-title">
@@ -54,7 +70,7 @@ Updates on my research, publication highlights, conferences, seminars, and relat
   <p class="news-links">
     <a href="https://arxiv.org/abs/2210.03750">arXiv:2210.03750</a>
     <span aria-hidden="true">·</span>
-    <a href="https://doi.org/10.1142/S0218271823420129">Int. J. Mod. Phys. D **32** (14), 2342012 (2023)</a>
+    <a href="https://doi.org/10.1142/S0218271823420129">Int. J. Mod. Phys. D <strong>32</strong> (14), 2342012 (2023)</a>
   </p>
 </article>
 
@@ -66,7 +82,7 @@ Updates on my research, publication highlights, conferences, seminars, and relat
   </h2>
 
   <p>
-    Our preprint <em>&ldquo;Classical-quantum gravity as quantum gravity in disguise&rdquo;</em>, was featured in Episode #22 of Dr. Blitz&rsquo;s peer-review series. Thank you for the comprehensive walkthrough!
+    Our preprint <em>&ldquo;Classical-quantum systems breaking conservation laws&rdquo;</em> was featured in Episode #22 of Dr. Blitz&rsquo;s peer-review series. Thank you for the comprehensive walkthrough!
   </p>
 
   <a class="video-preview" href="https://www.youtube.com/watch?v=2mq6KgKvl1I" aria-label="Watch Dr. Blitz peer-review video on YouTube">
