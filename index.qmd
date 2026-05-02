@@ -4,6 +4,87 @@ body-classes: home-page
 page-layout: full
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": "https://sebastianmurk.com/#profilepage",
+      "url": "https://sebastianmurk.com/",
+      "name": "Sebastian Murk",
+      "mainEntity": {
+        "@id": "https://sebastianmurk.com/#person"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://sebastianmurk.com/#person",
+      "name": "Sebastian Murk",
+      "url": "https://sebastianmurk.com/",
+      "image": "https://sebastianmurk.com/assets/home_images/sebastianmurkphoto.jpg",
+      "jobTitle": "Theoretical physicist",
+      "worksFor": {
+        "@type": "CollegeOrUniversity",
+        "name": "Charles University",
+        "url": "https://cuni.cz/"
+      },
+      "affiliation": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Faculty of Mathematics and Physics, Charles University",
+          "url": "https://www.mff.cuni.cz/"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Okinawa Institute of Science and Technology",
+          "url": "https://www.oist.jp/"
+        }
+      ],
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Macquarie University",
+          "url": "https://www.mq.edu.au/"
+        },
+        {
+          "@type": "Organization",
+          "name": "Sydney Quantum Academy",
+          "url": "https://sydneyquantum.org/"
+        }
+      ],
+      "knowsAbout": [
+        "black holes",
+        "gravitational physics",
+        "quantum information theory",
+        "semiclassical gravity",
+        "modified theories of gravity",
+        "regular black holes",
+        "quantum gravity"
+      ],
+      "sameAs": [
+        "https://arxiv.org/a/0000-0001-7296-0420.html",
+        "https://scholar.google.com/citations?hl=en&user=cduZz1QAAAAJ",
+        "https://inspirehep.net/authors/1742414",
+        "https://orcid.org/0000-0001-7296-0420",
+        "https://www.researchgate.net/profile/Sebastian-Murk",
+        "https://www.linkedin.com/in/sebastianmurk/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://sebastianmurk.com/#website",
+      "url": "https://sebastianmurk.com/",
+      "name": "Sebastian Murk",
+      "inLanguage": "en-GB",
+      "publisher": {
+        "@id": "https://sebastianmurk.com/#person"
+      }
+    }
+  ]
+}
+</script>
+
 <div class="home-wide">
 
 <div class="home-intro-grid">
