@@ -4,3 +4,6 @@
 _notes/
 
 /.quarto/
+
+__pycache__/
+*.pyc

@@ -5,6 +5,8 @@ project:
     - CNAME
     - .nojekyll
     - assets/
+  post-render:
+    - python3 tools/clean_urls.py
 
 lang: en-GB
 
@@ -17,21 +19,22 @@ website:
   navbar:
     title: false
     left:
-      - href: index.qmd
+      - href: /
         text: Home
-      - href: research/index.qmd
+      - href: /research/
         text: Research
-      - href: publications/index.qmd
+      - href: /publications/
         text: Publications
-      - href: news/index.qmd
+      - href: /news/
         text: News
-      - href: talks/index.qmd
+      - href: /talks/
         text: Talks
-      - href: photos/index.qmd
+      - href: /photos/
         text: Photos
 
 format:
   html:
+    canonical-url: true
     toc: false
     theme:
       - cosmo

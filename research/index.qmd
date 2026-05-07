@@ -1,6 +1,9 @@
 ---
 title: "Research"
 body-class: research-page
+aliases:
+  - /about.html
+  - /about/index.html
 ---
 
 <p class="page-subtitle">
