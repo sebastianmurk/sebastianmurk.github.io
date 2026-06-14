@@ -8,6 +8,36 @@ Selected recordings and slides from conference presentations, workshops, and sem
 </p>
 
 ```{=html}
+<div class="talk-year-pair">
+
+<section class="talk-year-section" aria-labelledby="talks-2026">
+  <h2 id="talks-2026">2026</h2>
+
+  <div class="talk-grid">
+
+    <article class="talk-card">
+      <a class="talk-preview talk-preview-image"
+         href="https://www.youtube.com/live/1rpHu-2qTQU?t=12671s"
+         target="_blank"
+         rel="noopener"
+         aria-label="Watch video: Classical-quantum gravity as quantum gravity in disguise">
+        <img src="https://img.youtube.com/vi/1rpHu-2qTQU/hqdefault.jpg"
+             alt=""
+             loading="lazy">
+        <span class="talk-play" aria-hidden="true"></span>
+      </a>
+
+      <div class="talk-card-body">
+        <p class="talk-date">12 June 2026</p>
+        <h3 class="talk-title">Classical-quantum gravity as quantum gravity in disguise</h3>
+        <p class="talk-event">RQI Circuit 2026 — Postdoc Meeting</p>
+        <p class="talk-location">International Society for Relativistic Quantum Information</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
 <section class="talk-year-section" aria-labelledby="talks-2025">
   <h2 id="talks-2025">2025</h2>
 
@@ -35,6 +65,8 @@ Selected recordings and slides from conference presentations, workshops, and sem
 
   </div>
 </section>
+
+</div>
 
 
 <section class="talk-year-section" aria-labelledby="talks-2024">

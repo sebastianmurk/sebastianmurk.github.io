@@ -1,5 +1,6 @@
 ---
 title: "List of Publications"
+body-classes: publications-page
 ---
 
 Within each category, entries are listed in reverse chronological order. Code and numerical calculations are available in my [GitHub repository](https://github.com/sebastianmurk) and are hyperlinked through the code file icon {{< fa regular file-code >}} where applicable. YouTube features are hyperlinked through the {{< fa brands youtube >}} YouTube symbol. Advised students are indicated by an asterisk *.
@@ -19,7 +20,8 @@ Int. J. Mod. Phys. D **31** (09), 2230015 (2022) · [10.1142/S0218271822300154](
 
 (@) <u>S Murk</u><br>
 Nomen non est omen: Why it is too soon to identify ultra-compact objects as black holes · [2210.03750](https://arxiv.org/abs/2210.03750)<br>
-*Selected Honorable Mention in the 2023 Gravity Research Foundation Essay Competition*<br>
+*Selected Honorable Mention, Gravity Research Foundation Essay Competition (2023)*<br>
+*Editor's Pick, International Journal of Modern Physics D (2025)*<br>
 Int. J. Mod. Phys. D **32** (14), 2342012 (2023) · [10.1142/S0218271823420129](https://doi.org/10.1142/S0218271823420129)
 
 (@) PK Dahal, <u>S Murk</u>, DR Terno<br>
@@ -42,11 +44,13 @@ Categorical quantum volume operator · [2406.02111](https://arxiv.org/abs/2406.0
 Phys. Rev. D **110** (8), 086013 (2024) · [10.1103/PhysRevD.110.086013](https://doi.org/10.1103/PhysRevD.110.086013)
 
 (@) <u>S Murk</u>, I Soranidis*<br>
-Light rings and causality for nonsingular ultracompact objects sourced by nonlinear electrodynamics · [2406.07957](https://arxiv.org/abs/2406.07957) · [{{< fa regular file-code >}} Code](https://github.com/sebastianmurk/2406.07957){.pub-action .pub-action-code target="_blank" rel="noopener"}<br>
+Light rings and causality for nonsingular ultracompact objects sourced by nonlinear<br>
+electrodynamics&nbsp;·&nbsp;[2406.07957](https://arxiv.org/abs/2406.07957)&nbsp;·&nbsp;[{{< fa regular file-code >}} Code](https://github.com/sebastianmurk/2406.07957){.pub-action .pub-action-code target="_blank" rel="noopener"}<br>
 Phys. Rev. D **110** (4), 044064 (2024) · [10.1103/PhysRevD.110.044064](https://doi.org/10.1103/PhysRevD.110.044064)
 
 (@) M Hotta, <u>S Murk</u><br>
-Probability vector representation of the Schrödinger equation and Leggett-Garg-type experiments · [2312.16281](https://arxiv.org/abs/2312.16281) · [{{< fa regular file-code >}} Code](https://github.com/sebastianmurk/2312.16281){.pub-action .pub-action-code target="_blank" rel="noopener"}<br>
+Probability vector representation of the Schrödinger equation and Leggett-Garg-type<br>
+experiments&nbsp;·&nbsp;[2312.16281](https://arxiv.org/abs/2312.16281)&nbsp;·&nbsp;[{{< fa regular file-code >}} Code](https://github.com/sebastianmurk/2312.16281){.pub-action .pub-action-code target="_blank" rel="noopener"}<br>
 *Machine learning code selected as [“Staff Pick” in the Wolfram Community Forum](https://community.wolfram.com/groups/-/m/t/3104397)*<br>
 Phys. Rev. A **109** (6), 062224 (2024) · [10.1103/PhysRevA.109.062224](https://doi.org/10.1103/PhysRevA.109.062224)
 
