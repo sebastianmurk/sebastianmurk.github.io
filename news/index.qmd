@@ -9,19 +9,53 @@ Updates on my research, publication highlights, conferences, seminars, and relat
 <div class="news-list">
 
 <article class="news-item">
-  <time class="news-date" datetime="2026-04-28">28 April 2026</time>
+  <time class="news-date" datetime="2026-06-24">24 June 2026</time>
 
   <h2 class="news-title">
-    Something is brewing... stay tuned!
+    New preprint: <em>Connecting Quantum Tomography and Quantum Retrodiction</em>
   </h2>
 
-  <figure class="news-image" style="width: 96%; max-width: 100%; margin: 1rem auto 0;">
+  <p>
+    See my related <a href="https://www.linkedin.com/posts/sebastianmurk_quantumphysics-quantuminformation-ugcPost-7475445102635655170-Ql_Q/">LinkedIn post</a> for more detail.
+  </p>
+
+  <figure class="news-image">
     <img
-      src="/assets/news_images/mokapot.webp"
-      alt="Moka pot on a stovetop with steam rising"
-      loading="lazy"
-      style="display: block; width: 100%; height: auto;">
+      src="/assets/news_images/2606.23777abstract.png"
+      alt="Abstract of the preprint Connecting Quantum Tomography and Quantum Retrodiction"
+      loading="lazy">
   </figure>
+
+  <p class="news-links">
+    <a href="https://arxiv.org/abs/2606.23777">arXiv:2606.23777</a>
+    <span aria-hidden="true">·</span>
+    <a href="https://www.linkedin.com/posts/sebastianmurk_quantumphysics-quantuminformation-ugcPost-7475445102635655170-Ql_Q/">LinkedIn post</a>
+  </p>
+</article>
+
+<article class="news-item">
+  <time class="news-date" datetime="2026-06-12">12 June 2026</time>
+
+  <h2 class="news-title">
+    RQI Circuit talk now live on YouTube
+  </h2>
+
+  <p>
+    My talk <em>&ldquo;Classical-quantum gravity as quantum gravity in disguise&rdquo;</em>, given as part of the RQI Circuit, is now live on YouTube.
+  </p>
+
+  <a class="video-preview" href="https://www.youtube.com/live/1rpHu-2qTQU?t=12671s" aria-label="Watch RQI Circuit talk on YouTube">
+    <img
+      src="https://img.youtube.com/vi/1rpHu-2qTQU/hqdefault.jpg"
+      alt="Video thumbnail for RQI Circuit talk Classical-quantum gravity as quantum gravity in disguise"
+      loading="lazy">
+    <span class="video-play" aria-hidden="true">▶</span>
+    <span class="video-label">Watch on YouTube</span>
+  </a>
+
+  <p class="news-links">
+    <a href="https://www.youtube.com/live/1rpHu-2qTQU?t=12671s">YouTube</a>
+  </p>
 </article>
 
 <article class="news-item">

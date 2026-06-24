@@ -3,9 +3,12 @@ title: "List of Publications"
 body-classes: publications-page
 ---
 
-Within each category, entries are listed in reverse chronological order. Code and numerical calculations are available in my [GitHub repository](https://github.com/sebastianmurk) and are hyperlinked through the code file icon {{< fa regular file-code >}} where applicable. YouTube features are hyperlinked through the {{< fa brands youtube >}} YouTube symbol. Advised students are indicated by an asterisk *.
+Within each category, publications are listed in reverse chronological order. Code and numerical calculations are available in my [GitHub repository](https://github.com/sebastianmurk) and are hyperlinked through the code file icon {{< fa regular file-code >}} where applicable. YouTube features are hyperlinked through the {{< fa brands youtube >}} YouTube symbol. Advised students are indicated by an asterisk *.
 
 ## Preprints
+
+(@) <u>S Murk</u>, I Tan, F Müller, D Šafránek<br>
+Connecting Quantum Tomography and Quantum Retrodiction · [2606.23777](https://arxiv.org/abs/2606.23777)
 
 (@) M Hotta, <u>S Murk</u>, DR Terno<br>
 Classical-quantum gravity as quantum gravity in disguise · [2506.15291](https://arxiv.org/abs/2506.15291) · [{{< fa brands youtube >}} YouTube](https://www.youtube.com/watch?v=2mq6KgKvl1I){.pub-action .pub-action-youtube target="_blank" rel="noopener"}
