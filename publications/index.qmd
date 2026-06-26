@@ -7,6 +7,9 @@ Within each category, publications are listed in reverse chronological order. Co
 
 ## Preprints
 
+(@) F Gray, <u>S Murk</u>, DR Terno<br>
+Covariant variation for point-particle Lagrangians · [2606.25266](https://arxiv.org/abs/2606.25266)
+
 (@) <u>S Murk</u>, I Tan, F Müller, D Šafránek<br>
 Connecting Quantum Tomography and Quantum Retrodiction · [2606.23777](https://arxiv.org/abs/2606.23777)
 
