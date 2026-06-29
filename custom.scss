@@ -1723,3 +1723,54 @@ body.photos-page .photo-location {
     margin-top: 0.75rem !important;
   }
 }
+
+body.talks-page .talk-card,
+main.content:has(.talk-year-section) .talk-card {
+  display: flex;
+  flex-direction: column;
+}
+
+body.talks-page .talk-card-body,
+main.content:has(.talk-year-section) .talk-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+body.talks-page .talk-card-footer,
+main.content:has(.talk-year-section) .talk-card-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 0.75rem;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 0.35rem;
+}
+
+body.talks-page .talk-card-footer .talk-location,
+main.content:has(.talk-year-section) .talk-card-footer .talk-location {
+  margin: 0;
+  min-width: 0;
+}
+
+body.talks-page .talk-card-footer .talk-action,
+main.content:has(.talk-year-section) .talk-card-footer .talk-action {
+  justify-self: end;
+  align-self: center;
+  margin: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 520px) {
+  body.talks-page .talk-card-footer,
+  main.content:has(.talk-year-section) .talk-card-footer {
+    grid-template-columns: 1fr;
+    row-gap: 0.45rem;
+    align-items: start;
+  }
+
+  body.talks-page .talk-card-footer .talk-action,
+  main.content:has(.talk-year-section) .talk-card-footer .talk-action {
+    justify-self: start;
+  }
+}
