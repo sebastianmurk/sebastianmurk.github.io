@@ -817,7 +817,8 @@ body.home-page .home-main-column,
 body.home-page .home-intro-grid,
 body.home-page .home-bio,
 body.home-page .home-actions-wide,
-body.home-page .home-latest-rail {
+body.home-page .home-side-rail,
+body.home-page .home-side-card {
   min-width: 0 !important;
 }
 
@@ -914,7 +915,7 @@ body.home-page .home-bio p:last-child {
 }
 
 body.home-page .home-contact-line,
-body.home-page .home-latest-rail {
+body.home-page .home-side-rail {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
 }
 
@@ -975,27 +976,63 @@ body.home-page .home-contact-line a {
   overflow-wrap: anywhere !important;
 }
 
-/* Latest side rail */
+/* Homepage side rail */
 
-body.home-page .home-latest-rail {
+body.home-page .home-side-rail {
   box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.9rem !important;
   width: min(100%, var(--home-rail-width)) !important;
   max-width: var(--home-rail-width) !important;
   margin: 1.2rem auto 0 !important;
+}
+
+/* Shared sidecard styling */
+
+body.home-page .home-side-card {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
   padding: 0.82rem 0.88rem 0.88rem !important;
   border: 1px solid rgba(47, 64, 83, 0.13) !important;
   border-left: 3px solid rgba(38, 65, 141, 0.32) !important;
   border-radius: 0.82rem !important;
   background:
-    linear-gradient(135deg, rgba(38, 65, 141, 0.045), rgba(255, 255, 255, 0.84)) !important;
+    linear-gradient(
+      135deg,
+      rgba(38, 65, 141, 0.045),
+      rgba(255, 255, 255, 0.84)
+    ) !important;
   color: #303741 !important;
   box-shadow: 0 0.25rem 0.9rem rgba(28, 47, 64, 0.045) !important;
 }
 
-/* Only float Latest to the right when there is enough room to keep the
-   main column centred without horizontal overflow. */
+/* Warm amber treatment for Up next */
+
+body.home-page .home-up-next-rail {
+  min-height: 8.25rem !important;
+  border-color: #e2d2aa !important;
+  border-left-color: #a86e1d !important;
+  background:
+    linear-gradient(135deg, #fff7e8, #fffdf8) !important;
+  color: #2b3038 !important;
+}
+
+body.home-page .home-up-next-rail .home-latest-heading-row h2 {
+  color: #704817 !important;
+}
+
+body.home-page .home-up-next-rail .home-latest-date,
+body.home-page .home-up-next-rail .home-latest-links {
+  color: #685e4c !important;
+}
+
+/* Float the complete sidecard stack on sufficiently wide screens. */
+
 @media (min-width: 1560px) {
-  body.home-page .home-latest-rail {
+  body.home-page .home-side-rail {
     position: absolute !important;
     top: 3.2rem !important;
     left: calc(100% + var(--home-rail-gap)) !important;
@@ -1180,11 +1217,10 @@ body.home-page .home-leiden-full img {
     justify-content: center !important;
   }
 
-  body.home-page .home-latest-rail {
+  body.home-page .home-side-rail {
     width: min(100%, 38rem) !important;
     max-width: 38rem !important;
     margin: 1.2rem auto 0 !important;
-    padding: 0.82rem 0.85rem 0.88rem !important;
   }
 
   body.home-page .home-leiden-full {
@@ -1707,7 +1743,7 @@ body.photos-page .photo-location {
   }
 
   body.home-page .home-intro-grid,
-  body.home-page .home-latest-rail {
+  body.home-page .home-side-rail {
     transform: translateX(var(--home-hero-shift)) !important;
   }
 
@@ -1719,7 +1755,7 @@ body.photos-page .photo-location {
 
 /* Lower the Home-page Latest sidebar slightly on desktop. */
 @media (min-width: 1181px) {
-  body.home-page .home-latest-rail {
+  body.home-page .home-side-rail {
     margin-top: 0.75rem !important;
   }
 }

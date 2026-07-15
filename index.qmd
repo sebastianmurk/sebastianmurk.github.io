@@ -159,40 +159,60 @@ page-layout: full
 
     </div>
 
-<aside class="home-latest-rail" aria-labelledby="home-latest-heading">
-  <div class="home-latest-heading-row">
-    <h2 id="home-latest-heading">Latest</h2>
-    <a class="home-latest-all" href="/news/">All updates</a>
-  </div>
+<div class="home-side-rail">
 
-  <article class="home-latest-item">
-    <time class="home-latest-date" datetime="2026-06-24">24 June 2026</time>
+  <aside class="home-side-card home-latest-rail" aria-labelledby="home-latest-heading">
+    <div class="home-latest-heading-row">
+      <h2 id="home-latest-heading">Latest</h2>
+      <a class="home-latest-all" href="/news/">All updates</a>
+    </div>
 
-    <a class="home-latest-title" href="/news/">
-      New preprint: <em>Covariant variation for point-particle Lagrangians</em>
-    </a>
+    <article class="home-latest-item">
+      <time class="home-latest-date" datetime="2026-06-24">24 June 2026</time>
 
-    <p class="home-latest-links">
-      <a href="https://arxiv.org/abs/2606.25266" target="_blank" rel="noopener">
-        arXiv:2606.25266
+      <a class="home-latest-title" href="/news/">
+        New preprint: <em>Covariant variation for point-particle Lagrangians</em>
       </a>
-    </p>
-  </article>
 
-  <article class="home-latest-item">
-    <time class="home-latest-date" datetime="2026-06-22">22 June 2026</time>
+      <p class="home-latest-links">
+        <a href="https://arxiv.org/abs/2606.25266" target="_blank" rel="noopener">
+          arXiv:2606.25266
+        </a>
+      </p>
+    </article>
 
-    <a class="home-latest-title" href="/news/">
-      New preprint: <em>Connecting Quantum Tomography and Quantum Retrodiction</em>
-    </a>
+    <article class="home-latest-item">
+      <time class="home-latest-date" datetime="2026-06-22">22 June 2026</time>
 
-    <p class="home-latest-links">
-      <a href="https://arxiv.org/abs/2606.23777" target="_blank" rel="noopener">
-        arXiv:2606.23777
+      <a class="home-latest-title" href="/news/">
+        New preprint: <em>Connecting Quantum Tomography and Quantum Retrodiction</em>
       </a>
-    </p>
-  </article>
-</aside>
+
+      <p class="home-latest-links">
+        <a href="https://arxiv.org/abs/2606.23777" target="_blank" rel="noopener">
+          arXiv:2606.23777
+        </a>
+      </p>
+    </article>
+  </aside>
+
+  <aside class="home-side-card home-up-next-rail" aria-labelledby="home-up-next-heading">
+    <div class="home-latest-heading-row">
+      <h2 id="home-up-next-heading">Up next</h2>
+    </div>
+
+    <article class="home-latest-item">
+      <time class="home-latest-date" datetime="2027-07-27">27 July 2027 &mdash; 1 August 2027</time>
+
+      <a class="home-latest-title" href="https://fqmt.fzu.cz/26" target="_blank" rel="noopener">
+        Frontiers of Quantum and Mesoscopic Thermodynamics Conference
+      </a>
+
+      <p class="home-latest-links">Prague, Czech Republic</p>
+    </article>
+  </aside>
+
+</div>
 
   </div>
 
