@@ -4,7 +4,7 @@ body-class: talks-page
 ---
 
 <p class="page-subtitle">
-Selected recordings and slides from conference presentations, workshops, and seminars.
+Selected recordings and slides from conference presentations, workshops, and seminars. Explore the wider journey on my <a href="/travels/">academic travels map</a>.
 </p>
 
 ```{=html}

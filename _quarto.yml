@@ -29,6 +29,8 @@ website:
         text: News
       - href: /talks/
         text: Talks
+      - href: /travels/
+        text: Travels
       - href: /photos/
         text: Photos
 

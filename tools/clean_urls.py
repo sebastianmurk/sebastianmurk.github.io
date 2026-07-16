@@ -3,7 +3,7 @@ import os
 
 OUTPUT_DIR = Path(os.environ.get("QUARTO_PROJECT_OUTPUT_DIR", "docs"))
 SITE = "https://sebastianmurk.com"
-PAGES = ("research", "publications", "news", "talks", "photos")
+PAGES = ("research", "publications", "news", "talks", "travels", "photos")
 
 
 def clean_text(text: str) -> str:
@@ -74,4 +74,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-    

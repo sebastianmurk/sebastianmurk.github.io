@@ -1,0 +1,88 @@
+---
+title: "Academic travels"
+body-classes: travels-page
+page-layout: full
+---
+
+<p class="page-subtitle travels-intro">
+A map of the places my research has taken me. Perhaps we crossed paths at one of them.
+</p>
+
+```{=html}
+<link rel="stylesheet" href="/assets/vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="/assets/vendor/leaflet-markercluster/MarkerCluster.css">
+<link rel="stylesheet" href="https://cdn.maptiler.com/maptiler-sdk-js/v3.9.0/maptiler-sdk.css">
+
+<div class="travels-shell"
+     data-travel-map
+     data-maptiler-key="kSpsVldgGYqG1YgICPnI"
+     data-source="/assets/data/academic-travels.json">
+
+  <section class="travels-toolbar" aria-labelledby="travels-filter-heading">
+    <div class="travels-toolbar-copy">
+      <h2 id="travels-filter-heading">Explore by year</h2>
+      <p id="travels-result-summary" class="travels-result-summary" aria-live="polite">
+        Loading events…
+      </p>
+    </div>
+
+    <div id="travels-year-filters"
+         class="travels-year-filters"
+         role="group"
+         aria-label="Filter events by year"></div>
+  </section>
+
+  <div class="travels-explorer">
+    <section class="travels-map-panel" aria-labelledby="travels-map-heading">
+      <h2 id="travels-map-heading" class="visually-hidden">Interactive conference map</h2>
+
+      <div id="travels-map"
+           class="travels-map"
+           aria-label="Interactive world map of academic events"
+           aria-describedby="travels-map-help"></div>
+
+      <div class="travels-map-footer">
+        <p id="travels-map-help">
+          Drag to move the map. Scroll over it to zoom, or select an event from the list.
+        </p>
+        <div class="travels-map-actions">
+          <button id="travels-map-gesture-toggle"
+                  class="travels-map-gesture-toggle"
+                  type="button"
+                  aria-pressed="false"
+                  hidden>
+            Enable map dragging
+          </button>
+          <button id="travels-reset-map" class="travels-reset-map" type="button">
+            Reset map
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="travels-list-panel" aria-labelledby="travels-list-heading">
+      <header class="travels-list-header">
+        <h2 id="travels-list-heading">Events</h2>
+        <span id="travels-list-count" class="travels-list-count"></span>
+      </header>
+
+      <ol id="travels-event-list" class="travels-event-list"></ol>
+    </section>
+  </div>
+
+  <p id="travels-error" class="travels-error" role="alert" hidden></p>
+
+  <noscript>
+    <p class="travels-error">
+      This map requires JavaScript. Selected recordings and slides remain available on the
+      <a href="/talks/">Talks page</a>.
+    </p>
+  </noscript>
+</div>
+
+<script src="/assets/vendor/leaflet/leaflet.js"></script>
+<script src="https://cdn.maptiler.com/maptiler-sdk-js/v3.9.0/maptiler-sdk.umd.min.js"></script>
+<script src="https://cdn.maptiler.com/leaflet-maptilersdk/v4.1.1/leaflet-maptilersdk.umd.min.js"></script>
+<script src="/assets/vendor/leaflet-markercluster/leaflet.markercluster.js"></script>
+<script src="/assets/js/academic-travels-map.js"></script>
+```

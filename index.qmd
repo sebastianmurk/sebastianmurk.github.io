@@ -202,7 +202,7 @@ page-layout: full
     </div>
 
     <article class="home-latest-item">
-      <time class="home-latest-date" datetime="2027-07-27">27 July 2027 &mdash; 1 August 2027</time>
+      <time class="home-latest-date" datetime="2027-07-27">26 July 2027 &mdash; 1 August 2027</time>
 
       <a class="home-latest-title" href="https://fqmt.fzu.cz/26" target="_blank" rel="noopener">
         Frontiers of Quantum and Mesoscopic Thermodynamics Conference

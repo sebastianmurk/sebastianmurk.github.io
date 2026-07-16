@@ -1,0 +1,759 @@
+{
+  "metadata": {
+    "schemaVersion": "1.1.0",
+    "eventCount": 29,
+    "talkCount": 31,
+    "years": [
+      2026,
+      2025,
+      2024,
+      2023,
+      2022,
+      2020,
+      2019,
+      2018
+    ],
+    "hostUrls": {
+      "Australian Mathematical Sciences Institute": "https://amsi.org.au",
+      "Australian Institute of Physics": "https://www.aip.org.au",
+      "COST Action CA23115 — Relativistic Quantum Information": "https://www.cost.eu/actions/CA23115/",
+      "International Society for Quantum Gravity": "https://isqg.org",
+      "International Society for Relativistic Quantum Information": "https://www.isrqi.net/",
+      "International Society on General Relativity and Gravitation": "http://www.isgrg.org",
+      "Minkowski Institute for Foundational Studies": "https://minkowskiinstitute.org",
+      "Northern Sydney Astronomical Society": "https://nsas.org.au",
+      "Sydney Quantum Academy": "https://sydneyquantum.org"
+    }
+  },
+  "events": [
+    {
+      "id": "2026-rqi-circuit-postdoc-meeting-villamartin",
+      "name": "RQI Circuit 2026 — Postdoc Meeting",
+      "startDate": "2026-06-09",
+      "endDate": "2026-06-13",
+      "year": 2026,
+      "type": "Meeting",
+      "hostOrganization": "International Society for Relativistic Quantum Information; COST Action CA23115 — Relativistic Quantum Information",
+      "venue": "El Tiempo Recobrado",
+      "location": {
+        "address": "Av. Villanueva, 33, 24550 Villamartín de la Abadía, León, Spain",
+        "city": "Villamartín de la Abadía",
+        "region": "León",
+        "country": "Spain",
+        "latitude": 42.5643791422995,
+        "longitude": -6.74712864965576
+      },
+      "url": "https://sites.google.com/view/rqi-postdoc-meeting-2026",
+      "talks": [
+        {
+          "order": 1,
+          "title": "Classical-quantum gravity as quantum gravity in disguise",
+          "presentationDate": "2026-06-12",
+          "recordingUrl": "https://www.youtube.com/live/1rpHu-2qTQU?t=12671s"
+        }
+      ]
+    },
+    {
+      "id": "2025-relativity-seminar-charles-prague",
+      "name": "Relativity Seminar — Institute of Theoretical Physics",
+      "startDate": "2025-12-02",
+      "endDate": "2025-12-02",
+      "year": 2025,
+      "type": "Seminar",
+      "hostOrganization": "Institute of Theoretical Physics, Faculty of Mathematics and Physics, Charles University",
+      "venue": "Institute of Theoretical Physics, Faculty of Mathematics and Physics, Charles University",
+      "location": {
+        "address": "V Holešovičkách 2/747, 180 00 Praha 8",
+        "city": "Prague",
+        "region": "Prague",
+        "country": "Czech Republic",
+        "latitude": 50.114943292028,
+        "longitude": 14.4493779558494
+      },
+      "url": "https://utf.mff.cuni.cz/seminare/relat.pl?lang=en",
+      "talks": [
+        {
+          "order": 1,
+          "title": "Physical implications of horizon formation in finite asymptotic time",
+          "presentationDate": "2025-12-02"
+        }
+      ]
+    },
+    {
+      "id": "2025-quantum-gravity-penn-state",
+      "name": "Quantum Gravity 2025",
+      "startDate": "2025-07-21",
+      "endDate": "2025-07-25",
+      "year": 2025,
+      "type": "Conference",
+      "hostOrganization": "The Pennsylvania State University; International Society for Quantum Gravity",
+      "venue": "Erick J. Barron Innovation Hub",
+      "location": {
+        "address": "123 S Burrowes St, State College, PA 16801, United States",
+        "city": "State College",
+        "region": "Pennsylvania",
+        "country": "United States",
+        "latitude": 40.7922955502225,
+        "longitude": -77.8628593721008
+      },
+      "url": "https://sites.psu.edu/2024quantumgravity/",
+      "talks": [
+        {
+          "order": 1,
+          "title": "Light rings and causality for nonsingular ultracompact objects sourced by nonlinear electrodynamics"
+        }
+      ]
+    },
+    {
+      "id": "2025-gr24-glasgow",
+      "name": "24th International Conference on General Relativity and Gravitation",
+      "startDate": "2025-07-14",
+      "endDate": "2025-07-18",
+      "year": 2025,
+      "type": "Conference",
+      "hostOrganization": "University of Glasgow; International Society on General Relativity and Gravitation",
+      "venue": "Scottish Event Campus (SEC), Glasgow",
+      "location": {
+        "address": "Exhibition Way, Glasgow G3 8YW, United Kingdom",
+        "city": "Glasgow",
+        "region": "Scotland",
+        "country": "United Kingdom",
+        "latitude": 55.8607423949909,
+        "longitude": -4.28751260190193
+      },
+      "url": "https://iop.eventsair.com/gr24-amaldi16/",
+      "talks": [
+        {
+          "order": 1,
+          "title": "Light rings and causality for nonsingular ultracompact objects sourced by nonlinear electrodynamics"
+        }
+      ]
+    },
+    {
+      "id": "2025-rqi-north-naples",
+      "name": "15th Annual Conference on Relativistic Quantum Information (RQI North)",
+      "startDate": "2025-06-23",
+      "endDate": "2025-06-27",
+      "year": 2025,
+      "type": "Conference",
+      "hostOrganization": "University of Naples Federico II; International Society for Relativistic Quantum Information; COST Action CA23115 — Relativistic Quantum Information",
+      "venue": "University of Naples Federico II",
+      "location": {
+        "address": "Aula Ottagonale, Edificio Centrale, Corso Umberto I, 40, 80138 Napoli",
+        "city": "Naples",
+        "region": "Campania",
+        "country": "Italy",
+        "latitude": 40.8455221061413,
+        "longitude": 14.2577638288358
+      },
+      "url": "https://agenda.infn.it/event/43783/",
+      "talks": [
+        {
+          "order": 1,
+          "title": "Gravity-induced birefringence in spherically symmetric spacetimes"
+        }
+      ]
+    },
+    {
+      "id": "2024-aip-congress-melbourne",
+      "name": "25th Australian Institute of Physics Congress",
+      "startDate": "2024-12-02",
+      "endDate": "2024-12-06",
+      "year": 2024,
+      "type": "Conference",
+      "hostOrganization": "Australian Institute of Physics",
+      "venue": "Melbourne Convention and Exhibition Centre",
+      "location": {
+        "address": "1 Convention Centre Pl, South Wharf VIC 3006, Australia",
+        "city": "Melbourne",
+        "region": "Victoria",
+        "country": "Australia",
+        "latitude": -37.8242408874781,
+        "longitude": 144.956093692124
+      },
+      "url": "https://www.aip.org.au/page-18329",
+      "talks": [
+        {
+          "order": 1,
+          "title": "Photon trajectories in curved spacetimes from a covariant spin optics approximation"
+        }
+      ]
+    },
+    {
+      "id": "2024-vienna-quantum-foundations",
+      "name": "2nd Vienna Quantum Foundations Conference",
+      "startDate": "2024-09-23",
+      "endDate": "2024-09-27",
+      "year": 2024,
+      "type": "Conference",
+      "hostOrganization": "Institute for Quantum Optics and Quantum Information Vienna, Austrian Academy of Sciences; University of Vienna",
+      "venue": "Christian Doppler Lecture Hall, Department of Physics, University of Vienna",
+      "location": {
+        "address": "Boltzmanngasse 5, 1090 Wien, Austria",
+        "city": "Vienna",
+        "region": "Vienna",
+        "country": "Austria",
+        "latitude": 48.2216762386714,
+        "longitude": 16.3563054820632
+      },
+      "url": "https://vqf.iqoqi.oeaw.ac.at",
+      "talks": [
+        {
+          "order": 1,
+          "title": "Probability vector representation of the Schrödinger equation and Leggett-Garg-type experiments"
+        }
+      ]
+    },
+    {
+      "id": "2024-dice-castiglioncello",
+      "name": "11th International DICE Workshop — Spacetime, Matter, Quantum Mechanics",
+      "startDate": "2024-09-16",
+      "endDate": "2024-09-20",
+      "year": 2024,
+      "type": "Workshop",
+      "hostOrganization": "DICE Workshop Organizing Committee",
+      "venue": "Castello Pasquini",
+      "location": {
+        "address": "Piazza della Vittoria, 1, 57016 Castiglioncello LI, Italy",
+        "city": "Castiglioncello",
+        "region": "Tuscany",
+        "country": "Italy",
+        "latitude": 43.4054592277806,
+        "longitude": 10.4126310443531
+      },
+      "url": "https://osiris.df.unipi.it/~elze/DICE2024.html",
+      "talks": [
+        {
+          "order": 1,
+          "title": "Probability vector representation of the Schrödinger equation and Leggett-Garg-type experiments"
+        }
+      ]
+    },
+    {
+      "id": "2024-cfps-seminar-prague",
+      "name": "Seminar — Cosmology, Fundamental Physics, and Strings",
+      "startDate": "2024-08-05",
+      "endDate": "2024-08-05",
+      "year": 2024,
+      "type": "Seminar",
+      "hostOrganization": "Institute of Physics of the Czech Academy of Sciences",
+      "venue": "Institute of Physics, Czech Academy of Sciences",
+      "location": {
+        "address": "Na Slovance 1999/2, 182 00 Praha 8",
+        "city": "Prague",
+        "region": "Prague",
+        "country": "Czech Republic",
+        "latitude": 50.1234111055218,
+        "longitude": 14.4687906102378
+      },
+      "talks": [
+        {
+          "order": 1,
+          "title": "Light rings and causality for nonsingular ultracompact objects sourced by nonlinear electrodynamics",
+          "presentationDate": "2024-08-05"
+        }
+      ]
+    },
+    {
+      "id": "2024-rqi-north-prague",
+      "name": "14th Annual Conference on Relativistic Quantum Information (North)",
+      "startDate": "2024-08-05",
+      "endDate": "2024-08-09",
+      "year": 2024,
+      "type": "Conference",
+      "hostOrganization": "Faculty of Mathematics and Physics, Charles University; International Society for Relativistic Quantum Information",
+      "venue": "IMPAKT Building (Charles University, Faculty of Mathematics and Physics)",
+      "location": {
+        "address": "V Holešovičkách 2, 180 00 Praha 8",
+        "city": "Prague",
+        "region": "Prague",
+        "country": "Czech Republic",
+        "latitude": 50.1163098634334,
+        "longitude": 14.4498243299817
+      },
+      "talks": [
+        {
+          "order": 1,
+          "title": "Polarization-corrected photon trajectories in curved spacetimes"
+        }
+      ]
+    },
+    {
+      "id": "2024-marcel-grossmann-17-pescara",
+      "name": "17th Marcel Grossmann Meeting",
+      "startDate": "2024-07-07",
+      "endDate": "2024-07-12",
+      "year": 2024,
+      "type": "Conference",
+      "hostOrganization": "International Center for Relativistic Astrophysics Network (ICRANet)",
+      "venue": "Gabriele d’Annunzio University",
+      "location": {
+        "address": "Viale Pindaro, 42, 65127 Pescara PE, Italy",
+        "city": "Pescara",
+        "region": "Abruzzo",
+        "country": "Italy",
+        "latitude": 42.4520453799658,
+        "longitude": 14.2248506669159
+      },
+      "url": "https://indico.icranet.org/event/8/",
+      "talks": [
+        {
+          "order": 1,
+          "title": "Polarization-corrected light propagation in gravitational fields"
+        }
+      ]
+    },
+    {
+      "id": "2024-black-holes-cosmology-nassau",
+      "name": "Black Holes & Cosmology 2024",
+      "startDate": "2024-03-11",
+      "endDate": "2024-03-15",
+      "year": 2024,
+      "type": "Conference",
+      "hostOrganization": "The University of The Bahamas",
+      "venue": "RBC Auditorium, Franklyn R. Wilson Graduate Centre, University of The Bahamas",
+      "location": {
+        "address": "N, 4912, University Drive, Nassau, Bahamas",
+        "city": "Nassau",
+        "region": "New Providence",
+        "country": "The Bahamas",
+        "latitude": 25.0607210756678,
+        "longitude": -77.3548266648486
+      },
+      "url": "https://indico.mpp.mpg.de/event/9815/",
+      "talks": [
+        {
+          "order": 1,
+          "title": "Kinematic and thermodynamic properties of dynamical regular black holes",
+          "slidesUrl": "https://indico.mpp.mpg.de/event/9815/page/363-contributions"
+        }
+      ]
+    },
+    {
+      "id": "2024-rqi-south-brisbane",
+      "name": "15th Annual Relativistic Quantum Information Workshop (RQI South)",
+      "startDate": "2024-02-05",
+      "endDate": "2024-02-06",
+      "year": 2024,
+      "type": "Workshop",
+      "hostOrganization": "The University of Queensland; International Society for Relativistic Quantum Information",
+      "venue": "Customs House",
+      "location": {
+        "address": "399 Queen St, Brisbane City QLD 4000, Australia",
+        "city": "Brisbane",
+        "region": "Queensland",
+        "country": "Australia",
+        "latitude": -27.4654292966387,
+        "longitude": 153.031115364657
+      },
+      "talks": [
+        {
+          "order": 1,
+          "title": "Properties of dynamical regular black holes"
+        }
+      ]
+    },
+    {
+      "id": "2024-gravity-cosmology-kyoto",
+      "name": "Long-term workshop ‘Gravity and Cosmology 2024’",
+      "startDate": "2024-01-29",
+      "endDate": "2024-03-01",
+      "year": 2024,
+      "type": "Workshop",
+      "hostOrganization": "Yukawa Institute for Theoretical Physics, Kyoto University",
+      "venue": "Panasonic Auditorium, Yukawa Hall, Yukawa Institute for Theoretical Physics, Kyoto University",
+      "location": {
+        "address": "Kitashirakawa Oiwakecho, Sakyo Ward, Kyoto 606-8502, Japan",
+        "city": "Kyoto",
+        "region": "Kyoto Prefecture",
+        "country": "Japan",
+        "latitude": 35.0308192768418,
+        "longitude": 135.785970849922
+      },
+      "url": "https://www2.yukawa.kyoto-u.ac.jp/~gc2024/index.php",
+      "talks": [
+        {
+          "order": 1,
+          "title": "Kinematic and thermodynamic properties of dynamical regular black holes",
+          "recordingUrl": "https://www2.yukawa.kyoto-u.ac.jp/~gc2024/records/240228-11_Murk.mp4",
+          "slidesUrl": "https://www2.yukawa.kyoto-u.ac.jp/~gc2024/slides/240228-11_Murk.pdf"
+        }
+      ]
+    },
+    {
+      "id": "2023-tohoku-seminar-sendai",
+      "name": "Seminar — Particle Theory and Cosmology Group, Tohoku University",
+      "startDate": "2023-10-19",
+      "endDate": "2023-10-19",
+      "year": 2023,
+      "type": "Seminar",
+      "hostOrganization": "Particle Theory and Cosmology Group, Tohoku University",
+      "venue": "Aobayama Campus, Tohoku University",
+      "location": {
+        "address": "Aobayama North Campus, 6-3 Aoba, Aramaki, Aoba-ku, Sendai, Miyagi 980-8579, Japan",
+        "city": "Sendai",
+        "region": "Miyagi",
+        "country": "Japan",
+        "latitude": 38.2577124112292,
+        "longitude": 140.836627471252
+      },
+      "talks": [
+        {
+          "order": 1,
+          "title": "Physical black holes and what it takes to observe them",
+          "presentationDate": "2023-10-19"
+        }
+      ]
+    },
+    {
+      "id": "2023-minkowski-meeting-albena",
+      "name": "3rd Minkowski Meeting on the Foundations of Spacetime Physics",
+      "startDate": "2023-09-11",
+      "endDate": "2023-09-14",
+      "year": 2023,
+      "type": "Conference",
+      "hostOrganization": "Minkowski Institute for Foundational Studies",
+      "venue": "Hotel Sandy Beach",
+      "location": {
+        "address": "Albena Resort, 9620 Albena, Bulgaria",
+        "city": "Albena",
+        "country": "Bulgaria",
+        "latitude": 43.366503,
+        "longitude": 28.081231
+      },
+      "url": "http://www.minkowskiinstitute.org/meetings/2023/",
+      "talks": [
+        {
+          "order": 1,
+          "title": "Nomen non est omen: Why it is too soon to identify ultra-compact objects as black holes"
+        }
+      ]
+    },
+    {
+      "id": "2023-rqi-north-chania",
+      "name": "13th Annual Conference on Relativistic Quantum Information (North)",
+      "startDate": "2023-07-17",
+      "endDate": "2023-07-21",
+      "year": 2023,
+      "type": "Conference",
+      "hostOrganization": "Technical University of Crete; International Society for Relativistic Quantum Information",
+      "venue": "Technical University of Crete",
+      "location": {
+        "address": "Akrotiri Campus, Chania 731 00, Greece",
+        "city": "Chania",
+        "region": "Crete",
+        "country": "Greece",
+        "latitude": 35.5293519445718,
+        "longitude": 24.0687444864222
+      },
+      "url": "https://rqi.tuc.gr",
+      "talks": [
+        {
+          "order": 1,
+          "title": "Nomen non est omen: Why it is too soon to identify ultra-compact objects as black holes"
+        }
+      ]
+    },
+    {
+      "id": "2023-quantum-gravity-nijmegen",
+      "name": "Quantum Gravity 2023",
+      "startDate": "2023-07-10",
+      "endDate": "2023-07-14",
+      "year": 2023,
+      "type": "Conference",
+      "hostOrganization": "Radboud University",
+      "venue": "Collegezalencomplex, Radboud University",
+      "location": {
+        "address": "Mercatorpad 1, 6525 HS Nijmegen, Netherlands",
+        "city": "Nijmegen",
+        "region": "Gelderland",
+        "country": "Netherlands",
+        "latitude": 51.81921,
+        "longitude": 5.8644
+      },
+      "url": "https://indico.imapp.ru.nl/event/106/",
+      "talks": [
+        {
+          "order": 1,
+          "title": "Regular black holes and the first law of black hole mechanics",
+          "recordingUrl": "https://www.youtube.com/watch?v=SPSRSEsC15c"
+        }
+      ]
+    },
+    {
+      "id": "2022-aip-congress-adelaide",
+      "name": "24th Australian Institute of Physics Congress",
+      "startDate": "2022-12-11",
+      "endDate": "2022-12-16",
+      "year": 2022,
+      "type": "Conference",
+      "hostOrganization": "Australian Institute of Physics",
+      "venue": "Adelaide Convention Centre",
+      "location": {
+        "address": "North Terrace, Adelaide SA 5000, Australia",
+        "city": "Adelaide",
+        "region": "South Australia",
+        "country": "Australia",
+        "latitude": -34.9209587628263,
+        "longitude": 138.595241320938
+      },
+      "talks": [
+        {
+          "order": 1,
+          "title": "Surface gravity and information loss"
+        },
+        {
+          "order": 2,
+          "title": "Physical black holes in modified theories of gravity"
+        }
+      ]
+    },
+    {
+      "id": "2022-northern-sydney-astronomical-society",
+      "name": "Seminar — Northern Sydney Astronomical Society",
+      "startDate": "2022-03-15",
+      "endDate": "2022-03-15",
+      "year": 2022,
+      "type": "Seminar",
+      "hostOrganization": "Northern Sydney Astronomical Society",
+      "venue": "Regis Hall, Saint Ignatius’ College Riverview",
+      "location": {
+        "address": "115 Tambourine Bay Rd, Riverview NSW 2066, Australia",
+        "city": "Sydney",
+        "region": "New South Wales",
+        "country": "Australia",
+        "latitude": -33.8239142132532,
+        "longitude": 151.15686824269
+      },
+      "talks": [
+        {
+          "order": 1,
+          "title": "Black holes in semiclassical and modified theories of gravity",
+          "presentationDate": "2022-03-15"
+        }
+      ]
+    },
+    {
+      "id": "2020-sydney-quantum-academy-conference",
+      "name": "Sydney Quantum Academy Conference",
+      "startDate": "2020-12-07",
+      "endDate": "2020-12-11",
+      "year": 2020,
+      "type": "Conference",
+      "hostOrganization": "Sydney Quantum Academy",
+      "venue": "Belinda Hutchinson Building (H70), The University of Sydney",
+      "location": {
+        "address": "Darlington NSW 2008, Australia",
+        "city": "Sydney",
+        "region": "New South Wales",
+        "country": "Australia",
+        "latitude": -33.8920953692458,
+        "longitude": 151.190966070579
+      },
+      "talks": [
+        {
+          "order": 1,
+          "title": "Black holes and quantum gravity"
+        }
+      ]
+    },
+    {
+      "id": "2020-aip-postgraduate-awards",
+      "name": "Australian Institute of Physics Postgraduate Awards",
+      "startDate": "2020-11-10",
+      "endDate": "2020-11-10",
+      "year": 2020,
+      "type": "Awards event",
+      "hostOrganization": "Australian Institute of Physics",
+      "venue": "Concord Golf Club",
+      "location": {
+        "address": "190 Majors Bay Rd, Concord NSW 2137, Australia",
+        "city": "Sydney",
+        "region": "New South Wales",
+        "country": "Australia",
+        "latitude": -33.8520753830684,
+        "longitude": 151.099095188601
+      },
+      "talks": [
+        {
+          "order": 1,
+          "title": "Black holes in modified theories of gravity",
+          "presentationDate": "2020-11-10"
+        }
+      ]
+    },
+    {
+      "id": "2020-rqi-south-brisbane",
+      "name": "13th Annual Relativistic Quantum Information Workshop (RQI South)",
+      "startDate": "2020-02-19",
+      "endDate": "2020-02-20",
+      "year": 2020,
+      "type": "Workshop",
+      "hostOrganization": "The University of Queensland; International Society for Relativistic Quantum Information",
+      "venue": "Customs House",
+      "location": {
+        "address": "399 Queen St, Brisbane City QLD 4000, Australia",
+        "city": "Brisbane",
+        "region": "Queensland",
+        "country": "Australia",
+        "latitude": -27.4654292966387,
+        "longitude": 153.031115364657
+      },
+      "talks": [
+        {
+          "order": 1,
+          "title": "Correlations as a measure of distance in quantum geometries"
+        }
+      ]
+    },
+    {
+      "id": "2020-quantum-information-structure-spacetime-hong-kong",
+      "name": "The Quantum Information Structure of Spacetime",
+      "startDate": "2020-01-13",
+      "endDate": "2020-01-17",
+      "year": 2020,
+      "type": "Workshop",
+      "hostOrganization": "The University of Hong Kong",
+      "venue": "Island Pacific Hotel Hong Kong",
+      "location": {
+        "address": "152 Connaught Rd W, Sai Ying Pun, Hong Kong",
+        "city": "Hong Kong",
+        "country": "Hong Kong",
+        "latitude": 22.2883656996633,
+        "longitude": 114.142493465156
+      },
+      "talks": [
+        {
+          "order": 1,
+          "title": "Simulating quantum geometries with correlated photon pairs",
+          "slidesUrl": "https://archive.org/details/murk-QISS-HKU/mode"
+        }
+      ]
+    },
+    {
+      "id": "2019-ens-lyon-theory-seminar",
+      "name": "Séminaire de physique théorique, ENS Lyon",
+      "startDate": "2019-07-25",
+      "endDate": "2019-07-25",
+      "year": 2019,
+      "type": "Seminar",
+      "hostOrganization": "Laboratoire de Physique, École normale supérieure de Lyon",
+      "venue": "École normale supérieure de Lyon",
+      "location": {
+        "address": "46 All. d'Italie, 69007 Lyon, France",
+        "city": "Lyon",
+        "region": "Auvergne-Rhône-Alpes",
+        "country": "France",
+        "latitude": 45.7298418939061,
+        "longitude": 4.82715470182465
+      },
+      "talks": [
+        {
+          "order": 1,
+          "title": "Black hole horizons in semiclassical gravity",
+          "presentationDate": "2019-07-25"
+        }
+      ]
+    },
+    {
+      "id": "2019-gr22-valencia",
+      "name": "22nd International Conference on General Relativity and Gravitation",
+      "startDate": "2019-07-07",
+      "endDate": "2019-07-12",
+      "year": 2019,
+      "type": "Conference",
+      "hostOrganization": "Universitat de València; International Society on General Relativity and Gravitation",
+      "venue": "Palacio de Congresos de Valencia",
+      "location": {
+        "address": "Av. de les Corts Valencianes, 60, Pobles de l'Oest, 46015 València, Valencia, Spain",
+        "city": "València",
+        "region": "Valencian Community",
+        "country": "Spain",
+        "latitude": 39.4965161819917,
+        "longitude": -0.40206355282752
+      },
+      "talks": [
+        {
+          "order": 1,
+          "title": "Quantum effects in gravitational collapse and black hole evaporation"
+        },
+        {
+          "order": 2,
+          "title": "Energy-momentum tensor and metric near the Schwarzschild sphere"
+        }
+      ]
+    },
+    {
+      "id": "2019-rqi-south-brisbane",
+      "name": "12th Annual Relativistic Quantum Information Workshop (RQI South)",
+      "startDate": "2019-02-20",
+      "endDate": "2019-02-22",
+      "year": 2019,
+      "type": "Workshop",
+      "hostOrganization": "The University of Queensland; International Society for Relativistic Quantum Information",
+      "venue": "Customs House",
+      "location": {
+        "address": "399 Queen St, Brisbane City QLD 4000, Australia",
+        "city": "Brisbane",
+        "region": "Queensland",
+        "country": "Australia",
+        "latitude": -27.4654292966387,
+        "longitude": 153.031115364657
+      },
+      "talks": [
+        {
+          "order": 1,
+          "title": "Quantum effects in gravitational collapse"
+        }
+      ]
+    },
+    {
+      "id": "2018-aip-congress-perth",
+      "name": "23rd Australian Institute of Physics Congress",
+      "startDate": "2018-12-09",
+      "endDate": "2018-12-13",
+      "year": 2018,
+      "type": "Conference",
+      "hostOrganization": "Australian Institute of Physics",
+      "venue": "The University of Western Australia",
+      "location": {
+        "address": "35 Stirling Hwy, Crawley WA 6009, Australia",
+        "city": "Perth",
+        "region": "Western Australia",
+        "country": "Australia",
+        "latitude": -31.9788287638692,
+        "longitude": 115.818065203261
+      },
+      "talks": [
+        {
+          "order": 1,
+          "title": "Energy-momentum tensor and metric near the Schwarzschild sphere"
+        }
+      ]
+    },
+    {
+      "id": "2018-amsi-winter-school-curvature-brisbane",
+      "name": "Australian Mathematical Sciences Institute Winter School on Curvature",
+      "startDate": "2018-07-02",
+      "endDate": "2018-07-13",
+      "year": 2018,
+      "type": "School",
+      "hostOrganization": "Australian Mathematical Sciences Institute",
+      "venue": "The University of Queensland",
+      "location": {
+        "address": "St Lucia QLD 4072, Australia",
+        "city": "Brisbane",
+        "region": "Queensland",
+        "country": "Australia",
+        "latitude": -27.4974697234197,
+        "longitude": 153.012855368627
+      },
+      "talks": [
+        {
+          "order": 1,
+          "title": "Introduction to loop quantum gravity and coarse-graining"
+        }
+      ]
+    }
+  ]
+}
