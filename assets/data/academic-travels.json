@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "schemaVersion": "1.1.0",
+    "schemaVersion": "1.2.0",
     "eventCount": 29,
     "talkCount": 31,
     "years": [
@@ -12,18 +12,7 @@
       2020,
       2019,
       2018
-    ],
-    "hostUrls": {
-      "Australian Mathematical Sciences Institute": "https://amsi.org.au",
-      "Australian Institute of Physics": "https://www.aip.org.au",
-      "COST Action CA23115 — Relativistic Quantum Information": "https://www.cost.eu/actions/CA23115/",
-      "International Society for Quantum Gravity": "https://isqg.org",
-      "International Society for Relativistic Quantum Information": "https://www.isrqi.net/",
-      "International Society on General Relativity and Gravitation": "http://www.isgrg.org",
-      "Minkowski Institute for Foundational Studies": "https://minkowskiinstitute.org",
-      "Northern Sydney Astronomical Society": "https://nsas.org.au",
-      "Sydney Quantum Academy": "https://sydneyquantum.org"
-    }
+    ]
   },
   "events": [
     {
@@ -48,14 +37,17 @@
         {
           "order": 1,
           "title": "Classical-quantum gravity as quantum gravity in disguise",
+          "contributionType": "Talk",
           "presentationDate": "2026-06-12",
-          "recordingUrl": "https://www.youtube.com/live/1rpHu-2qTQU?t=12671s"
+          "recordingUrl": "https://www.youtube.com/live/1rpHu-2qTQU?t=12671s",
+          "publicationLabel": "Preprint",
+          "publicationUrl": "https://arxiv.org/abs/2506.15291"
         }
       ]
     },
     {
       "id": "2025-relativity-seminar-charles-prague",
-      "name": "Relativity Seminar — Institute of Theoretical Physics",
+      "name": "Relativity Seminar — Institute of Theoretical Physics, Charles University",
       "startDate": "2025-12-02",
       "endDate": "2025-12-02",
       "year": 2025,
@@ -70,12 +62,15 @@
         "latitude": 50.114943292028,
         "longitude": 14.4493779558494
       },
-      "url": "https://utf.mff.cuni.cz/seminare/relat.pl?lang=en",
+      "url": "https://utf.mff.cuni.cz/seminare/relat-en_2025f.html",
       "talks": [
         {
           "order": 1,
           "title": "Physical implications of horizon formation in finite asymptotic time",
-          "presentationDate": "2025-12-02"
+          "contributionType": "Seminar talk",
+          "presentationDate": "2025-12-02",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1142/S0218271822300154"
         }
       ]
     },
@@ -100,7 +95,10 @@
       "talks": [
         {
           "order": 1,
-          "title": "Light rings and causality for nonsingular ultracompact objects sourced by nonlinear electrodynamics"
+          "title": "Light rings and causality for nonsingular ultracompact objects sourced by nonlinear electrodynamics",
+          "contributionType": "Talk",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1103/PhysRevD.110.044064"
         }
       ]
     },
@@ -125,7 +123,11 @@
       "talks": [
         {
           "order": 1,
-          "title": "Light rings and causality for nonsingular ultracompact objects sourced by nonlinear electrodynamics"
+          "title": "Light rings and causality for nonsingular ultracompact objects sourced by nonlinear electrodynamics",
+          "contributionType": "Talk",
+          "recordingUrl": "https://youtu.be/UOE1d95je1I?t=1860",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1103/PhysRevD.110.044064"
         }
       ]
     },
@@ -150,7 +152,10 @@
       "talks": [
         {
           "order": 1,
-          "title": "Gravity-induced birefringence in spherically symmetric spacetimes"
+          "title": "Gravity-induced birefringence in spherically symmetric spacetimes",
+          "contributionType": "Talk",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1103/PhysRevD.111.044001"
         }
       ]
     },
@@ -175,7 +180,10 @@
       "talks": [
         {
           "order": 1,
-          "title": "Photon trajectories in curved spacetimes from a covariant spin optics approximation"
+          "title": "Photon trajectories in curved spacetimes from a covariant spin optics approximation",
+          "contributionType": "Talk",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1103/PhysRevD.111.044001"
         }
       ]
     },
@@ -200,7 +208,10 @@
       "talks": [
         {
           "order": 1,
-          "title": "Probability vector representation of the Schrödinger equation and Leggett-Garg-type experiments"
+          "title": "Probability vector representation of the Schrödinger equation and Leggett-Garg-type experiments",
+          "contributionType": "Poster",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1103/PhysRevA.109.062224"
         }
       ]
     },
@@ -225,13 +236,16 @@
       "talks": [
         {
           "order": 1,
-          "title": "Probability vector representation of the Schrödinger equation and Leggett-Garg-type experiments"
+          "title": "Probability vector representation of the Schrödinger equation and Leggett-Garg-type experiments",
+          "contributionType": "Talk",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1103/PhysRevA.109.062224"
         }
       ]
     },
     {
       "id": "2024-cfps-seminar-prague",
-      "name": "Seminar — Cosmology, Fundamental Physics, and Strings",
+      "name": "FZU Seminar — Cosmology, Fundamental Physics, and Strings",
       "startDate": "2024-08-05",
       "endDate": "2024-08-05",
       "year": 2024,
@@ -250,7 +264,10 @@
         {
           "order": 1,
           "title": "Light rings and causality for nonsingular ultracompact objects sourced by nonlinear electrodynamics",
-          "presentationDate": "2024-08-05"
+          "contributionType": "Seminar talk",
+          "presentationDate": "2024-08-05",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1103/PhysRevD.110.044064"
         }
       ]
     },
@@ -274,7 +291,10 @@
       "talks": [
         {
           "order": 1,
-          "title": "Polarization-corrected photon trajectories in curved spacetimes"
+          "title": "Polarization-corrected photon trajectories in curved spacetimes",
+          "contributionType": "Talk",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1103/PhysRevD.111.044001"
         }
       ]
     },
@@ -299,7 +319,10 @@
       "talks": [
         {
           "order": 1,
-          "title": "Polarization-corrected light propagation in gravitational fields"
+          "title": "Polarization-corrected light propagation in gravitational fields",
+          "contributionType": "Talk",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1103/PhysRevD.111.044001"
         }
       ]
     },
@@ -325,7 +348,10 @@
         {
           "order": 1,
           "title": "Kinematic and thermodynamic properties of dynamical regular black holes",
-          "slidesUrl": "https://indico.mpp.mpg.de/event/9815/page/363-contributions"
+          "contributionType": "Talk",
+          "slidesUrl": "https://indico.mpp.mpg.de/event/9815/page/363-contributions",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1103/PhysRevD.108.124007"
         }
       ]
     },
@@ -349,7 +375,10 @@
       "talks": [
         {
           "order": 1,
-          "title": "Properties of dynamical regular black holes"
+          "title": "Properties of dynamical regular black holes",
+          "contributionType": "Talk",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1103/PhysRevD.108.124007"
         }
       ]
     },
@@ -375,8 +404,11 @@
         {
           "order": 1,
           "title": "Kinematic and thermodynamic properties of dynamical regular black holes",
+          "contributionType": "Talk",
           "recordingUrl": "https://www2.yukawa.kyoto-u.ac.jp/~gc2024/records/240228-11_Murk.mp4",
-          "slidesUrl": "https://www2.yukawa.kyoto-u.ac.jp/~gc2024/slides/240228-11_Murk.pdf"
+          "slidesUrl": "https://www2.yukawa.kyoto-u.ac.jp/~gc2024/slides/240228-11_Murk.pdf",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1103/PhysRevD.108.124007"
         }
       ]
     },
@@ -401,7 +433,10 @@
         {
           "order": 1,
           "title": "Physical black holes and what it takes to observe them",
-          "presentationDate": "2023-10-19"
+          "contributionType": "Seminar talk",
+          "presentationDate": "2023-10-19",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1142/S0218271822300154"
         }
       ]
     },
@@ -425,7 +460,10 @@
       "talks": [
         {
           "order": 1,
-          "title": "Nomen non est omen: Why it is too soon to identify ultra-compact objects as black holes"
+          "title": "Nomen non est omen: Why it is too soon to identify ultra-compact objects as black holes",
+          "contributionType": "Talk",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1142/S0218271823420129"
         }
       ]
     },
@@ -450,7 +488,10 @@
       "talks": [
         {
           "order": 1,
-          "title": "Nomen non est omen: Why it is too soon to identify ultra-compact objects as black holes"
+          "title": "Nomen non est omen: Why it is too soon to identify ultra-compact objects as black holes",
+          "contributionType": "Talk",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1142/S0218271823420129"
         }
       ]
     },
@@ -476,7 +517,10 @@
         {
           "order": 1,
           "title": "Regular black holes and the first law of black hole mechanics",
-          "recordingUrl": "https://www.youtube.com/watch?v=SPSRSEsC15c"
+          "contributionType": "Talk",
+          "recordingUrl": "https://www.youtube.com/watch?v=SPSRSEsC15c",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1103/PhysRevD.108.044002"
         }
       ]
     },
@@ -500,11 +544,17 @@
       "talks": [
         {
           "order": 1,
-          "title": "Surface gravity and information loss"
+          "title": "Surface gravity and information loss",
+          "contributionType": "Talk",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1103/PhysRevD.105.124032"
         },
         {
           "order": 2,
-          "title": "Physical black holes in modified theories of gravity"
+          "title": "Physical black holes in modified theories of gravity",
+          "contributionType": "Talk",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1103/PhysRevD.105.044051"
         }
       ]
     },
@@ -529,7 +579,10 @@
         {
           "order": 1,
           "title": "Black holes in semiclassical and modified theories of gravity",
-          "presentationDate": "2022-03-15"
+          "contributionType": "Seminar talk",
+          "presentationDate": "2022-03-15",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1142/S0218271822300154"
         }
       ]
     },
@@ -553,7 +606,8 @@
       "talks": [
         {
           "order": 1,
-          "title": "Black holes and quantum gravity"
+          "title": "Black holes and quantum gravity",
+          "contributionType": "Talk"
         }
       ]
     },
@@ -578,7 +632,10 @@
         {
           "order": 1,
           "title": "Black holes in modified theories of gravity",
-          "presentationDate": "2020-11-10"
+          "contributionType": "Talk",
+          "presentationDate": "2020-11-10",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1103/PhysRevD.105.044051"
         }
       ]
     },
@@ -602,7 +659,8 @@
       "talks": [
         {
           "order": 1,
-          "title": "Correlations as a measure of distance in quantum geometries"
+          "title": "Correlations as a measure of distance in quantum geometries",
+          "contributionType": "Talk"
         }
       ]
     },
@@ -626,6 +684,7 @@
         {
           "order": 1,
           "title": "Simulating quantum geometries with correlated photon pairs",
+          "contributionType": "Talk",
           "slidesUrl": "https://archive.org/details/murk-QISS-HKU/mode"
         }
       ]
@@ -651,7 +710,10 @@
         {
           "order": 1,
           "title": "Black hole horizons in semiclassical gravity",
-          "presentationDate": "2019-07-25"
+          "contributionType": "Seminar talk",
+          "presentationDate": "2019-07-25",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1103/PhysRevD.100.064054"
         }
       ]
     },
@@ -675,11 +737,17 @@
       "talks": [
         {
           "order": 1,
-          "title": "Quantum effects in gravitational collapse and black hole evaporation"
+          "title": "Quantum effects in gravitational collapse and black hole evaporation",
+          "contributionType": "Talk",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1103/PhysRevD.100.064054"
         },
         {
           "order": 2,
-          "title": "Energy-momentum tensor and metric near the Schwarzschild sphere"
+          "title": "Energy-momentum tensor and metric near the Schwarzschild sphere",
+          "contributionType": "Talk",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1103/PhysRevD.99.124014"
         }
       ]
     },
@@ -703,7 +771,10 @@
       "talks": [
         {
           "order": 1,
-          "title": "Quantum effects in gravitational collapse"
+          "title": "Quantum effects in gravitational collapse",
+          "contributionType": "Talk",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1103/PhysRevD.100.064054"
         }
       ]
     },
@@ -727,7 +798,10 @@
       "talks": [
         {
           "order": 1,
-          "title": "Energy-momentum tensor and metric near the Schwarzschild sphere"
+          "title": "Energy-momentum tensor and metric near the Schwarzschild sphere",
+          "contributionType": "Poster",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1103/PhysRevD.99.124014"
         }
       ]
     },
@@ -751,7 +825,8 @@
       "talks": [
         {
           "order": 1,
-          "title": "Introduction to loop quantum gravity and coarse-graining"
+          "title": "Introduction to loop quantum gravity and coarse-graining",
+          "contributionType": "Talk"
         }
       ]
     }

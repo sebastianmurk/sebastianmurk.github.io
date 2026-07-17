@@ -14,17 +14,19 @@
   const mapHelp = document.getElementById("travels-map-help");
   const errorMessage = document.getElementById("travels-error");
   const mapTilerKeyPlaceholder = "PASTE_YOUR_PROTECTED_MAPTILER_KEY_HERE";
+  const allowedContributionTypes = new Set(["Talk", "Seminar talk", "Poster"]);
 
   const yearColours = new Map([
-    [2026, "#6f42c1"],
-    [2025, "#237a57"],
-    [2024, "#2f6fa8"],
-    [2023, "#a95712"],
-    [2022, "#b23f5d"],
-    [2020, "#087b83"],
-    [2019, "#8a5729"],
-    [2018, "#536477"],
-  ]);
+  [2026, "#184e77"], // dark blue
+  [2025, "#2f6fa8"], // medium blue
+  [2024, "#76a9d4"], // light blue
+  [2023, "#7a263a"], // dark red
+  [2022, "#b23f5d"], // medium red
+  [2021, "#d98da0"], // light red — reserved
+  [2020, "#7a5a00"], // dark gold
+  [2019, "#b38616"], // medium gold
+  [2018, "#ddbe5c"], // light gold
+]);
 
   const fallbackColours = [
     "#375a7f",
@@ -46,7 +48,6 @@
   let mapTilerLayer;
   let mapTilerApiKey = "";
   let markerCluster;
-  let hostUrls = Object.create(null);
   let allEvents = [];
   let visibleEvents = [];
   let activeEventId = null;
@@ -82,7 +83,6 @@
 
     const dataset = await response.json();
     allEvents = validateDataset(dataset);
-    hostUrls = validateHostUrls(dataset.metadata && dataset.metadata.hostUrls);
 
     createMap();
     createMarkers();
@@ -108,24 +108,6 @@
       );
     }
     return apiKey;
-  }
-
-  function validateHostUrls(value) {
-    if (value === undefined || value === null) return Object.create(null);
-    if (typeof value !== "object" || Array.isArray(value)) {
-      throw new Error("The host-link registry is not valid.");
-    }
-
-    const validated = Object.create(null);
-    Object.entries(value).forEach(function (entry) {
-      const name = entry[0];
-      const url = entry[1];
-      if (!name.trim() || typeof url !== "string" || !/^https?:\/\/\S+$/.test(url)) {
-        throw new Error(`Invalid host link for ${name || "an unnamed host"}.`);
-      }
-      validated[name] = url;
-    });
-    return validated;
   }
 
   function validateDataset(dataset) {
@@ -166,6 +148,34 @@
       if (!Array.isArray(event.talks) || event.talks.length === 0) {
         throw new Error(`${event.name} has no linked talks.`);
       }
+
+      event.talks.forEach(function (talk) {
+        if (
+          !talk ||
+          !talk.title ||
+          !allowedContributionTypes.has(talk.contributionType)
+        ) {
+          throw new Error(`${event.name} has invalid contribution information.`);
+        }
+        [talk.recordingUrl, talk.slidesUrl, talk.publicationUrl]
+          .filter(Boolean)
+          .forEach(function (url) {
+            if (typeof url !== "string" || !/^https?:\/\/\S+$/.test(url)) {
+              throw new Error(`${event.name} contains an invalid contribution link.`);
+            }
+          });
+        const hasPublicationUrl = Boolean(talk.publicationUrl);
+        const hasPublicationLabel = Boolean(talk.publicationLabel);
+        if (hasPublicationUrl !== hasPublicationLabel) {
+          throw new Error(`${event.name} has incomplete publication information.`);
+        }
+        if (
+          hasPublicationLabel &&
+          !["Publication", "Preprint"].includes(talk.publicationLabel)
+        ) {
+          throw new Error(`${event.name} has an invalid publication label.`);
+        }
+      });
 
       ids.add(event.id);
       return event;
@@ -543,22 +553,21 @@
 
   function updateSummary() {
     const eventWord = visibleEvents.length === 1 ? "event" : "events";
-    const cities = new Set(
+
+    const countries = new Set(
       visibleEvents.map(function (event) {
-        return `${event.location.city}|${event.location.country}`;
+        return event.location.country;
       }),
     ).size;
-    const countries = new Set(
-      visibleEvents.map(function (event) { return event.location.country; }),
-    ).size;
 
+    const countryWord = countries === 1 ? "country" : "countries";
     const yearText = activeYear === null ? "" : ` from ${activeYear}`;
+
     resultSummary.textContent =
       `Showing ${visibleEvents.length} ${eventWord}${yearText} in ` +
-      `${cities} ${cities === 1 ? "city" : "cities"} across ` +
-      `${countries} ${countries === 1 ? "country" : "countries"}.`;
-    listCount.textContent = `${visibleEvents.length} ${eventWord}`;
+      `${countries} ${countryWord}.`;
 
+    listCount.textContent = `${visibleEvents.length} ${eventWord}`;
   }
 
   function fitVisibleEvents(animate) {
@@ -617,12 +626,12 @@
         .filter(Boolean)
         .join(" · "),
     );
-    appendHostDetail(details, "Hosted by", event.hostOrganization);
+    appendDetail(details, "Host", event.hostOrganization);
 
     const talks = document.createElement("section");
     talks.className = "travels-popup-talks";
     const talksHeading = document.createElement("h4");
-    talksHeading.textContent = event.talks.length === 1 ? "Talk" : "Talks";
+    talksHeading.textContent = contributionHeading(event.talks);
     const talkList = document.createElement(event.talks.length === 1 ? "div" : "ol");
     talkList.className = "travels-popup-talk-list";
 
@@ -637,21 +646,19 @@
       talkTitle.textContent = talk.title;
       talkItem.appendChild(talkTitle);
 
-      if (talk.presentationDate) {
-        const presentationDate = document.createElement("p");
-        presentationDate.className = "travels-popup-talk-date";
-        presentationDate.textContent = formatSingleDate(talk.presentationDate);
-        talkItem.appendChild(presentationDate);
-      }
-
-      if (talk.recordingUrl || talk.slidesUrl) {
+      if (talk.recordingUrl || talk.slidesUrl || talk.publicationUrl) {
         const actions = document.createElement("p");
         actions.className = "travels-popup-actions";
         if (talk.recordingUrl) {
-          actions.appendChild(makeExternalLink(talk.recordingUrl, "Recording"));
+          actions.appendChild(makeExternalLink(talk.recordingUrl, "Video"));
         }
         if (talk.slidesUrl) {
           actions.appendChild(makeExternalLink(talk.slidesUrl, "Slides"));
+        }
+        if (talk.publicationUrl) {
+          actions.appendChild(
+            makeExternalLink(talk.publicationUrl, talk.publicationLabel),
+          );
         }
         talkItem.appendChild(actions);
       }
@@ -672,36 +679,22 @@
     return popup;
   }
 
+  function contributionHeading(talks) {
+    const types = Array.from(
+      new Set(talks.map(function (talk) { return talk.contributionType; })),
+    );
+    if (types.length !== 1) return "Contributions";
+    if (talks.length === 1) return types[0];
+    if (types[0] === "Seminar talk") return "Seminar talks";
+    return `${types[0]}s`;
+  }
+
   function appendDetail(list, label, value) {
     if (!value) return;
     const term = document.createElement("dt");
     term.textContent = label;
     const description = document.createElement("dd");
     description.textContent = value;
-    list.append(term, description);
-  }
-
-  function appendHostDetail(list, label, value) {
-    if (!value) return;
-    const hosts = value.split(";").map(function (host) {
-      return host.trim();
-    }).filter(Boolean);
-    if (hosts.length === 0) return;
-
-    const term = document.createElement("dt");
-    term.textContent = label;
-    const description = document.createElement("dd");
-
-    hosts.forEach(function (host, index) {
-      const url = hostUrls[host];
-      description.appendChild(
-        url ? makeExternalLink(url, host) : document.createTextNode(host),
-      );
-      if (index < hosts.length - 1) {
-        description.appendChild(document.createTextNode("; "));
-      }
-    });
-
     list.append(term, description);
   }
 
@@ -747,10 +740,6 @@
     }
 
     return `${formatDateObject(start)} – ${formatDateObject(end)}`;
-  }
-
-  function formatSingleDate(value) {
-    return formatDateObject(parseIsoDate(value));
   }
 
   function parseIsoDate(value) {

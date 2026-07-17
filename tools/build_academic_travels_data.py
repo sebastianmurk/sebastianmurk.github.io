@@ -68,25 +68,6 @@ HOST_NAME_REPLACEMENTS = {
     ),
 }
 
-HOST_URLS = {
-    "Australian Institute of Physics": "https://www.aip.org.au",
-    "COST Action CA23115 — Relativistic Quantum Information": (
-        "https://www.cost.eu/actions/CA23115/"
-    ),
-    "International Society for Quantum Gravity": "https://isqg.org",
-    "International Society for Relativistic Quantum Information": (
-        "https://www.isrqi.net/"
-    ),
-    "International Society on General Relativity and Gravitation": (
-        "http://www.isgrg.org"
-    ),
-    "Minkowski Institute for Foundational Studies": (
-        "https://minkowskiinstitute.org"
-    ),
-    "Northern Sydney Astronomical Society": "https://nsas.org.au",
-    "Sydney Quantum Academy": "https://sydneyquantum.org",
-}
-
 # These editorial corrections were agreed after the confirmed workbook was
 # produced. Keeping them here ensures a future rebuild from that workbook does
 # not silently restore the superseded labels.
@@ -100,12 +81,138 @@ EVENT_EDITORIAL_OVERRIDES = {
     "2024-aip-congress-melbourne": {
         "venue": "Melbourne Convention and Exhibition Centre",
     },
+    "2024-cfps-seminar-prague": {
+        "event_name": "FZU Seminar — Cosmology, Fundamental Physics, and Strings",
+    },
     "2025-gr24-glasgow": {
         "host_organization": (
             "University of Glasgow; "
             "International Society on General Relativity and Gravitation"
         ),
     },
+}
+
+POSTER_CONTRIBUTIONS = {
+    ("2018-aip-congress-perth", 1),
+    ("2024-vienna-quantum-foundations", 1),
+}
+
+TALK_RECORDING_OVERRIDES = {
+    ("2025-gr24-glasgow", 1): "https://youtu.be/UOE1d95je1I?t=1860",
+}
+
+# Per-talk publication links. The first tuple item is the button label and the
+# second is the destination. DOI links are labelled "Publication"; the single
+# work that remains a preprint is labelled "Preprint".
+PUBLICATION_LINKS = {
+    ("2026-rqi-circuit-postdoc-meeting-villamartin", 1): (
+        "Preprint",
+        "https://arxiv.org/abs/2506.15291",
+    ),
+    ("2025-relativity-seminar-charles-prague", 1): (
+        "Publication",
+        "https://doi.org/10.1142/S0218271822300154",
+    ),
+    ("2023-tohoku-seminar-sendai", 1): (
+        "Publication",
+        "https://doi.org/10.1142/S0218271822300154",
+    ),
+    ("2022-northern-sydney-astronomical-society", 1): (
+        "Publication",
+        "https://doi.org/10.1142/S0218271822300154",
+    ),
+    ("2025-quantum-gravity-penn-state", 1): (
+        "Publication",
+        "https://doi.org/10.1103/PhysRevD.110.044064",
+    ),
+    ("2025-gr24-glasgow", 1): (
+        "Publication",
+        "https://doi.org/10.1103/PhysRevD.110.044064",
+    ),
+    ("2024-cfps-seminar-prague", 1): (
+        "Publication",
+        "https://doi.org/10.1103/PhysRevD.110.044064",
+    ),
+    ("2025-rqi-north-naples", 1): (
+        "Publication",
+        "https://doi.org/10.1103/PhysRevD.111.044001",
+    ),
+    ("2024-aip-congress-melbourne", 1): (
+        "Publication",
+        "https://doi.org/10.1103/PhysRevD.111.044001",
+    ),
+    ("2024-rqi-north-prague", 1): (
+        "Publication",
+        "https://doi.org/10.1103/PhysRevD.111.044001",
+    ),
+    ("2024-marcel-grossmann-17-pescara", 1): (
+        "Publication",
+        "https://doi.org/10.1103/PhysRevD.111.044001",
+    ),
+    ("2024-vienna-quantum-foundations", 1): (
+        "Publication",
+        "https://doi.org/10.1103/PhysRevA.109.062224",
+    ),
+    ("2024-dice-castiglioncello", 1): (
+        "Publication",
+        "https://doi.org/10.1103/PhysRevA.109.062224",
+    ),
+    ("2024-black-holes-cosmology-nassau", 1): (
+        "Publication",
+        "https://doi.org/10.1103/PhysRevD.108.124007",
+    ),
+    ("2024-rqi-south-brisbane", 1): (
+        "Publication",
+        "https://doi.org/10.1103/PhysRevD.108.124007",
+    ),
+    ("2024-gravity-cosmology-kyoto", 1): (
+        "Publication",
+        "https://doi.org/10.1103/PhysRevD.108.124007",
+    ),
+    ("2023-minkowski-meeting-albena", 1): (
+        "Publication",
+        "https://doi.org/10.1142/S0218271823420129",
+    ),
+    ("2023-rqi-north-chania", 1): (
+        "Publication",
+        "https://doi.org/10.1142/S0218271823420129",
+    ),
+    ("2023-quantum-gravity-nijmegen", 1): (
+        "Publication",
+        "https://doi.org/10.1103/PhysRevD.108.044002",
+    ),
+    ("2022-aip-congress-adelaide", 1): (
+        "Publication",
+        "https://doi.org/10.1103/PhysRevD.105.124032",
+    ),
+    ("2022-aip-congress-adelaide", 2): (
+        "Publication",
+        "https://doi.org/10.1103/PhysRevD.105.044051",
+    ),
+    ("2020-aip-postgraduate-awards", 1): (
+        "Publication",
+        "https://doi.org/10.1103/PhysRevD.105.044051",
+    ),
+    ("2019-gr22-valencia", 1): (
+        "Publication",
+        "https://doi.org/10.1103/PhysRevD.100.064054",
+    ),
+    ("2019-gr22-valencia", 2): (
+        "Publication",
+        "https://doi.org/10.1103/PhysRevD.99.124014",
+    ),
+    ("2019-ens-lyon-theory-seminar", 1): (
+        "Publication",
+        "https://doi.org/10.1103/PhysRevD.100.064054",
+    ),
+    ("2019-rqi-south-brisbane", 1): (
+        "Publication",
+        "https://doi.org/10.1103/PhysRevD.100.064054",
+    ),
+    ("2018-aip-congress-perth", 1): (
+        "Publication",
+        "https://doi.org/10.1103/PhysRevD.99.124014",
+    ),
 }
 
 
@@ -672,7 +779,9 @@ def build_data(workbook: XlsxWorkbook) -> Dict[str, Any]:
         event = compact_object(
             {
                 "id": event_id,
-                "name": required_text(row, "event_name", row_label),
+                "name": overrides.get(
+                    "event_name", required_text(row, "event_name", row_label)
+                ),
                 "startDate": start_date,
                 "endDate": end_date,
                 "year": int(start_date[:4]),
@@ -719,6 +828,24 @@ def build_data(workbook: XlsxWorkbook) -> Dict[str, Any]:
             )
         talk_order_keys.add(order_key)
 
+        if order_key in POSTER_CONTRIBUTIONS:
+            contribution_type = "Poster"
+        elif event["type"] == "Seminar":
+            contribution_type = "Seminar talk"
+        else:
+            contribution_type = "Talk"
+        publication = PUBLICATION_LINKS.get(order_key)
+        recording_url = normalize_url(
+            TALK_RECORDING_OVERRIDES.get(order_key, row.get("recording_url")),
+            row_label,
+            "recording_url",
+        )
+        publication_url = (
+            normalize_url(publication[1], row_label, "publication_url")
+            if publication
+            else None
+        )
+
         presentation_date = normalize_date(
             row.get("presentation_date"),
             row_label,
@@ -738,14 +865,32 @@ def build_data(workbook: XlsxWorkbook) -> Dict[str, Any]:
                 {
                     "order": order,
                     "title": required_text(row, "talk_title", row_label),
+                    "contributionType": contribution_type,
                     "presentationDate": presentation_date,
-                    "recordingUrl": normalize_url(
-                        row.get("recording_url"), row_label, "recording_url"
-                    ),
+                    "recordingUrl": recording_url,
                     "slidesUrl": normalize_url(
                         row.get("slides_url"), row_label, "slides_url"
                     ),
+                    "publicationLabel": publication[0] if publication else None,
+                    "publicationUrl": publication_url,
                 }
+            )
+        )
+
+    editorial_talk_keys = (
+        POSTER_CONTRIBUTIONS
+        | set(TALK_RECORDING_OVERRIDES)
+        | set(PUBLICATION_LINKS)
+    )
+    unknown_editorial_talk_keys = editorial_talk_keys - talk_order_keys
+    if unknown_editorial_talk_keys:
+        formatted_keys = ", ".join(
+            "{} (talk {})".format(event_id, order)
+            for event_id, order in sorted(unknown_editorial_talk_keys)
+        )
+        raise BuildError(
+            "Editorial talk metadata references unknown contributions: {}".format(
+                formatted_keys
             )
         )
 
@@ -765,11 +910,10 @@ def build_data(workbook: XlsxWorkbook) -> Dict[str, Any]:
     years = sorted({event["year"] for event in events}, reverse=True)
     return {
         "metadata": {
-            "schemaVersion": "1.1.0",
+            "schemaVersion": "1.2.0",
             "eventCount": event_count,
             "talkCount": talk_count,
             "years": years,
-            "hostUrls": HOST_URLS,
         },
         "events": events,
     }

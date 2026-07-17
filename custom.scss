@@ -2302,6 +2302,7 @@ body.travels-page .leaflet-popup-content-wrapper {
 }
 
 body.travels-page .leaflet-popup-content {
+  min-width: min(360px, calc(100vw - 5rem));
   margin: 0;
   padding: 1rem 1.05rem 1.05rem;
   color: #27313c;
@@ -2398,7 +2399,6 @@ body.travels-page .travels-popup-talk:last-child {
 }
 
 body.travels-page .travels-popup-talk-title,
-body.travels-page .travels-popup-talk-date,
 body.travels-page .travels-popup-actions,
 body.travels-page .travels-popup-event-action {
   margin: 0;
@@ -2408,12 +2408,6 @@ body.travels-page .travels-popup-talk-title {
   font-size: 0.77rem;
   font-weight: 650;
   line-height: 1.4;
-}
-
-body.travels-page .travels-popup-talk-date {
-  margin-top: 0.12rem;
-  color: var(--travels-muted);
-  font-size: 0.68rem;
 }
 
 body.travels-page .travels-popup-actions,
