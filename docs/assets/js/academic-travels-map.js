@@ -224,9 +224,13 @@
       animate: !prefersReducedMotion,
       showCoverageOnHover: false,
       spiderfyOnMaxZoom: true,
-      spiderfyDistanceMultiplier: 1.25,
+      spiderfyDistanceMultiplier: 1.5,
       zoomToBoundsOnClick: true,
-      maxClusterRadius: 48,
+      maxClusterRadius: function (zoom) {
+        if (zoom <= 2) return 36;
+        if (zoom === 3) return 20;
+        return 10;
+      },
       iconCreateFunction: createClusterIcon,
     });
     markerCluster.addTo(map);
