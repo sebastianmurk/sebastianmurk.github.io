@@ -322,52 +322,88 @@
   }
 
   function clampPopupInsideMap(event) {
-    const popup = event.popup;
-    const popupElement = popup.getElement();
+  const popup = event.popup;
+  const popupElement = popup.getElement();
 
-    if (!popupElement) return;
+  if (!popupElement) return;
 
-    const baseOffset = window.L.point(0, 7);
-    const inset = 8; // Use 0 for exact alignment with the map edge.
+  const baseOffset = window.L.point(0, 7);
+  const inset = 8;
 
-    // Reset any adjustment from a previous opening.
-    popup.options.offset = baseOffset;
-    popupElement.classList.remove("is-map-clamped");
-    popupElement.style.visibility = "hidden";
-    popup.update();
+  popup.options.offset = baseOffset;
+  popupElement.classList.remove("is-map-clamped");
+  popupElement.style.visibility = "hidden";
+  popup.update();
 
-    requestAnimationFrame(function () {
-      if (!popupElement.isConnected) return;
-
-      const mapBounds = mapElement.getBoundingClientRect();
-      const popupBounds = popupElement.getBoundingClientRect();
-
-      let shiftX = 0;
-      let shiftY = 0;
-
-      if (popupBounds.left < mapBounds.left + inset) {
-        shiftX = mapBounds.left + inset - popupBounds.left;
-      } else if (popupBounds.right > mapBounds.right - inset) {
-        shiftX = mapBounds.right - inset - popupBounds.right;
-      }
-
-      if (popupBounds.top < mapBounds.top + inset) {
-        shiftY = mapBounds.top + inset - popupBounds.top;
-      }
-
-      if (shiftX !== 0 || shiftY !== 0) {
-        popup.options.offset = window.L.point(
-          baseOffset.x + shiftX,
-          baseOffset.y + shiftY,
-        );
-
-        popupElement.classList.add("is-map-clamped");
-        popup.update();
-      }
-
+  window.requestAnimationFrame(function () {
+    if (!popupElement.isConnected) {
       popupElement.style.visibility = "";
-    });
-  }
+      return;
+    }
+
+    const mapBounds = mapElement.getBoundingClientRect();
+    const popupBounds = popupElement.getBoundingClientRect();
+
+    let shiftX = 0;
+    let shiftY = 0;
+
+    if (popupBounds.left < mapBounds.left + inset) {
+      shiftX = mapBounds.left + inset - popupBounds.left;
+    } else if (popupBounds.right > mapBounds.right - inset) {
+      shiftX = mapBounds.right - inset - popupBounds.right;
+    }
+
+    if (popupBounds.top < mapBounds.top + inset) {
+      shiftY = mapBounds.top + inset - popupBounds.top;
+    }
+
+    const zoomControl = mapElement.querySelector(
+      ".leaflet-control-zoom",
+    );
+
+    if (zoomControl) {
+      const zoomBounds = zoomControl.getBoundingClientRect();
+
+      const adjustedLeft = popupBounds.left + shiftX;
+      const adjustedRight = popupBounds.right + shiftX;
+      const adjustedTop = popupBounds.top + shiftY;
+      const adjustedBottom = popupBounds.bottom + shiftY;
+
+      const overlapsZoom =
+        adjustedLeft < zoomBounds.right + inset &&
+        adjustedRight > zoomBounds.left - inset &&
+        adjustedTop < zoomBounds.bottom + inset &&
+        adjustedBottom > zoomBounds.top - inset;
+
+      if (overlapsZoom) {
+        const safeLeft = zoomBounds.right + inset;
+        const roomToRight =
+          mapBounds.right - inset - safeLeft;
+
+        if (popupBounds.width <= roomToRight) {
+          shiftX += safeLeft - adjustedLeft;
+        } else {
+          shiftY += Math.max(
+            0,
+            zoomBounds.bottom + inset - adjustedTop,
+          );
+        }
+      }
+    }
+
+    if (shiftX !== 0 || shiftY !== 0) {
+      popup.options.offset = window.L.point(
+        baseOffset.x + shiftX,
+        baseOffset.y + shiftY,
+      );
+
+      popupElement.classList.add("is-map-clamped");
+      popup.update();
+    }
+
+    popupElement.style.visibility = "";
+  });
+}
 
   function createMarkerIcon(event) {
     const colour = colourForYear(event.year);
