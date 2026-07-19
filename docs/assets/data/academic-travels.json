@@ -110,7 +110,7 @@
       "endDate": "2025-07-25",
       "year": 2025,
       "type": "Conference",
-      "hostOrganization": "The Pennsylvania State University; International Society for Quantum Gravity",
+      "hostOrganization": "International Society for Quantum Gravity; The Pennsylvania State University",
       "venue": "Erick J. Barron Innovation Hub",
       "location": {
         "address": "123 S Burrowes St, State College, PA 16801, United States",
@@ -138,7 +138,7 @@
       "endDate": "2025-07-18",
       "year": 2025,
       "type": "Conference",
-      "hostOrganization": "University of Glasgow; International Society on General Relativity and Gravitation",
+      "hostOrganization": "International Society on General Relativity and Gravitation; University of Glasgow",
       "venue": "Scottish Event Campus, Glasgow",
       "location": {
         "address": "Exhibition Way, Glasgow G3 8YW, United Kingdom",
@@ -167,7 +167,7 @@
       "endDate": "2025-06-27",
       "year": 2025,
       "type": "Conference",
-      "hostOrganization": "University of Naples Federico II; International Society for Relativistic Quantum Information; COST Action CA23115 — Relativistic Quantum Information",
+      "hostOrganization": "International Society for Relativistic Quantum Information; COST Action CA23115 — Relativistic Quantum Information; University of Naples Federico II",
       "venue": "University of Naples Federico II",
       "location": {
         "address": "Aula Ottagonale, Edificio Centrale, Corso Umberto I, 40, 80138 Napoli",
@@ -308,8 +308,8 @@
       "endDate": "2024-08-09",
       "year": 2024,
       "type": "Conference",
-      "hostOrganization": "Faculty of Mathematics and Physics, Charles University; International Society for Relativistic Quantum Information",
-      "venue": "IMPAKT Building (Charles University, Faculty of Mathematics and Physics)",
+      "hostOrganization": "International Society for Relativistic Quantum Information; Faculty of Mathematics and Physics, Charles University",
+      "venue": "IMPAKT Building, Faculty of Mathematics and Physics, Charles University",
       "location": {
         "address": "V Holešovičkách 2, 180 00 Praha 8",
         "city": "Prague",
@@ -392,7 +392,7 @@
       "endDate": "2024-02-06",
       "year": 2024,
       "type": "Workshop",
-      "hostOrganization": "The University of Queensland; International Society for Relativistic Quantum Information",
+      "hostOrganization": "International Society for Relativistic Quantum Information; The University of Queensland",
       "venue": "Customs House",
       "location": {
         "address": "399 Queen St, Brisbane City QLD 4000, Australia",
@@ -504,7 +504,7 @@
       "endDate": "2023-07-21",
       "year": 2023,
       "type": "Conference",
-      "hostOrganization": "Technical University of Crete; International Society for Relativistic Quantum Information",
+      "hostOrganization": "International Society for Relativistic Quantum Information; Technical University of Crete",
       "venue": "Technical University of Crete",
       "location": {
         "address": "Akrotiri Campus, Chania 731 00, Greece",
@@ -532,7 +532,7 @@
       "endDate": "2023-07-14",
       "year": 2023,
       "type": "Conference",
-      "hostOrganization": "Radboud University",
+      "hostOrganization": "International Society for Quantum Gravity; Radboud University",
       "venue": "Collegezalencomplex, Radboud University",
       "location": {
         "address": "Mercatorpad 1, 6525 HS Nijmegen, Netherlands",
@@ -676,7 +676,7 @@
       "endDate": "2020-02-20",
       "year": 2020,
       "type": "Workshop",
-      "hostOrganization": "The University of Queensland; International Society for Relativistic Quantum Information",
+      "hostOrganization": "International Society for Relativistic Quantum Information; The University of Queensland",
       "venue": "Customs House",
       "location": {
         "address": "399 Queen St, Brisbane City QLD 4000, Australia",
@@ -702,7 +702,7 @@
       "year": 2020,
       "type": "Workshop",
       "hostOrganization": "The University of Hong Kong",
-      "venue": "Island Pacific Hotel Hong Kong",
+      "venue": "Island Pacific Hotel",
       "location": {
         "address": "152 Connaught Rd W, Sai Ying Pun, Hong Kong",
         "city": "Hong Kong",
@@ -754,7 +754,7 @@
       "endDate": "2019-07-12",
       "year": 2019,
       "type": "Conference",
-      "hostOrganization": "Universitat de València; International Society on General Relativity and Gravitation",
+      "hostOrganization": "International Society on General Relativity and Gravitation; Universitat de València",
       "venue": "Palacio de Congresos de Valencia",
       "location": {
         "address": "Av. de les Corts Valencianes, 60, Pobles de l'Oest, 46015 València, Valencia, Spain",
@@ -788,7 +788,7 @@
       "endDate": "2019-02-22",
       "year": 2019,
       "type": "Workshop",
-      "hostOrganization": "The University of Queensland; International Society for Relativistic Quantum Information",
+      "hostOrganization": "International Society for Relativistic Quantum Information; The University of Queensland",
       "venue": "Customs House",
       "location": {
         "address": "399 Queen St, Brisbane City QLD 4000, Australia",
@@ -842,7 +842,7 @@
       "endDate": "2018-07-13",
       "year": 2018,
       "type": "School",
-      "hostOrganization": "Australian Mathematical Sciences Institute",
+      "hostOrganization": "Australian Mathematical Sciences Institute; The University of Queensland",
       "venue": "The University of Queensland",
       "location": {
         "address": "St Lucia QLD 4072, Australia",
