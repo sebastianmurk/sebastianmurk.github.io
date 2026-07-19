@@ -45,6 +45,35 @@
         }
       ]
     },
+        {
+      "id": "2025-ceico-seminar-prague",
+      "name": "CEICO Cosmo Seminar",
+      "startDate": "2025-12-10",
+      "endDate": "2025-12-10",
+      "year": 2025,
+      "type": "Seminar",
+      "hostOrganization": "Central European Institute for Cosmology and Fundamental Physics (CEICO)",
+      "venue": "Institute of Physics, Czech Academy of Sciences",
+      "location": {
+        "address": "Na Slovance 1999/2, 182 00 Praha 8",
+        "city": "Prague",
+        "region": "Prague",
+        "country": "Czech Republic",
+        "latitude": 50.1234111055218,
+        "longitude": 14.4687906102378
+      },
+      "url": "https://ceico.cz/seminars",
+      "talks": [
+        {
+          "order": 1,
+          "title": "Physical implications of horizon formation in finite asymptotic time",
+          "contributionType": "Seminar talk",
+          "presentationDate": "2025-12-10",
+          "publicationLabel": "Publication",
+          "publicationUrl": "https://doi.org/10.1142/S0218271822300154"
+        }
+      ]
+    },
     {
       "id": "2025-relativity-seminar-charles-prague",
       "name": "Relativity Seminar — Institute of Theoretical Physics, Charles University",
@@ -245,12 +274,12 @@
     },
     {
       "id": "2024-cfps-seminar-prague",
-      "name": "FZU Seminar — Cosmology, Fundamental Physics, and Strings",
+      "name": "FZU Strings Seminar",
       "startDate": "2024-08-05",
       "endDate": "2024-08-05",
       "year": 2024,
       "type": "Seminar",
-      "hostOrganization": "Institute of Physics of the Czech Academy of Sciences",
+      "hostOrganization": "Institute of Physics, Czech Academy of Sciences",
       "venue": "Institute of Physics, Czech Academy of Sciences",
       "location": {
         "address": "Na Slovance 1999/2, 182 00 Praha 8",
@@ -260,6 +289,7 @@
         "latitude": 50.1234111055218,
         "longitude": 14.4687906102378
       },
+      "url": "https://ceico.cz/seminars",
       "talks": [
         {
           "order": 1,
@@ -566,14 +596,14 @@
       "year": 2022,
       "type": "Seminar",
       "hostOrganization": "Northern Sydney Astronomical Society",
-      "venue": "Regis Hall, Saint Ignatius’ College Riverview",
+      "venue": "Saint Ignatius' College Riverview",
       "location": {
         "address": "115 Tambourine Bay Rd, Riverview NSW 2066, Australia",
         "city": "Sydney",
         "region": "New South Wales",
         "country": "Australia",
-        "latitude": -33.8239142132532,
-        "longitude": 151.15686824269
+        "latitude": -33.824202032368916,
+        "longitude": 151.15687964679358
       },
       "talks": [
         {

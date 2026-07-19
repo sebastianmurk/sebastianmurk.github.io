@@ -2171,17 +2171,6 @@ body.travels-page .travels-event-location {
   line-height: 1.35;
 }
 
-body.travels-page .travels-event-talk-count {
-  margin-top: 0.15rem;
-  padding: 0.24rem 0.44rem;
-  border-radius: 999px;
-  background: rgba(38, 65, 141, 0.075);
-  color: var(--site-blue);
-  font-size: 0.66rem;
-  font-weight: 700;
-  line-height: 1;
-}
-
 body.travels-page .travels-error {
   margin: 1rem 0 0;
   padding: 0.9rem 1rem;
@@ -2331,6 +2320,7 @@ body.travels-page .travels-popup h3 {
   font-weight: 750;
   line-height: 1.28;
   letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 
 body.travels-page .travels-popup-dates {
@@ -2365,6 +2355,7 @@ body.travels-page .travels-popup-details dd {
   color: #3d4854;
   font-size: 0.72rem;
   line-height: 1.4;
+  text-wrap: balance;
 }
 
 body.travels-page .travels-popup-details dd a {
@@ -2408,6 +2399,7 @@ body.travels-page .travels-popup-talk-title {
   font-size: 0.77rem;
   font-weight: 650;
   line-height: 1.4;
+  text-wrap: balance;
 }
 
 body.travels-page .travels-popup-actions,
@@ -2444,6 +2436,12 @@ body.travels-page .travels-popup-event-action a:focus {
   border-color: rgba(38, 65, 141, 0.42);
   background: rgba(38, 65, 141, 0.11);
   text-decoration: none;
+}
+
+body.travels-page
+  .leaflet-popup.is-map-clamped
+  .leaflet-popup-tip-container {
+  display: none;
 }
 
 @media (max-width: 960px) {

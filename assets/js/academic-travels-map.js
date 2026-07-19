@@ -89,6 +89,7 @@
     createYearFilters(dataset.metadata && dataset.metadata.years);
     applyYearFilter(null);
     observeMapSize();
+    map.on("popupopen", clampPopupInsideMap);
 
     if (usesCoarsePointer) {
       configureTouchDragging();
@@ -222,15 +223,11 @@
 
     markerCluster = window.L.markerClusterGroup({
       animate: !prefersReducedMotion,
-      showCoverageOnHover: false,
+      showCoverageOnHover: true,
       spiderfyOnMaxZoom: true,
       spiderfyDistanceMultiplier: 1.5,
       zoomToBoundsOnClick: true,
-      maxClusterRadius: function (zoom) {
-        if (zoom <= 2) return 36;
-        if (zoom === 3) return 20;
-        return 10;
-      },
+      maxClusterRadius: 3,
       iconCreateFunction: createClusterIcon,
     });
     markerCluster.addTo(map);
@@ -311,9 +308,9 @@
       );
 
       marker.bindPopup(buildPopup(event), {
-        autoPanPadding: [28, 28],
+        autoPan: false,
         maxWidth: 390,
-        minWidth: 270,
+        minWidth: 360,
       });
 
       marker.on("click", function () {
@@ -321,6 +318,54 @@
       });
 
       markersById.set(event.id, marker);
+    });
+  }
+
+  function clampPopupInsideMap(event) {
+    const popup = event.popup;
+    const popupElement = popup.getElement();
+
+    if (!popupElement) return;
+
+    const baseOffset = window.L.point(0, 7);
+    const inset = 8; // Use 0 for exact alignment with the map edge.
+
+    // Reset any adjustment from a previous opening.
+    popup.options.offset = baseOffset;
+    popupElement.classList.remove("is-map-clamped");
+    popupElement.style.visibility = "hidden";
+    popup.update();
+
+    requestAnimationFrame(function () {
+      if (!popupElement.isConnected) return;
+
+      const mapBounds = mapElement.getBoundingClientRect();
+      const popupBounds = popupElement.getBoundingClientRect();
+
+      let shiftX = 0;
+      let shiftY = 0;
+
+      if (popupBounds.left < mapBounds.left + inset) {
+        shiftX = mapBounds.left + inset - popupBounds.left;
+      } else if (popupBounds.right > mapBounds.right - inset) {
+        shiftX = mapBounds.right - inset - popupBounds.right;
+      }
+
+      if (popupBounds.top < mapBounds.top + inset) {
+        shiftY = mapBounds.top + inset - popupBounds.top;
+      }
+
+      if (shiftX !== 0 || shiftY !== 0) {
+        popup.options.offset = window.L.point(
+          baseOffset.x + shiftX,
+          baseOffset.y + shiftY,
+        );
+
+        popupElement.classList.add("is-map-clamped");
+        popup.update();
+      }
+
+      popupElement.style.visibility = "";
     });
   }
 
