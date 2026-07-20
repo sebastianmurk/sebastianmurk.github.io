@@ -580,13 +580,6 @@
 
       button.append(meta, name, location);
 
-      if (event.talks.length > 1) {
-        const talkCount = document.createElement("span");
-        talkCount.className = "travels-event-talk-count";
-        talkCount.textContent = `${event.talks.length} talks`;
-        button.appendChild(talkCount);
-      }
-
       button.addEventListener("click", function () {
         showEventOnMap(event.id);
       });
