@@ -1822,6 +1822,8 @@ body.travels-page {
   --travels-surface: #ffffff;
   --travels-surface-soft: #f4f7f9;
   --travels-shadow: 0 0.3rem 1.2rem rgba(20, 30, 40, 0.07);
+  --travels-academic-home: #202124;
+  --travels-academic-home-ink: #202124;
 }
 
 body.travels-page main.content,
@@ -1860,12 +1862,12 @@ body.travels-page .travels-shell {
 }
 
 body.travels-page .travels-toolbar {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(14rem, 1fr) max-content;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem 1.5rem;
+  gap: 0.68rem 1rem;
   margin-bottom: 1rem;
-  padding: 0.9rem 1rem;
+  padding: 0.8rem 0.9rem;
   border: 1px solid var(--travels-border);
   border-radius: 0.85rem;
   background: rgba(255, 255, 255, 0.78);
@@ -1873,13 +1875,17 @@ body.travels-page .travels-toolbar {
 }
 
 body.travels-page .travels-toolbar-copy {
-  min-width: 220px;
-  max-width: 280px;
-  flex: 0 1 280px;
+  display: flex;
+  min-width: 0;
+  max-width: none;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.12rem;
 }
 
 body.travels-page .travels-toolbar h2 {
-  margin: 0 0 0.14rem;
+  margin: 0;
   padding: 0;
   border: 0;
   font-size: 1rem;
@@ -1892,27 +1898,53 @@ body.travels-page .travels-result-summary {
   color: var(--travels-muted);
   font-size: 0.82rem;
   line-height: 1.35;
+  text-align: left;
+  text-wrap: balance;
+  white-space: normal;
+}
+
+body.travels-page .travels-toolbar-controls {
+  display: flex;
+  width: max-content;
+  max-width: 100%;
+  min-width: 0;
+  align-items: center;
+  justify-content: flex-end;
+  justify-self: end;
+  gap: 0.6rem;
+}
+
+body.travels-page .travels-affiliation-filters,
+body.travels-page .travels-year-filters {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.42rem;
+}
+
+body.travels-page .travels-affiliation-filters {
+  flex: 0 0 auto;
+  padding-right: 0.6rem;
+  border-right: 1px solid var(--travels-border-strong);
 }
 
 body.travels-page .travels-year-filters {
-  display: flex;
-  flex: 1 1 auto;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 0.42rem;
+  flex: 0 1 auto;
+  flex-wrap: nowrap;
 }
 
 body.travels-page .travels-year-filter {
   display: inline-flex;
-  min-height: 2.1rem;
+  min-height: 2rem;
   align-items: center;
-  gap: 0.38rem;
-  padding: 0.38rem 0.62rem;
+  gap: 0.22em;
+  padding: 0.34rem 0.38rem;
   border: 1px solid rgba(47, 64, 83, 0.18);
   border-radius: 999px;
   background: #ffffff;
   color: #344454;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 650;
   line-height: 1;
   box-shadow: 0 1px 2px rgba(20, 30, 40, 0.03);
@@ -1948,9 +1980,9 @@ body.travels-page .travels-event-button:focus-visible {
 
 body.travels-page .travels-year-dot {
   display: inline-block;
-  width: 0.62rem;
-  height: 0.62rem;
-  flex: 0 0 0.62rem;
+  width: 0.48rem;
+  height: 0.48rem;
+  flex: 0 0 0.48rem;
   border: 1.5px solid rgba(255, 255, 255, 0.92);
   border-radius: 50%;
   background: var(--year-colour, #536477);
@@ -1959,21 +1991,38 @@ body.travels-page .travels-year-dot {
 
 body.travels-page .travels-filter-count {
   display: inline-flex;
-  min-width: 1.15rem;
-  height: 1.15rem;
+  min-width: 1rem;
+  height: 1rem;
   align-items: center;
   justify-content: center;
-  padding: 0 0.25rem;
+  padding: 0 0.16rem;
   border-radius: 999px;
   background: rgba(47, 64, 83, 0.08);
   color: #526170;
-  font-size: 0.67rem;
+  font-size: 0.62rem;
   font-weight: 700;
 }
 
 body.travels-page .travels-year-filter[aria-pressed="true"] .travels-filter-count {
   background: rgba(255, 255, 255, 0.18);
   color: #ffffff;
+}
+
+body.travels-page .travels-affiliations-toggle {
+  white-space: nowrap;
+}
+
+body.travels-page .travels-affiliations-toggle:hover {
+  border-color: rgba(32, 33, 36, 0.5);
+  background: rgba(32, 33, 36, 0.08);
+  color: var(--travels-academic-home-ink);
+}
+
+body.travels-page .travels-affiliations-toggle[aria-pressed="true"] {
+  border-color: var(--travels-academic-home);
+  background: var(--travels-academic-home);
+  color: #ffffff;
+  box-shadow: 0 0.2rem 0.6rem rgba(24, 28, 32, 0.2);
 }
 
 body.travels-page .travels-explorer {
@@ -2209,6 +2258,63 @@ body.travels-page .travels-marker-dot {
   transform: rotate(-45deg);
 }
 
+body.travels-page .travels-academic-home-symbol {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 28px;
+  height: 24.5px;
+  color: var(--travels-academic-home);
+  filter:
+    drop-shadow(0 0 1px rgba(9, 10, 11, 0.44))
+    drop-shadow(0 3px 3px rgba(20, 30, 40, 0.34));
+  pointer-events: none;
+}
+
+body.travels-page .travels-academic-home-cap {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+body.travels-page .travels-academic-home-cap-shape,
+body.travels-page .travels-academic-home-cap-end {
+  fill: currentColor;
+  stroke: #ffffff;
+  stroke-linejoin: round;
+}
+
+body.travels-page .travels-academic-home-cap-shape {
+  stroke-width: 1.8;
+}
+
+body.travels-page .travels-academic-home-cap-tassel-outline,
+body.travels-page .travels-academic-home-cap-tassel {
+  fill: none;
+  stroke-linecap: round;
+}
+
+body.travels-page .travels-academic-home-cap-tassel-outline {
+  stroke: #ffffff;
+  stroke-width: 3.8;
+}
+
+body.travels-page .travels-academic-home-cap-tassel {
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+body.travels-page .travels-academic-home-cap-end {
+  stroke-width: 1.5;
+}
+
+body.travels-page .travels-leaflet-marker--academic-home:focus-visible {
+  outline: 3px solid rgba(32, 33, 36, 0.5);
+  outline-offset: 3px;
+}
+
 body.travels-page .travels-cluster {
   display: flex;
   width: 38px;
@@ -2311,6 +2417,72 @@ body.travels-page .travels-popup-meta {
   text-transform: uppercase;
 }
 
+body.travels-page .travels-academic-home-popup .travels-popup-meta {
+  color: var(--travels-academic-home-ink);
+}
+
+body.travels-page .travels-academic-home-key {
+  display: inline-block;
+  width: 0.88rem;
+  height: 0.77rem;
+  flex: 0 0 0.88rem;
+  color: var(--travels-academic-home);
+  filter: drop-shadow(0 1px 1px rgba(20, 30, 40, 0.2));
+}
+
+body.travels-page
+  .travels-affiliations-toggle[aria-pressed="true"]
+  .travels-academic-home-key {
+  color: #ffffff;
+  filter: none;
+}
+
+body.travels-page
+  .travels-affiliations-toggle[aria-pressed="true"]
+  .travels-academic-home-cap-shape,
+body.travels-page
+  .travels-affiliations-toggle[aria-pressed="true"]
+  .travels-academic-home-cap-end {
+  stroke: rgba(0, 0, 0, 0.32);
+}
+
+body.travels-page
+  .travels-affiliations-toggle[aria-pressed="true"]
+  .travels-academic-home-cap-tassel-outline {
+  stroke: rgba(0, 0, 0, 0.32);
+}
+
+body.travels-page .travels-academic-home-popup,
+body.travels-page .travels-academic-home-popup h3,
+body.travels-page .travels-academic-home-popup .travels-popup-details,
+body.travels-page .travels-academic-home-popup .travels-popup-details dt,
+body.travels-page .travels-academic-home-popup .travels-popup-details dd {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+}
+
+body.travels-page .travels-academic-home-popup h3,
+body.travels-page .travels-academic-home-popup .travels-popup-details dt,
+body.travels-page .travels-academic-home-popup .travels-popup-details dd {
+  overflow-wrap: anywhere;
+  white-space: normal;
+  word-break: normal;
+}
+
+body.travels-page .travels-affiliation-line {
+  display: block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+  white-space: normal;
+  word-break: normal;
+}
+
+body.travels-page .travels-affiliation-line + .travels-affiliation-line {
+  margin-top: 0.12rem;
+}
+
 body.travels-page .travels-popup h3 {
   margin: 0 1rem 0.35rem 0;
   padding: 0;
@@ -2321,6 +2493,15 @@ body.travels-page .travels-popup h3 {
   line-height: 1.28;
   letter-spacing: -0.01em;
   text-wrap: balance;
+}
+
+body.travels-page .travels-academic-home-popup h3,
+body.travels-page .travels-academic-home-popup .travels-popup-details dd {
+  text-wrap: balance;
+}
+
+body.travels-page .travels-academic-home-popup h3 {
+  overflow-wrap: normal;
 }
 
 body.travels-page .travels-popup-dates {
@@ -2338,6 +2519,21 @@ body.travels-page .travels-popup-details {
   padding: 0.68rem 0;
   border-top: 1px solid rgba(47, 64, 83, 0.11);
   border-bottom: 1px solid rgba(47, 64, 83, 0.11);
+}
+
+body.travels-page .travels-academic-home-popup .travels-popup-details {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+body.travels-page
+  .travels-affiliation-popup
+  .leaflet-popup-content {
+  box-sizing: border-box;
+  width: min(392px, calc(100vw - 5rem)) !important;
+  min-width: 0;
+  padding-bottom: 0.75rem;
 }
 
 body.travels-page .travels-popup-details dt,
@@ -2444,22 +2640,38 @@ body.travels-page
   display: none;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1240px) {
   body.travels-page .travels-toolbar {
-    align-items: flex-start;
-    flex-direction: column;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
   }
 
-  body.travels-page .travels-toolbar-copy {
+  body.travels-page .travels-toolbar-controls {
     width: 100%;
-    max-width: none;
-    flex: none;
+    justify-content: flex-start;
+    justify-self: stretch;
   }
 
   body.travels-page .travels-year-filters {
-    justify-content: flex-start;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 760px) {
+  body.travels-page .travels-toolbar-copy {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.12rem;
   }
 
+  body.travels-page .travels-result-summary {
+    text-align: left;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 960px) {
   body.travels-page .travels-explorer {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -2491,6 +2703,20 @@ body.travels-page
     padding: 0.82rem;
   }
 
+  body.travels-page .travels-toolbar-controls {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.52rem;
+  }
+
+  body.travels-page .travels-affiliation-filters {
+    width: 100%;
+    padding: 0 0 0.52rem;
+    border-right: 0;
+    border-bottom: 1px solid var(--travels-border-strong);
+  }
+
+  body.travels-page .travels-affiliation-filters,
   body.travels-page .travels-year-filters {
     gap: 0.36rem;
   }

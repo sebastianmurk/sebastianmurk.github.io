@@ -22,23 +22,30 @@ A map of the places my research has taken me. Perhaps we crossed paths at one of
     <div class="travels-toolbar-copy">
       <h2 id="travels-filter-heading">Explore by year</h2>
       <p id="travels-result-summary" class="travels-result-summary" aria-live="polite">
-        Loading events…
+        Loading map…
       </p>
     </div>
 
-    <div id="travels-year-filters"
-         class="travels-year-filters"
-         role="group"
-         aria-label="Filter events by year"></div>
+    <div class="travels-toolbar-controls">
+      <div id="travels-affiliation-filters"
+           class="travels-affiliation-filters"
+           role="group"
+           aria-label="Toggle affiliations"></div>
+
+      <div id="travels-year-filters"
+           class="travels-year-filters"
+           role="group"
+           aria-label="Filter events by year"></div>
+    </div>
   </section>
 
   <div class="travels-explorer">
     <section class="travels-map-panel" aria-labelledby="travels-map-heading">
-      <h2 id="travels-map-heading" class="visually-hidden">Interactive conference map</h2>
+      <h2 id="travels-map-heading" class="visually-hidden">Interactive academic travel map</h2>
 
       <div id="travels-map"
            class="travels-map"
-           aria-label="Interactive world map of academic events"
+           aria-label="Interactive world map of academic events and affiliations"
            aria-describedby="travels-map-help"></div>
 
       <div class="travels-map-footer">

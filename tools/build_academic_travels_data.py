@@ -68,6 +68,138 @@ HOST_NAME_REPLACEMENTS = {
     ),
 }
 
+# Long-term institutions that form part of the academic-travel map but are not
+# dated events. They are kept outside the workbook-derived event list so they
+# do not affect event, talk, or year-filter counts.
+ACADEMIC_HOMES = [
+    {
+        "id": "home-fau-erlangen",
+        "name": (
+            "Institute of Physics, "
+            "Friedrich-Alexander-Universität Erlangen-Nürnberg"
+        ),
+        "affiliations": [
+            {
+                "label": "Degree",
+                "title": "BSc Physics",
+                "period": "2012–2016",
+            },
+            {
+                "label": "Degree",
+                "title": "MSc Physics",
+                "period": "2015–2017",
+            },
+        ],
+        "location": {
+            "address": "Erwin-Rommel-Straße 1, 91058 Erlangen, Germany",
+            "city": "Erlangen",
+            "region": "Bavaria",
+            "country": "Germany",
+            "latitude": 49.57985915182439,
+            "longitude": 11.029489505419425,
+        },
+    },
+    {
+        "id": "home-ubc-vancouver",
+        "name": "University of British Columbia",
+        "affiliations": [
+            {
+                "label": "Degree",
+                "title": "BSc Physics",
+                "period": "2014–2015",
+            }
+        ],
+        "location": {
+            "address": "6200 University Blvd, Vancouver, BC V6T 1Z4, Canada",
+            "city": "Vancouver",
+            "region": "British Columbia",
+            "country": "Canada",
+            "latitude": 49.2593700311217,
+            "longitude": -123.24749952298325,
+        },
+    },
+    {
+        "id": "home-lund-university",
+        "name": "Lund University",
+        "affiliations": [
+            {
+                "label": "Degree",
+                "title": "MSc Physics",
+                "period": "2016–2017",
+            }
+        ],
+        "location": {
+            "address": "Professorsgatan 1, 223 64 Lund, Sweden",
+            "city": "Lund",
+            "region": "Skåne",
+            "country": "Sweden",
+            "latitude": 55.71026788194787,
+            "longitude": 13.204660853685159,
+        },
+    },
+    {
+        "id": "home-macquarie-university",
+        "name": "Macquarie University",
+        "affiliations": [
+            {
+                "label": "Degree",
+                "title": (
+                    "Doctor of Philosophy (PhD), Theoretical and Mathematical Physics"
+                ),
+                "period": "2018–2022",
+            }
+        ],
+        "location": {
+            "address": "Balaclava Rd, Macquarie Park NSW 2113, Australia",
+            "city": "Sydney",
+            "region": "New South Wales",
+            "country": "Australia",
+            "latitude": -33.774097452118234,
+            "longitude": 151.11522872681317,
+        },
+    },
+    {
+        "id": "home-oist",
+        "name": "Quantum Gravity Unit, Okinawa Institute of Science and Technology",
+        "affiliations": [
+            {
+                "label": "Appointment",
+                "title": "Postdoctoral Research Fellow",
+                "period": "2022–2025",
+            }
+        ],
+        "location": {
+            "address": (
+                "1919-1 Tancha, Onna, Kunigami District, "
+                "Okinawa 904-0495, Japan"
+            ),
+            "city": "Onna",
+            "region": "Okinawa",
+            "country": "Japan",
+            "latitude": 26.465001335733103,
+            "longitude": 127.83011615608896,
+        },
+    },
+    {
+        "id": "home-charles-university",
+        "name": "Faculty of Mathematics and Physics, Charles University",
+        "affiliations": [
+            {
+                "label": "Appointment",
+                "title": "Senior Postdoctoral Research Fellow",
+                "period": "2025–present",
+            }
+        ],
+        "location": {
+            "address": "Ke Karlovu 3, 121 16 Praha 2, Czech Republic",
+            "city": "Prague",
+            "country": "Czech Republic",
+            "latitude": 50.069594084364915,
+            "longitude": 14.428319596330235,
+        },
+    },
+]
+
 # These editorial corrections were agreed after the confirmed workbook was
 # produced. Keeping them here ensures a future rebuild from that workbook does
 # not silently restore the superseded labels.
@@ -910,11 +1042,13 @@ def build_data(workbook: XlsxWorkbook) -> Dict[str, Any]:
     years = sorted({event["year"] for event in events}, reverse=True)
     return {
         "metadata": {
-            "schemaVersion": "1.2.0",
+            "schemaVersion": "1.3.0",
             "eventCount": event_count,
             "talkCount": talk_count,
+            "academicHomeCount": len(ACADEMIC_HOMES),
             "years": years,
         },
+        "academicHomes": ACADEMIC_HOMES,
         "events": events,
     }
 
@@ -955,8 +1089,10 @@ def run(arguments: Sequence[str]) -> int:
         displayed_path = str(output_path)
     print("Wrote {}".format(displayed_path))
     print(
-        "Validated {} events and {} talks".format(
-            data["metadata"]["eventCount"], data["metadata"]["talkCount"]
+        "Validated {} events, {} talks, and {} affiliations".format(
+            data["metadata"]["eventCount"],
+            data["metadata"]["talkCount"],
+            data["metadata"]["academicHomeCount"],
         )
     )
     print("Years: {}".format(", ".join(str(year) for year in data["metadata"]["years"])))

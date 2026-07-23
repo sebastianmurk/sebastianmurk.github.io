@@ -6,6 +6,9 @@
 
   const mapElement = document.getElementById("travels-map");
   const filterContainer = document.getElementById("travels-year-filters");
+  const affiliationFilterContainer = document.getElementById(
+    "travels-affiliation-filters",
+  );
   const eventList = document.getElementById("travels-event-list");
   const resultSummary = document.getElementById("travels-result-summary");
   const listCount = document.getElementById("travels-list-count");
@@ -48,11 +51,15 @@
   let mapTilerLayer;
   let mapTilerApiKey = "";
   let markerCluster;
+  let academicHomeLayer;
+  let affiliationsToggleButton;
   let allEvents = [];
+  let academicHomes = [];
   let visibleEvents = [];
   let activeEventId = null;
   let activeYear = null;
   let activeBasemap = "streets";
+  let affiliationsVisible = true;
 
   initialise().catch(showError);
 
@@ -83,9 +90,11 @@
 
     const dataset = await response.json();
     allEvents = validateDataset(dataset);
+    academicHomes = validateAcademicHomes(dataset.academicHomes);
 
     createMap();
     createMarkers();
+    createAcademicHomeMarkers();
     createYearFilters(dataset.metadata && dataset.metadata.years);
     applyYearFilter(null);
     observeMapSize();
@@ -188,6 +197,55 @@
     });
   }
 
+  function validateAcademicHomes(homes) {
+    if (!Array.isArray(homes)) return [];
+
+    const ids = new Set(allEvents.map(function (event) { return event.id; }));
+    return homes.map(function (home) {
+      const location = home && home.location;
+      const requiredText = [
+        home && home.id,
+        home && home.name,
+        location && location.address,
+        location && location.city,
+        location && location.country,
+      ];
+
+      if (requiredText.some(function (value) { return !value; })) {
+        throw new Error("An affiliation is missing information required by the map.");
+      }
+      if (ids.has(home.id)) {
+        throw new Error(`Duplicate map identifier: ${home.id}`);
+      }
+      if (
+        !Number.isFinite(location.latitude) ||
+        !Number.isFinite(location.longitude) ||
+        location.latitude < -90 ||
+        location.latitude > 90 ||
+        location.longitude < -180 ||
+        location.longitude > 180
+      ) {
+        throw new Error(`Invalid coordinates for ${home.name}.`);
+      }
+      if (!Array.isArray(home.affiliations) || home.affiliations.length === 0) {
+        throw new Error(`${home.name} has no affiliation information.`);
+      }
+      home.affiliations.forEach(function (affiliation) {
+        if (
+          !affiliation ||
+          !affiliation.label ||
+          !affiliation.title ||
+          !affiliation.period
+        ) {
+          throw new Error(`${home.name} has incomplete affiliation information.`);
+        }
+      });
+
+      ids.add(home.id);
+      return home;
+    });
+  }
+
   function createMap() {
     map = window.L.map(mapElement, {
       center: [18, 12],
@@ -201,6 +259,9 @@
       worldCopyJump: true,
       preferCanvas: true,
     });
+
+    map.createPane("academicHomesPane");
+    map.getPane("academicHomesPane").style.zIndex = "625";
 
     map.attributionControl.setPrefix(
       '<a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a>',
@@ -231,6 +292,7 @@
       iconCreateFunction: createClusterIcon,
     });
     markerCluster.addTo(map);
+    academicHomeLayer = window.L.layerGroup().addTo(map);
   }
 
   function createBasemapControl() {
@@ -318,6 +380,37 @@
       });
 
       markersById.set(event.id, marker);
+    });
+  }
+
+  function createAcademicHomeMarkers() {
+    academicHomes.forEach(function (home) {
+      const marker = window.L.marker(
+        [home.location.latitude, home.location.longitude],
+        {
+          alt:
+            `${home.name}, ${home.location.city}, ` +
+            `${home.location.country}, affiliation`,
+          icon: createAcademicHomeIcon(home),
+          keyboard: true,
+          pane: "academicHomesPane",
+          riseOnHover: true,
+          title: `${home.name} — affiliation`,
+        },
+      );
+
+      marker.bindPopup(buildAcademicHomePopup(home), {
+        autoPan: false,
+        className: "travels-affiliation-popup",
+        maxWidth: 392,
+        minWidth: 0,
+      });
+
+      marker.on("click", function () {
+        setActiveEvent(null);
+      });
+
+      academicHomeLayer.addLayer(marker);
     });
   }
 
@@ -420,6 +513,51 @@
     });
   }
 
+  function createAcademicHomeIcon(home) {
+    const accessibleName =
+      `${home.name}, ${home.location.city}, ` +
+      `${home.location.country}, affiliation`;
+
+    return window.L.divIcon({
+      className:
+        "travels-leaflet-marker travels-leaflet-marker--academic-home",
+      html:
+        `<span class="travels-academic-home-symbol">` +
+        academicHomeIconMarkup() +
+        `<span class="visually-hidden">${escapeHtml(accessibleName)}</span>` +
+        `</span>`,
+      iconAnchor: [14, 21],
+      iconSize: [28, 25],
+      popupAnchor: [0, -22],
+    });
+  }
+
+  function academicHomeIconMarkup() {
+    return (
+      `<svg class="travels-academic-home-cap" ` +
+      `viewBox="0 0 32 28" aria-hidden="true" focusable="false">` +
+      `<path class="travels-academic-home-cap-shape" ` +
+      `d="M2.5 9.2 16 2.5 29.5 9.2 16 15.9Z"></path>` +
+      `<path class="travels-academic-home-cap-shape" ` +
+      `d="M7.5 13.4v6c4.7 3.5 12.3 3.5 17 0v-6L16 17.7Z"></path>` +
+      `<path class="travels-academic-home-cap-tassel-outline" ` +
+      `d="M29.5 9.2v9.1"></path>` +
+      `<path class="travels-academic-home-cap-tassel" ` +
+      `d="M29.5 9.2v9.1"></path>` +
+      `<circle class="travels-academic-home-cap-end" ` +
+      `cx="29.5" cy="20.2" r="1.55"></circle>` +
+      `</svg>`
+    );
+  }
+
+  function makeAcademicHomeSymbol(className) {
+    const symbol = document.createElement("span");
+    symbol.className = className;
+    symbol.setAttribute("aria-hidden", "true");
+    symbol.innerHTML = academicHomeIconMarkup();
+    return symbol;
+  }
+
   function createClusterIcon(cluster) {
     const childMarkers = cluster.getAllChildMarkers();
     const childYears = new Set(
@@ -460,6 +598,15 @@
 
     years.sort(function (left, right) { return right - left; });
     filterContainer.replaceChildren();
+    affiliationFilterContainer.replaceChildren();
+
+    if (academicHomes.length > 0) {
+      affiliationsToggleButton = makeAffiliationsToggleButton(
+        academicHomes.length,
+      );
+      affiliationFilterContainer.appendChild(affiliationsToggleButton);
+    }
+
     filterContainer.appendChild(
       makeFilterButton(null, "All", allEvents.length),
     );
@@ -472,6 +619,10 @@
         makeFilterButton(Number(year), String(year), count),
       );
     });
+
+    if (affiliationsToggleButton) {
+      updateAffiliationsToggleButton();
+    }
   }
 
   function makeFilterButton(year, label, count) {
@@ -511,6 +662,62 @@
     return button;
   }
 
+  function makeAffiliationsToggleButton(count) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "travels-year-filter travels-affiliations-toggle";
+
+    const symbol = makeAcademicHomeSymbol("travels-academic-home-key");
+
+    const label = document.createElement("span");
+    label.textContent = "Affiliations";
+
+    const countElement = document.createElement("span");
+    countElement.className = "travels-filter-count";
+    countElement.textContent = String(count);
+    countElement.setAttribute("aria-hidden", "true");
+
+    button.append(symbol, label, countElement);
+    button.addEventListener("click", function () {
+      setAffiliationsVisible(!affiliationsVisible);
+    });
+    return button;
+  }
+
+  function setAffiliationsVisible(visible) {
+    affiliationsVisible = Boolean(visible);
+    map.closePopup();
+
+    if (affiliationsVisible) {
+      if (!map.hasLayer(academicHomeLayer)) {
+        academicHomeLayer.addTo(map);
+      }
+    } else if (map.hasLayer(academicHomeLayer)) {
+      map.removeLayer(academicHomeLayer);
+    }
+
+    updateAffiliationsToggleButton();
+    updateSummary();
+    fitVisibleEvents(false);
+  }
+
+  function updateAffiliationsToggleButton() {
+    if (!affiliationsToggleButton) return;
+
+    const affiliationWord = academicHomes.length === 1
+      ? "affiliation"
+      : "affiliations";
+    affiliationsToggleButton.setAttribute(
+      "aria-pressed",
+      affiliationsVisible ? "true" : "false",
+    );
+    affiliationsToggleButton.setAttribute(
+      "aria-label",
+      `${affiliationsVisible ? "Hide" : "Show"} ` +
+        `${academicHomes.length} ${affiliationWord}`,
+    );
+  }
+
   function applyYearFilter(year) {
     activeYear = year;
     activeEventId = null;
@@ -525,13 +732,15 @@
       visibleEvents.map(function (event) { return markersById.get(event.id); }),
     );
 
-    filterContainer.querySelectorAll(".travels-year-filter").forEach(function (button) {
-      const buttonYear = button.dataset.year === "all"
-        ? null
-        : Number(button.dataset.year);
-      const selected = buttonYear === activeYear;
-      button.setAttribute("aria-pressed", selected ? "true" : "false");
-    });
+    filterContainer
+      .querySelectorAll(".travels-year-filter[data-year]")
+      .forEach(function (button) {
+        const buttonYear = button.dataset.year === "all"
+          ? null
+          : Number(button.dataset.year);
+        const selected = buttonYear === activeYear;
+        button.setAttribute("aria-pressed", selected ? "true" : "false");
+      });
 
     renderEventList();
     updateSummary();
@@ -631,31 +840,51 @@
 
   function updateSummary() {
     const eventWord = visibleEvents.length === 1 ? "event" : "events";
+    const visibleAffiliations = affiliationsVisible ? academicHomes : [];
+    const affiliationWord = visibleAffiliations.length === 1
+      ? "affiliation"
+      : "affiliations";
 
     const countries = new Set(
-      visibleEvents.map(function (event) {
-        return event.location.country;
+      visibleEvents.concat(visibleAffiliations).map(function (item) {
+        return item.location.country;
       }),
     ).size;
 
     const countryWord = countries === 1 ? "country" : "countries";
     const yearText = activeYear === null ? "" : ` from ${activeYear}`;
+    let summary = `Showing ${visibleEvents.length} ${eventWord}${yearText}`;
+
+    if (visibleAffiliations.length > 0) {
+      summary +=
+        ` and ${visibleAffiliations.length} ${affiliationWord}`;
+    }
 
     resultSummary.textContent =
-      `Showing ${visibleEvents.length} ${eventWord}${yearText} in ` +
-      `${countries} ${countryWord}.`;
+      `${summary} in ${countries} ${countryWord}.`;
 
     listCount.textContent = `${visibleEvents.length} ${eventWord}`;
   }
 
   function fitVisibleEvents(animate) {
-    if (!map || visibleEvents.length === 0) return;
+    if (!map) return;
 
     window.requestAnimationFrame(function () {
       map.invalidateSize({ pan: false });
       const points = visibleEvents.map(function (event) {
         return [event.location.latitude, event.location.longitude];
       });
+
+      if (activeYear === null && affiliationsVisible) {
+        academicHomes.forEach(function (home) {
+          points.push([
+            home.location.latitude,
+            home.location.longitude,
+          ]);
+        });
+      }
+
+      if (points.length === 0) return;
 
       if (points.length === 1) {
         map.setView(points[0], 7, {
@@ -670,6 +899,50 @@
         padding: [34, 34],
       });
     });
+  }
+
+  function buildAcademicHomePopup(home) {
+    const popup = document.createElement("article");
+    popup.className = "travels-popup travels-academic-home-popup";
+    popup.tabIndex = -1;
+    popup.setAttribute("role", "region");
+    popup.setAttribute("aria-label", `${home.name} affiliation details`);
+
+    const meta = document.createElement("p");
+    meta.className = "travels-popup-meta";
+
+    const symbol = makeAcademicHomeSymbol("travels-academic-home-key");
+    meta.append(symbol, document.createTextNode("Affiliation"));
+
+    const title = document.createElement("h3");
+    title.textContent = home.name;
+
+    const details = document.createElement("dl");
+    details.className = "travels-popup-details";
+
+    const affiliationGroups = new Map();
+    home.affiliations.forEach(function (affiliation) {
+      if (!affiliationGroups.has(affiliation.label)) {
+        affiliationGroups.set(affiliation.label, []);
+      }
+      affiliationGroups.get(affiliation.label).push(affiliation);
+    });
+
+    affiliationGroups.forEach(function (affiliations, label) {
+      const displayLabel = label === "Degree" && affiliations.length > 1
+        ? "Degrees"
+        : label;
+      appendAffiliationDetail(details, displayLabel, affiliations);
+    });
+
+    appendDetail(
+      details,
+      "Location",
+      home.location.address || formatLocation(home.location),
+    );
+
+    popup.append(meta, title, details);
+    return popup;
   }
 
   function buildPopup(event) {
@@ -773,6 +1046,27 @@
     term.textContent = label;
     const description = document.createElement("dd");
     description.textContent = value;
+    list.append(term, description);
+  }
+
+  function appendAffiliationDetail(list, label, affiliations) {
+    if (!affiliations.length) return;
+
+    const term = document.createElement("dt");
+    term.textContent = label;
+    const description = document.createElement("dd");
+
+    affiliations.forEach(function (affiliation) {
+      const line = document.createElement("span");
+      line.className = "travels-affiliation-line";
+      line.textContent = [
+        affiliation.title,
+        affiliation.period,
+        affiliation.note,
+      ].filter(Boolean).join(" · ");
+      description.appendChild(line);
+    });
+
     list.append(term, description);
   }
 
