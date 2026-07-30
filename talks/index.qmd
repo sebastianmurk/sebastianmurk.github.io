@@ -70,7 +70,17 @@ Selected recordings and slides from conference presentations, workshops, and sem
         <p class="talk-date">14–18 July 2025</p>
         <h3 class="talk-title">Light rings and causality for nonsingular ultracompact objects sourced by nonlinear electrodynamics</h3>
         <p class="talk-event">24th International Conference on General Relativity and Gravitation (GR24)</p>
-        <p class="talk-location">University of Glasgow, Scotland, UK</p>
+
+        <div class="talk-card-footer">
+          <p class="talk-location">University of Glasgow, Scotland, UK</p>
+          <a class="talk-action talk-action-slides"
+             href="/assets/talks/20250717-gr24.pdf"
+             target="_blank"
+             rel="noopener"
+             aria-label="Open slides for Light rings and causality for nonsingular ultracompact objects sourced by nonlinear electrodynamics">
+            Slides
+          </a>
+        </div>
       </div>
     </article>
 

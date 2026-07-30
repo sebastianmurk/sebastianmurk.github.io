@@ -1,8 +1,8 @@
 {
   "metadata": {
     "schemaVersion": "1.3.0",
-    "eventCount": 30,
-    "talkCount": 32,
+    "eventCount": 31,
+    "talkCount": 33,
     "academicHomeCount": 6,
     "years": [
       2026,
@@ -136,36 +136,67 @@
     }
   ],
   "events": [
+{
+  "id": "2026-fqmt-praha",
+  "name": "Frontiers of Quantum and Mesoscopic Thermodynamics",
+  "startDate": "2026-07-26",
+  "endDate": "2026-08-01",
+  "year": 2026,
+  "type": "Conference",
+  "hostOrganization": "Institute of Physics of the Czech Academy of Sciences; Committee on Education, Science, Culture, Human Rights and Petitions of the Senate of the Parliament of the Czech Republic",
+  "venue": "OREA Hotel Pyramida Praha",
+  "location": {
+    "address": "Bělohorská 24, 169 01",
+    "city": "Prague",
+    "region": "Prague",
+    "country": "Czech Republic",
+    "latitude": 50.085445977242216,
+    "longitude": 14.379637064501981
+  },
+  "url": "https://fqmt.fzu.cz/26/",
+  "talks": [
     {
-      "id": "2026-rqi-circuit-postdoc-meeting-villamartin",
-      "name": "RQI Circuit 2026 — Postdoc Meeting",
-      "startDate": "2026-06-09",
-      "endDate": "2026-06-13",
-      "year": 2026,
-      "type": "Meeting",
-      "hostOrganization": "International Society for Relativistic Quantum Information; COST Action CA23115 — Relativistic Quantum Information",
-      "venue": "El Tiempo Recobrado",
-      "location": {
-        "address": "Av. Villanueva, 33, 24550 Villamartín de la Abadía, León, Spain",
-        "city": "Villamartín de la Abadía",
-        "region": "León",
-        "country": "Spain",
-        "latitude": 42.5643791422995,
-        "longitude": -6.74712864965576
-      },
-      "url": "https://sites.google.com/view/rqi-postdoc-meeting-2026",
-      "talks": [
-        {
-          "order": 1,
-          "title": "Classical-quantum gravity as quantum gravity in disguise",
-          "contributionType": "Talk",
-          "presentationDate": "2026-06-12",
-          "recordingUrl": "https://www.youtube.com/live/1rpHu-2qTQU?t=12671s",
-          "publicationLabel": "Preprint",
-          "publicationUrl": "https://arxiv.org/abs/2506.15291"
-        }
-      ]
-    },
+      "order": 1,
+      "title": "Classical-quantum gravity as quantum gravity in disguise",
+      "contributionType": "Poster",
+      "presentationDate": "2026-07-30",
+      "posterUrl": "https://sebastianmurk.com/assets/posters/20260730-fqmt.pdf",
+      "publicationLabel": "Preprint",
+      "publicationUrl": "https://arxiv.org/abs/2506.15291"
+    }
+  ]
+},
+{
+  "id": "2026-rqi-circuit-postdoc-meeting-villamartin",
+  "name": "RQI Circuit 2026 — Postdoc Meeting",
+  "startDate": "2026-06-09",
+  "endDate": "2026-06-13",
+  "year": 2026,
+  "type": "Meeting",
+  "hostOrganization": "International Society for Relativistic Quantum Information; COST Action CA23115 — Relativistic Quantum Information",
+  "venue": "El Tiempo Recobrado",
+  "location": {
+    "address": "Av. Villanueva, 33, 24550",
+    "city": "Villamartín de la Abadía",
+    "region": "León",
+    "country": "Spain",
+    "latitude": 42.5643791422995,
+    "longitude": -6.74712864965576
+  },
+  "url": "https://sites.google.com/view/rqi-postdoc-meeting-2026",
+  "talks": [
+    {
+      "order": 1,
+      "title": "Classical-quantum gravity as quantum gravity in disguise",
+      "contributionType": "Talk",
+      "presentationDate": "2026-06-12",
+      "recordingUrl": "https://www.youtube.com/live/1rpHu-2qTQU?t=12671s",
+      "slidesUrl": "https://sebastianmurk.com/assets/talks/20260612-rqi-circuit.pdf",
+      "publicationLabel": "Preprint",
+      "publicationUrl": "https://arxiv.org/abs/2506.15291"
+    }
+  ]
+},
         {
       "id": "2025-ceico-seminar-prague",
       "name": "CEICO Cosmo Seminar",
@@ -176,7 +207,7 @@
       "hostOrganization": "Central European Institute for Cosmology and Fundamental Physics (CEICO)",
       "venue": "Institute of Physics, Czech Academy of Sciences",
       "location": {
-        "address": "Na Slovance 1999/2, 182 00 Praha 8",
+        "address": "Na Slovance 1999/2, 182 00",
         "city": "Prague",
         "region": "Prague",
         "country": "Czech Republic",
@@ -205,7 +236,7 @@
       "hostOrganization": "Institute of Theoretical Physics, Faculty of Mathematics and Physics, Charles University",
       "venue": "Institute of Theoretical Physics, Faculty of Mathematics and Physics, Charles University",
       "location": {
-        "address": "V Holešovičkách 2/747, 180 00 Praha 8",
+        "address": "V Holešovičkách 2/747, 180 00",
         "city": "Prague",
         "region": "Prague",
         "country": "Czech Republic",
@@ -234,7 +265,7 @@
       "hostOrganization": "International Society for Quantum Gravity; The Pennsylvania State University",
       "venue": "Erick J. Barron Innovation Hub",
       "location": {
-        "address": "123 S Burrowes St, State College, PA 16801, United States",
+        "address": "123 S Burrowes St, 16801",
         "city": "State College",
         "region": "Pennsylvania",
         "country": "United States",
@@ -262,7 +293,7 @@
       "hostOrganization": "International Society on General Relativity and Gravitation; University of Glasgow",
       "venue": "Scottish Event Campus, Glasgow",
       "location": {
-        "address": "Exhibition Way, Glasgow G3 8YW, United Kingdom",
+        "address": "Exhibition Way, G3 8YW",
         "city": "Glasgow",
         "region": "Scotland",
         "country": "United Kingdom",
@@ -276,6 +307,7 @@
           "title": "Light rings and causality for nonsingular ultracompact objects sourced by nonlinear electrodynamics",
           "contributionType": "Talk",
           "recordingUrl": "https://youtu.be/UOE1d95je1I?t=1860",
+          "slidesUrl": "https://sebastianmurk.com/assets/talks/20250717-gr24.pdf",
           "publicationLabel": "Publication",
           "publicationUrl": "https://doi.org/10.1103/PhysRevD.110.044064"
         }
@@ -291,7 +323,7 @@
       "hostOrganization": "International Society for Relativistic Quantum Information; COST Action CA23115 — Relativistic Quantum Information; University of Naples Federico II",
       "venue": "University of Naples Federico II",
       "location": {
-        "address": "Aula Ottagonale, Edificio Centrale, Corso Umberto I, 40, 80138 Napoli",
+        "address": "Aula Ottagonale, Edificio Centrale, Corso Umberto I, 40, 80138",
         "city": "Naples",
         "region": "Campania",
         "country": "Italy",
@@ -319,7 +351,7 @@
       "hostOrganization": "Australian Institute of Physics",
       "venue": "Melbourne Convention and Exhibition Centre",
       "location": {
-        "address": "1 Convention Centre Pl, South Wharf VIC 3006, Australia",
+        "address": "1 Convention Centre Pl, South Wharf, 3006",
         "city": "Melbourne",
         "region": "Victoria",
         "country": "Australia",
@@ -347,7 +379,7 @@
       "hostOrganization": "Institute for Quantum Optics and Quantum Information Vienna, Austrian Academy of Sciences; University of Vienna",
       "venue": "Christian Doppler Lecture Hall, Department of Physics, University of Vienna",
       "location": {
-        "address": "Boltzmanngasse 5, 1090 Wien, Austria",
+        "address": "Boltzmanngasse 5, 1090",
         "city": "Vienna",
         "region": "Vienna",
         "country": "Austria",
@@ -375,7 +407,7 @@
       "hostOrganization": "DICE Workshop Organizing Committee",
       "venue": "Castello Pasquini",
       "location": {
-        "address": "Piazza della Vittoria, 1, 57016 Castiglioncello LI, Italy",
+        "address": "Piazza della Vittoria, 1, 57016",
         "city": "Castiglioncello",
         "region": "Tuscany",
         "country": "Italy",
@@ -388,6 +420,7 @@
           "order": 1,
           "title": "Probability vector representation of the Schrödinger equation and Leggett-Garg-type experiments",
           "contributionType": "Talk",
+          "slidesUrl": "https://sebastianmurk.com/assets/talks/20240917-dice.pdf",
           "publicationLabel": "Publication",
           "publicationUrl": "https://doi.org/10.1103/PhysRevA.109.062224"
         }
@@ -403,7 +436,7 @@
       "hostOrganization": "Institute of Physics, Czech Academy of Sciences",
       "venue": "Institute of Physics, Czech Academy of Sciences",
       "location": {
-        "address": "Na Slovance 1999/2, 182 00 Praha 8",
+        "address": "Na Slovance 1999/2, 182 00",
         "city": "Prague",
         "region": "Prague",
         "country": "Czech Republic",
@@ -432,7 +465,7 @@
       "hostOrganization": "International Society for Relativistic Quantum Information; Faculty of Mathematics and Physics, Charles University",
       "venue": "IMPAKT Building, Faculty of Mathematics and Physics, Charles University",
       "location": {
-        "address": "V Holešovičkách 2, 180 00 Praha 8",
+        "address": "V Holešovičkách 2, 180 00",
         "city": "Prague",
         "region": "Prague",
         "country": "Czech Republic",
@@ -459,7 +492,7 @@
       "hostOrganization": "International Center for Relativistic Astrophysics Network (ICRANet)",
       "venue": "Gabriele d’Annunzio University",
       "location": {
-        "address": "Viale Pindaro, 42, 65127 Pescara PE, Italy",
+        "address": "Viale Pindaro, 42, 65127",
         "city": "Pescara",
         "region": "Abruzzo",
         "country": "Italy",
@@ -487,7 +520,7 @@
       "hostOrganization": "The University of The Bahamas",
       "venue": "RBC Auditorium, Franklyn R. Wilson Graduate Centre, University of The Bahamas",
       "location": {
-        "address": "N, 4912, University Drive, Nassau, Bahamas",
+        "address": "University Drive, P.O. Box N-4912",
         "city": "Nassau",
         "region": "New Providence",
         "country": "The Bahamas",
@@ -516,7 +549,7 @@
       "hostOrganization": "International Society for Relativistic Quantum Information; The University of Queensland",
       "venue": "Customs House",
       "location": {
-        "address": "399 Queen St, Brisbane City QLD 4000, Australia",
+        "address": "399 Queen St, 4000",
         "city": "Brisbane",
         "region": "Queensland",
         "country": "Australia",
@@ -543,7 +576,7 @@
       "hostOrganization": "Yukawa Institute for Theoretical Physics, Kyoto University",
       "venue": "Panasonic Auditorium, Yukawa Hall, Yukawa Institute for Theoretical Physics, Kyoto University",
       "location": {
-        "address": "Kitashirakawa Oiwakecho, Sakyo Ward, Kyoto 606-8502, Japan",
+        "address": "Kitashirakawa Oiwakecho, Sakyo Ward, 606-8502",
         "city": "Kyoto",
         "region": "Kyoto Prefecture",
         "country": "Japan",
@@ -573,7 +606,7 @@
       "hostOrganization": "Particle Theory and Cosmology Group, Tohoku University",
       "venue": "Aobayama Campus, Tohoku University",
       "location": {
-        "address": "Aobayama North Campus, 6-3 Aoba, Aramaki, Aoba-ku, Sendai, Miyagi 980-8579, Japan",
+        "address": "Aobayama North Campus, 6-3 Aoba, Aramaki, Aoba-ku, 980-8579",
         "city": "Sendai",
         "region": "Miyagi",
         "country": "Japan",
@@ -601,7 +634,7 @@
       "hostOrganization": "Minkowski Institute for Foundational Studies",
       "venue": "Hotel Sandy Beach",
       "location": {
-        "address": "Albena Resort, 9620 Albena, Bulgaria",
+        "address": "Albena Resort, 9620",
         "city": "Albena",
         "country": "Bulgaria",
         "latitude": 43.366503,
@@ -628,7 +661,7 @@
       "hostOrganization": "International Society for Relativistic Quantum Information; Technical University of Crete",
       "venue": "Technical University of Crete",
       "location": {
-        "address": "Akrotiri Campus, Chania 731 00, Greece",
+        "address": "Akrotiri Campus, 731 00",
         "city": "Chania",
         "region": "Crete",
         "country": "Greece",
@@ -656,7 +689,7 @@
       "hostOrganization": "International Society for Quantum Gravity; Radboud University",
       "venue": "Collegezalencomplex, Radboud University",
       "location": {
-        "address": "Mercatorpad 1, 6525 HS Nijmegen, Netherlands",
+        "address": "Mercatorpad 1, 6525 HS",
         "city": "Nijmegen",
         "region": "Gelderland",
         "country": "Netherlands",
@@ -685,7 +718,7 @@
       "hostOrganization": "Australian Institute of Physics",
       "venue": "Adelaide Convention Centre",
       "location": {
-        "address": "North Terrace, Adelaide SA 5000, Australia",
+        "address": "North Terrace, 5000",
         "city": "Adelaide",
         "region": "South Australia",
         "country": "Australia",
@@ -719,7 +752,7 @@
       "hostOrganization": "Northern Sydney Astronomical Society",
       "venue": "Saint Ignatius' College Riverview",
       "location": {
-        "address": "115 Tambourine Bay Rd, Riverview NSW 2066, Australia",
+        "address": "115 Tambourine Bay Rd, Riverview, 2066",
         "city": "Sydney",
         "region": "New South Wales",
         "country": "Australia",
@@ -747,7 +780,7 @@
       "hostOrganization": "Sydney Quantum Academy",
       "venue": "Belinda Hutchinson Building (H70), The University of Sydney",
       "location": {
-        "address": "Darlington NSW 2008, Australia",
+        "address": "Darlington, 2008",
         "city": "Sydney",
         "region": "New South Wales",
         "country": "Australia",
@@ -772,7 +805,7 @@
       "hostOrganization": "Australian Institute of Physics",
       "venue": "Concord Golf Club",
       "location": {
-        "address": "190 Majors Bay Rd, Concord NSW 2137, Australia",
+        "address": "190 Majors Bay Rd, Concord, 2137",
         "city": "Sydney",
         "region": "New South Wales",
         "country": "Australia",
@@ -800,7 +833,7 @@
       "hostOrganization": "International Society for Relativistic Quantum Information; The University of Queensland",
       "venue": "Customs House",
       "location": {
-        "address": "399 Queen St, Brisbane City QLD 4000, Australia",
+        "address": "399 Queen St, 4000",
         "city": "Brisbane",
         "region": "Queensland",
         "country": "Australia",
@@ -825,7 +858,7 @@
       "hostOrganization": "The University of Hong Kong",
       "venue": "Island Pacific Hotel",
       "location": {
-        "address": "152 Connaught Rd W, Sai Ying Pun, Hong Kong",
+        "address": "152 Connaught Rd W, Sai Ying Pun",
         "city": "Hong Kong",
         "country": "Hong Kong",
         "latitude": 22.2883656996633,
@@ -850,7 +883,7 @@
       "hostOrganization": "Laboratoire de Physique, École normale supérieure de Lyon",
       "venue": "École normale supérieure de Lyon",
       "location": {
-        "address": "46 All. d'Italie, 69007 Lyon, France",
+        "address": "46 All. d'Italie, 69007",
         "city": "Lyon",
         "region": "Auvergne-Rhône-Alpes",
         "country": "France",
@@ -878,7 +911,7 @@
       "hostOrganization": "International Society on General Relativity and Gravitation; Universitat de València",
       "venue": "Palacio de Congresos de Valencia",
       "location": {
-        "address": "Av. de les Corts Valencianes, 60, Pobles de l'Oest, 46015 València, Valencia, Spain",
+        "address": "Av. de les Corts Valencianes, 60, Pobles de l'Oest, 46015",
         "city": "València",
         "region": "Valencian Community",
         "country": "Spain",
@@ -912,7 +945,7 @@
       "hostOrganization": "International Society for Relativistic Quantum Information; The University of Queensland",
       "venue": "Customs House",
       "location": {
-        "address": "399 Queen St, Brisbane City QLD 4000, Australia",
+        "address": "399 Queen St, 4000",
         "city": "Brisbane",
         "region": "Queensland",
         "country": "Australia",
@@ -939,7 +972,7 @@
       "hostOrganization": "Australian Institute of Physics",
       "venue": "The University of Western Australia",
       "location": {
-        "address": "35 Stirling Hwy, Crawley WA 6009, Australia",
+        "address": "35 Stirling Hwy, Crawley, 6009",
         "city": "Perth",
         "region": "Western Australia",
         "country": "Australia",
@@ -966,7 +999,7 @@
       "hostOrganization": "Australian Mathematical Sciences Institute; The University of Queensland",
       "venue": "The University of Queensland",
       "location": {
-        "address": "St Lucia QLD 4072, Australia",
+        "address": "St Lucia, 4072",
         "city": "Brisbane",
         "region": "Queensland",
         "country": "Australia",

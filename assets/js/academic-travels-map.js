@@ -167,7 +167,7 @@
         ) {
           throw new Error(`${event.name} has invalid contribution information.`);
         }
-        [talk.recordingUrl, talk.slidesUrl, talk.publicationUrl]
+        [talk.recordingUrl,talk.slidesUrl,talk.posterUrl,talk.publicationUrl]
           .filter(Boolean)
           .forEach(function (url) {
             if (typeof url !== "string" || !/^https?:\/\/\S+$/.test(url)) {
@@ -938,7 +938,7 @@
     appendDetail(
       details,
       "Location",
-      home.location.address || formatLocation(home.location),
+      formatAddress(home.location) || formatLocation(home.location),
     );
 
     popup.append(meta, title, details);
@@ -973,7 +973,7 @@
     appendDetail(
       details,
       "Location",
-      [event.location.address, formatLocation(event.location)]
+      [formatAddress(event.location), formatLocation(event.location)]
         .filter(Boolean)
         .join(" · "),
     );
@@ -997,7 +997,7 @@
       talkTitle.textContent = talk.title;
       talkItem.appendChild(talkTitle);
 
-      if (talk.recordingUrl || talk.slidesUrl || talk.publicationUrl) {
+      if (talk.recordingUrl || talk.slidesUrl || talk.posterUrl || talk.publicationUrl) {
         const actions = document.createElement("p");
         actions.className = "travels-popup-actions";
         if (talk.recordingUrl) {
@@ -1005,6 +1005,9 @@
         }
         if (talk.slidesUrl) {
           actions.appendChild(makeExternalLink(talk.slidesUrl, "Slides"));
+        }
+        if (talk.posterUrl) {
+          actions.appendChild(makeExternalLink(talk.posterUrl, "Poster"));
         }
         if (talk.publicationUrl) {
           actions.appendChild(
@@ -1079,9 +1082,29 @@
     return link;
   }
 
+  function formatAddress(location) {
+    const address = location.address || "";
+    if (
+      location.country !== "Czech Republic" &&
+      location.country !== "Czechia"
+    ) {
+      return address;
+    }
+    return address.replace(
+      /\b(\d{3})[ \u00a0](\d{2})\b/g,
+      "$1\u00a0$2",
+    );
+  }
+
+  function samePlaceName(left, right) {
+    return left.trim().localeCompare(right.trim(), "en", {
+      sensitivity: "base",
+    }) === 0;
+  }
+
   function formatLocation(location) {
     const parts = [location.city];
-    if (location.region && location.region !== location.city) {
+    if (location.region && !samePlaceName(location.region, location.city)) {
       parts.push(location.region);
     }
     parts.push(location.country);
