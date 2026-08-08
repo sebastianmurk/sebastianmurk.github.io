@@ -137,6 +137,37 @@
   ],
   "events": [
 {
+  "id": "2026-tqftcs-sãopaulo-brazil",
+  "name": "Thermality in Quantum Field Theory in Curved Spacetimes",
+  "startDate": "2026-08-03",
+  "endDate": "2026-08-07",
+  "year": 2026,
+  "type": "Conference",
+  "hostOrganization": "International Centre for Theoretical Physics (ICTP); South American Institute for Fundamental Research (SAIFR)",
+  "venue": "Instituto Principia",
+  "location": {
+    "address": "Rua Pamplona, 145 - Cerqueira César",
+    "city": "São Paulo",
+    "region": "SP 01405-900",
+    "country": "Brazil",
+    "latitude": -23.559793070997976, 
+    "longitude": -46.65109914378208
+  },
+  "url": "https://www.ictp-saifr.org/tqftcs2026/",
+  "talks": [
+    {
+      "order": 1,
+      "title": "Thermodynamics of regular black holes in anti-de Sitter space",
+      "contributionType": "Talk",
+      "presentationDate": "2026-08-06",
+      "recordingUrl": "https://www.youtube.com/watch?v=0Y-zKNmziuc",
+      "slidesUrl": "https://sebastianmurk.com/assets/talks/20260806-tqftcs.pdf",
+      "publicationLabel": "Publication",
+      "publicationUrl": "https://doi.org/10.1007/JHEP11(2025)121"
+    }
+  ]
+},  
+{
   "id": "2026-fqmt-praha",
   "name": "Frontiers of Quantum and Mesoscopic Thermodynamics",
   "startDate": "2026-07-26",

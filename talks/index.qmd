@@ -1,6 +1,6 @@
 ---
 title: "Talks"
-body-class: talks-page
+body-classes: talks-page
 ---
 
 <p class="page-subtitle">
@@ -8,12 +8,42 @@ Selected recordings and slides from conference presentations, workshops, and sem
 </p>
 
 ```{=html}
-<div class="talk-year-pair">
 
 <section class="talk-year-section" aria-labelledby="talks-2026">
   <h2 id="talks-2026">2026</h2>
 
   <div class="talk-grid">
+
+    <article class="talk-card">
+      <a class="talk-preview talk-preview-image"
+         href="https://www.youtube.com/watch?v=0Y-zKNmziuc"
+         target="_blank"
+         rel="noopener"
+         aria-label="Watch video: Thermodynamics of regular black holes in anti-de Sitter space">
+        <img src="https://img.youtube.com/vi/0Y-zKNmziuc/hqdefault.jpg"
+             alt=""
+             loading="lazy">
+        <span class="talk-play" aria-hidden="true"></span>
+      </a>
+
+      <div class="talk-card-body">
+        <p class="talk-date">6 August 2026</p>
+        <h3 class="talk-title">Thermodynamics of regular black holes in anti-de Sitter space</h3>
+        <p class="talk-event">Thermality in Quantum Field Theory in Curved Spacetimes Conference</p>
+
+        <div class="talk-card-footer">
+          <p class="talk-location">ICTP–SAIFR, Instituto Principia, São Paulo, Brazil</p>
+
+          <a class="talk-action talk-action-slides"
+             href="/assets/talks/20260806-tqftcs.pdf"
+             target="_blank"
+             rel="noopener"
+             aria-label="Open slides for Thermodynamics of regular black holes in anti-de Sitter space">
+            Slides
+          </a>
+        </div>
+      </div>
+    </article>
 
     <article class="talk-card">
       <a class="talk-preview talk-preview-image"
@@ -49,6 +79,7 @@ Selected recordings and slides from conference presentations, workshops, and sem
   </div>
 </section>
 
+
 <section class="talk-year-section" aria-labelledby="talks-2025">
   <h2 id="talks-2025">2025</h2>
 
@@ -73,6 +104,7 @@ Selected recordings and slides from conference presentations, workshops, and sem
 
         <div class="talk-card-footer">
           <p class="talk-location">University of Glasgow, Scotland, UK</p>
+
           <a class="talk-action talk-action-slides"
              href="/assets/talks/20250717-gr24.pdf"
              target="_blank"
@@ -86,8 +118,6 @@ Selected recordings and slides from conference presentations, workshops, and sem
 
   </div>
 </section>
-
-</div>
 
 
 <section class="talk-year-section" aria-labelledby="talks-2024">
@@ -110,6 +140,7 @@ Selected recordings and slides from conference presentations, workshops, and sem
         <h3 class="talk-title">Kinematic and thermodynamic properties <br> of dynamical regular black holes</h3>
         <p class="talk-event">Black Holes &amp; Cosmology 2024</p>
         <p class="talk-location">University of The Bahamas, Nassau, The Bahamas</p>
+
         <p class="talk-actions">
           <a class="talk-action talk-action-slides"
              href="https://indico.mpp.mpg.de/event/9815/page/363-contributions"
@@ -135,11 +166,13 @@ Selected recordings and slides from conference presentations, workshops, and sem
         <h3 class="talk-title">Kinematic and thermodynamic properties <br> of dynamical regular black holes</h3>
         <p class="talk-event">Long-term workshop “Gravity and Cosmology 2024”</p>
         <p class="talk-location">Yukawa Institute for Theoretical Physics,<br> Kyoto University, Kyoto, Japan</p>
+
         <p class="talk-actions">
           <a class="talk-action talk-action-video"
              href="https://www2.yukawa.kyoto-u.ac.jp/~gc2024/records/240228-11_Murk.mp4"
              target="_blank"
              rel="noopener">Video</a>
+
           <a class="talk-action talk-action-slides"
              href="https://www2.yukawa.kyoto-u.ac.jp/~gc2024/slides/240228-11_Murk.pdf"
              target="_blank"
@@ -243,11 +276,13 @@ Selected recordings and slides from conference presentations, workshops, and sem
         <h3 class="talk-title">Physical black holes in <br> modified theories of gravity</h3>
         <p class="talk-event">23rd International Conference on General Relativity and Gravitation (GR23)</p>
         <p class="talk-location">Parallel Session A3 — Alternative and modified theories of gravity; Institute of Theoretical Physics, Chinese Academy of Sciences, Liyang, China</p>
+
         <p class="talk-actions">
           <a class="talk-action talk-action-video"
              href="https://www.koushare.com/video/videodetail/30603"
              target="_blank"
              rel="noopener">Video</a>
+
           <a class="talk-action talk-action-slides"
              href="http://gr23beijing.com/uploads/2022/07/122231011955.pdf"
              target="_blank"
@@ -262,7 +297,7 @@ Selected recordings and slides from conference presentations, workshops, and sem
          href="http://gr23beijing.com/uploads/2022/06/252200149506.pdf"
          target="_blank"
          rel="noopener"
-         aria-label="Open slides: Generalisations of surface gravity <br> to dynamical apparent horizons">
+         aria-label="Open slides: Generalisations of surface gravity to dynamical apparent horizons">
         <span class="talk-preview-kicker">Slides</span>
         <span class="talk-preview-text">GR23 Parallel Session D4</span>
       </a>
@@ -272,6 +307,7 @@ Selected recordings and slides from conference presentations, workshops, and sem
         <h3 class="talk-title">Generalisations of surface gravity <br> to dynamical apparent horizons</h3>
         <p class="talk-event">23rd International Conference on General Relativity and Gravitation (GR23)</p>
         <p class="talk-location">Parallel Session D4 — Quantum fields in curved spacetime and quantum gravity phenomenology; Institute of Theoretical Physics, Chinese Academy of Sciences, Liyang, China</p>
+
         <p class="talk-actions">
           <a class="talk-action talk-action-slides"
              href="http://gr23beijing.com/uploads/2022/06/252200149506.pdf"

@@ -202,13 +202,13 @@ page-layout: full
     </div>
 
     <article class="home-latest-item">
-      <time class="home-latest-date" datetime="2026-08-03">3&ndash;7 August 2026</time>
+      <time class="home-latest-date" datetime="2026-08-03">10&ndash;14 August 2026</time>
 
-      <a class="home-latest-title" href="https://www.ictp-saifr.org/tqftcs2026/" target="_blank" rel="noopener">
-        Conference: <em>Thermality in Quantum Field Theory in Curved Spacetimes</em>
+      <a class="home-latest-title" href="https://iip.ufrn.br/en/events/quantum-thermodynamics-conference" target="_blank" rel="noopener">
+        Conference: <em>Quantum Thermodynamics</em>
       </a>
 
-      <p class="home-latest-links">São Paulo, Brazil</p>
+      <p class="home-latest-links">Natal, Brazil</p>
     </article>
   </aside>
 
