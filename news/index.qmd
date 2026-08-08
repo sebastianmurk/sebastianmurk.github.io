@@ -9,6 +9,33 @@ Updates on my research, publication highlights, conferences, seminars, and relat
 <div class="news-list">
 
 <article class="news-item">
+  <time class="news-date" datetime="2026-08-06">6 August 2026</time>
+
+  <h2 class="news-title">
+    ICTP–SAIFR conference talk available on YouTube
+  </h2>
+
+  <p>
+    My talk <em>&ldquo;Thermodynamics of regular black holes in anti-de Sitter space&rdquo;</em> from the <em>Thermality in Quantum Field Theory in Curved Spacetimes</em> conference held at the Instituto Principia in São Paulo, Brazil, is now live on YouTube.
+  </p>
+
+  <a class="video-preview" href="https://www.youtube.com/watch?v=0Y-zKNmziuc" aria-label="Watch Thermodynamics of regular black holes in anti-de Sitter space on YouTube">
+    <img
+      src="https://img.youtube.com/vi/0Y-zKNmziuc/hqdefault.jpg"
+      alt="Video thumbnail for the talk Thermodynamics of regular black holes in anti-de Sitter space"
+      loading="lazy">
+    <span class="video-play" aria-hidden="true">▶</span>
+    <span class="video-label">Watch on YouTube</span>
+  </a>
+
+  <p class="news-links">
+    <a href="https://www.youtube.com/watch?v=0Y-zKNmziuc">YouTube</a>
+    <span aria-hidden="true">·</span>
+    <a href="/assets/talks/20260806-tqftcs.pdf" target="_blank" rel="noopener">Slides</a>
+  </p>
+</article>
+
+<article class="news-item">
   <time class="news-date" datetime="2026-06-24">24 June 2026</time>
 
   <h2 class="news-title">
@@ -80,6 +107,8 @@ Updates on my research, publication highlights, conferences, seminars, and relat
 
   <p class="news-links">
     <a href="https://www.youtube.com/live/1rpHu-2qTQU?t=12671s">YouTube</a>
+    <span aria-hidden="true">·</span>
+    <a href="/assets/talks/20260612-rqi-circuit.pdf" target="_blank" rel="noopener">Slides</a>
   </p>
 </article>
 
