@@ -137,6 +137,36 @@
   ],
   "events": [
 {
+  "id": "qtd-2026-natal-brazil",
+  "name": "Quantum Thermodynamics",
+  "startDate": "2026-08-10",
+  "endDate": "2026-08-14",
+  "year": 2026,
+  "type": "Conference",
+  "hostOrganization": "International Institute of Physics (IIP)",
+  "venue": "International Institute of Physics (IIP) at the Federal University of Rio Grande do Norte (UFRN)",
+  "location": {
+    "address": "Anel Viário da UFRN - Lagoa Nova",
+    "city": "Natal",
+    "region": "RN 59078-970",
+    "country": "Brazil",
+    "latitude": -5.84038145219003, 
+    "longitude": -35.19560682242541
+  },
+  "url": "https://iip.ufrn.br/en/events/quantum-thermodynamics-conference",
+  "talks": [
+    {
+      "order": 1,
+      "title": "Classical-quantum gravity as quantum gravity in disguise",
+      "contributionType": "Poster",
+      "presentationDate": "2026-08-11",
+      "posterUrl": "https://sebastianmurk.com/assets/posters/20260730-fqmt.pdf",
+      "publicationLabel": "Preprint",
+      "publicationUrl": "https://arxiv.org/abs/2506.15291"
+    }
+  ]
+}, 
+{
   "id": "2026-tqftcs-sãopaulo-brazil",
   "name": "Thermality in Quantum Field Theory in Curved Spacetimes",
   "startDate": "2026-08-03",

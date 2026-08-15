@@ -1732,6 +1732,12 @@ body.photos-page .photo-location {
   }
 }
 
+.home-up-next-rail .home-latest-title {
+  display: block;
+  text-wrap: balance;
+  white-space: normal;
+}
+
 /* Shift only the top Home-page hero area:
    title + portrait + bio + Latest sidebar.
    Keep publications/contact/Leiden centred. */

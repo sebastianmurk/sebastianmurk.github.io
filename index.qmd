@@ -202,13 +202,13 @@ page-layout: full
     </div>
 
     <article class="home-latest-item">
-      <time class="home-latest-date" datetime="2026-08-10">10&ndash;14 August 2026</time>
+      <time class="home-latest-date" datetime="2026-08-10">14&ndash;18 September 2026</time>
 
-      <a class="home-latest-title" href="https://iip.ufrn.br/en/events/quantum-thermodynamics-conference" target="_blank" rel="noopener">
-        Conference: <em>Quantum Thermodynamics</em>
+      <a class="home-latest-title" href="https://indico.global/event/17643/" target="_blank" rel="noopener">
+        Conference: <em>Puzzles in the QG landscape</em>
       </a>
 
-      <p class="home-latest-links">Natal, Brazil</p>
+      <p class="home-latest-links">Graz, Austria</p>
     </article>
   </aside>
 
