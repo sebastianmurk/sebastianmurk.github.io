@@ -1,156 +1,9 @@
 ---
 pagetitle: "Photos"
-body-class: photos-page
+body-classes: photos-page
 page-layout: full
 ---
 
-<style>
-body.photos-page main.content,
-body.photos-page #quarto-document-content {
-  max-width: none;
-}
-
-.photos-shell {
-  --photos-width: 930px;
-  --photos-gap-x: 1.55rem;
-  --photos-gap-y: 1.75rem;
-
-  width: min(var(--photos-width), calc(100vw - 2rem));
-  margin: 0 auto;
-  padding-top: 0rem;
-}
-
-.photos-title {
-  margin: 0;
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 2.05rem;
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
-  color: #252a32;
-}
-
-.photos-subtitle {
-  margin: 0.45rem 0 0;
-  color: #4f5965;
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.55;
-}
-
-.photos-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--photos-gap-y) var(--photos-gap-x);
-  margin-top: 2rem;
-}
-
-.photo-card {
-  min-width: 0;
-  margin: 0;
-}
-
-.photo-button {
-  display: block;
-  width: 100%;
-  padding: 0;
-  border: 0;
-  appearance: none;
-  -webkit-appearance: none;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  border-radius: 0.8rem;
-  background: #f2f2f0;
-  box-shadow: 0 0.12rem 0.7rem rgba(0, 0, 0, 0.08);
-  cursor: zoom-in;
-  line-height: 0;
-}
-
-.photo-button:hover .photo-image,
-.photo-button:focus .photo-image {
-  transform: scale(1.025);
-}
-
-.photo-button:focus-visible {
-  outline: 3px solid rgba(38, 65, 141, 0.45);
-  outline-offset: 4px;
-}
-
-.photo-image {
-  display: block;
-  width: 100%;
-  max-width: none;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition: transform 180ms ease;
-}
-
-.photo-card figcaption {
-  margin-top: 0.55rem;
-  padding: 0;
-  line-height: 1.25;
-}
-
-.photo-caption {
-  display: block;
-  padding: 0;
-  font-family: "Source Serif 4", Georgia, Cambria, "Times New Roman", serif;
-  font-size: 1rem;
-  font-weight: 450;
-  line-height: 1.18;
-  color: #3f3f3f;
-}
-
-.photo-place {
-  display: block;
-  margin-top: 0.08rem;
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.86rem;
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: 0.005em;
-  color: #707070;
-}
-
-@media (max-width: 900px) {
-  .photos-gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 620px) {
-  .photos-shell {
-    --photos-gap-y: 1.3rem;
-
-    width: min(100%, calc(100vw - 1.4rem));
-    padding-top: 1.1rem;
-  }
-
-  .photos-gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .photo-lightbox {
-    padding: 1rem;
-  }
-
-  .photo-lightbox-image {
-    max-height: 76vh;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .photo-image {
-    transition: none;
-  }
-
-  .photo-button:hover .photo-image,
-  .photo-button:focus .photo-image {
-    transform: none;
-  }
-}
-</style>
 
 <div class="photos-shell">
 
@@ -183,22 +36,42 @@ A small collection of photos from my travels.
 </figure>
 
 <figure class="photo-card">
-  <button class="photo-button" type="button" data-full="/assets/photos/large/cherry-blossoms-okinawa-jp.webp" aria-label="Open larger image: Spring arrives early in pink">
-    <img class="photo-image" src="/assets/photos/thumbs/cherry-blossoms-okinawa-jp.webp" alt="Cherry blossoms in Okinawa, Japan" width="750" height="1000" loading="eager" decoding="async">
-  </button>
-  <figcaption>
-    <span class="photo-caption">Spring arrives early in pink</span>
-    <span class="photo-place">Mt. Yaedake, Okinawa, Japan</span>
-  </figcaption>
-</figure>
-
-<figure class="photo-card">
   <button class="photo-button" type="button" data-full="/assets/photos/large/nakijin-okinawa-jp.webp" aria-label="Open larger image: Evening light through the trees">
-    <img class="photo-image" src="/assets/photos/thumbs/nakijin-okinawa-jp.webp" alt="Evening light through the trees in Nakijin, Okinawa, Japan" width="720" height="900" loading="lazy" decoding="async">
+    <img class="photo-image" src="/assets/photos/thumbs/nakijin-okinawa-jp.webp" alt="Evening light through the trees in Nakijin, Okinawa, Japan" width="720" height="900" loading="eager" decoding="async">
   </button>
   <figcaption>
     <span class="photo-caption">Evening light through the trees</span>
     <span class="photo-place">Nakijin, Okinawa, Japan</span>
+  </figcaption>
+</figure>
+
+<figure class="photo-card">
+  <button class="photo-button" type="button" data-full="/assets/photos/large/forest-trail-bavaria-de.webp" aria-label="Open larger image: Walking under a green canopy">
+    <img class="photo-image" src="/assets/photos/thumbs/forest-trail-bavaria-de.webp" alt="Sunlit path through a green forest in Bavaria, Germany" width="732" height="1000" loading="eager" decoding="async">
+  </button>
+  <figcaption>
+    <span class="photo-caption">Walking under a green canopy</span>
+    <span class="photo-place">Bavaria, Germany</span>
+  </figcaption>
+</figure>
+
+<figure class="photo-card">
+  <button class="photo-button" type="button" data-full="/assets/photos/large/genipabu-dunes-rn-br.webp" aria-label="Open larger image: Dunes above the Atlantic">
+    <img class="photo-image" src="/assets/photos/thumbs/genipabu-dunes-rn-br.webp" alt="Sand dunes overlooking the Atlantic coast at Genipabu, Brazil" width="1000" height="750" loading="lazy" decoding="async">
+  </button>
+  <figcaption>
+    <span class="photo-caption">Dunes above the Atlantic</span>
+    <span class="photo-place">Genipabu Dunes, RN, Brazil</span>
+  </figcaption>
+</figure>
+
+<figure class="photo-card">
+  <button class="photo-button" type="button" data-full="/assets/photos/large/lone-tree-barra-do-rio-rn-br.webp" aria-label="Open larger image: Alone beneath the gathering storm">
+    <img class="photo-image" src="/assets/photos/thumbs/lone-tree-barra-do-rio-rn-br.webp" alt="Lone tree beneath storm clouds at the Ceará-Mirim River estuary, Brazil" width="1000" height="750" loading="lazy" decoding="async">
+  </button>
+  <figcaption>
+    <span class="photo-caption">Alone beneath the gathering storm</span>
+    <span class="photo-place">Barra do Rio, Extremoz, RN, Brazil</span>
   </figcaption>
 </figure>
 
@@ -218,37 +91,7 @@ A small collection of photos from my travels.
   </button>
   <figcaption>
     <span class="photo-caption">Hiking near Wentworth Falls</span>
-    <span class="photo-place">Blue Mountains, NSW</span>
-  </figcaption>
-</figure>
-
-<figure class="photo-card">
-  <button class="photo-button" type="button" data-full="/assets/photos/large/booti-booti-national-park-nsw-au.webp" aria-label="Open larger image: A quiet curve of coast">
-    <img class="photo-image" src="/assets/photos/thumbs/booti-booti-national-park-nsw-au.webp" alt="A quiet curve of coast at Booti Booti National Park, New South Wales" width="1000" height="755" loading="lazy" decoding="async">
-  </button>
-  <figcaption>
-    <span class="photo-caption">A quiet curve of coast</span>
-    <span class="photo-place">Booti Booti National Park, NSW</span>
-  </figcaption>
-</figure>
-
-<figure class="photo-card">
-  <button class="photo-button" type="button" data-full="/assets/photos/large/byron-bay-nsw-au.webp" aria-label="Open larger image: Last light over the beach">
-    <img class="photo-image" src="/assets/photos/thumbs/byron-bay-nsw-au.webp" alt="Last light over the beach at Byron Bay, New South Wales" width="1000" height="750" loading="lazy" decoding="async">
-  </button>
-  <figcaption>
-    <span class="photo-caption">Last light over the beach</span>
-    <span class="photo-place">Byron Bay, NSW</span>
-  </figcaption>
-</figure>
-
-<figure class="photo-card">
-  <button class="photo-button" type="button" data-full="/assets/photos/large/wallis-lake-nsw-au.webp" aria-label="Open larger image: Soft dusk over the lake">
-    <img class="photo-image" src="/assets/photos/thumbs/wallis-lake-nsw-au.webp" alt="Soft dusk over Wallis Lake, New South Wales" width="1000" height="750" loading="lazy" decoding="async">
-  </button>
-  <figcaption>
-    <span class="photo-caption">Soft dusk over the lake</span>
-    <span class="photo-place">Wallis Lake, NSW</span>
+    <span class="photo-place">Blue Mountains, NSW, Australia</span>
   </figcaption>
 </figure>
 
@@ -258,7 +101,37 @@ A small collection of photos from my travels.
   </button>
   <figcaption>
     <span class="photo-caption">An inquisitive island local</span>
-    <span class="photo-place">Rottnest Island, WA</span>
+    <span class="photo-place">Rottnest Island, WA, Australia</span>
+  </figcaption>
+</figure>
+
+<figure class="photo-card">
+  <button class="photo-button" type="button" data-full="/assets/photos/large/lipan-slope-jujuy-ar.webp" aria-label="Open larger image: Winding descent through the Andes">
+    <img class="photo-image" src="/assets/photos/thumbs/lipan-slope-jujuy-ar.webp" alt="Winding road descending through the arid Andes at Cuesta de Lipán, Argentina" width="1000" height="750" loading="lazy" decoding="async">
+  </button>
+  <figcaption>
+    <span class="photo-caption">Winding descent through the Andes</span>
+    <span class="photo-place">Cuesta de Lipán, Jujuy, Argentina</span>
+  </figcaption>
+</figure>
+
+<figure class="photo-card">
+  <button class="photo-button" type="button" data-full="/assets/photos/large/route68-salta-ar.webp" aria-label="Open larger image: Between red rock and blue sky">
+    <img class="photo-image" src="/assets/photos/thumbs/route68-salta-ar.webp" alt="Red rock landscape beneath a blue sky along Route 68 in Salta, Argentina" width="1000" height="750" loading="lazy" decoding="async">
+  </button>
+  <figcaption>
+    <span class="photo-caption">Between red rock and blue sky</span>
+    <span class="photo-place">Route 68, Salta, Argentina</span>
+  </figcaption>
+</figure>
+
+<figure class="photo-card">
+  <button class="photo-button" type="button" data-full="/assets/photos/large/salt-flats-jujuy-ar.webp" aria-label="Open larger image: Clouds gathering over the salt flats">
+    <img class="photo-image" src="/assets/photos/thumbs/salt-flats-jujuy-ar.webp" alt="Salt flats beneath gathering storm clouds at Salinas Grandes, Argentina" width="1000" height="750" loading="lazy" decoding="async">
+  </button>
+  <figcaption>
+    <span class="photo-caption">Clouds gathering over the salt flats</span>
+    <span class="photo-place">Salinas Grandes, Jujuy, Argentina</span>
   </figcaption>
 </figure>
 
@@ -273,12 +146,112 @@ A small collection of photos from my travels.
 </figure>
 
 <figure class="photo-card">
-  <button class="photo-button" type="button" data-full="/assets/photos/large/outback-sunset-au.webp" aria-label="Open larger image: Sunset over open country">
+  <button class="photo-button" type="button" data-full="/assets/photos/large/outback-sunset-au.webp" aria-label="Open larger image: Sunset over the plains">
     <img class="photo-image" src="/assets/photos/thumbs/outback-sunset-au.webp" alt="Outback sunset in Australia" width="1000" height="750" loading="lazy" decoding="async">
   </button>
   <figcaption>
     <span class="photo-caption">Sunset over the plains</span>
     <span class="photo-place">Outback, Australia</span>
+  </figcaption>
+</figure>
+
+<figure class="photo-card">
+  <button class="photo-button" type="button" data-full="/assets/photos/large/byron-bay-nsw-au.webp" aria-label="Open larger image: Last light over the beach">
+    <img class="photo-image" src="/assets/photos/thumbs/byron-bay-nsw-au.webp" alt="Last light over the beach at Byron Bay, New South Wales" width="1000" height="750" loading="lazy" decoding="async">
+  </button>
+  <figcaption>
+    <span class="photo-caption">Last light over the beach</span>
+    <span class="photo-place">Byron Bay, NSW, Australia</span>
+  </figcaption>
+</figure>
+
+<figure class="photo-card">
+  <button class="photo-button" type="button" data-full="/assets/photos/large/wallis-lake-nsw-au.webp" aria-label="Open larger image: Soft dusk over the lake">
+    <img class="photo-image" src="/assets/photos/thumbs/wallis-lake-nsw-au.webp" alt="Soft dusk over Wallis Lake, New South Wales" width="1000" height="750" loading="lazy" decoding="async">
+  </button>
+  <figcaption>
+    <span class="photo-caption">Soft dusk over the lake</span>
+    <span class="photo-place">Wallis Lake, NSW, Australia</span>
+  </figcaption>
+</figure>
+
+<figure class="photo-card">
+  <button class="photo-button" type="button" data-full="/assets/photos/large/seoul-skyline-autumn-kr.webp" aria-label="Open larger image: Autumn above the Seoul skyline">
+    <img class="photo-image" src="/assets/photos/thumbs/seoul-skyline-autumn-kr.webp" alt="Seoul skyline viewed through autumn foliage" width="1000" height="750" loading="lazy" decoding="async">
+  </button>
+  <figcaption>
+    <span class="photo-caption">Autumn above the Seoul skyline</span>
+    <span class="photo-place">Seoul, South Korea</span>
+  </figcaption>
+</figure>
+
+<figure class="photo-card">
+  <button class="photo-button" type="button" data-full="/assets/photos/large/seoul-skyline-sunset-kr.webp" aria-label="Open larger image: Seoul beneath a pastel sky">
+    <img class="photo-image" src="/assets/photos/thumbs/seoul-skyline-sunset-kr.webp" alt="Seoul skyline beneath a pastel sunset sky" width="1000" height="750" loading="lazy" decoding="async">
+  </button>
+  <figcaption>
+    <span class="photo-caption">Seoul beneath a pastel sky</span>
+    <span class="photo-place">Seoul, South Korea</span>
+  </figcaption>
+</figure>
+
+<figure class="photo-card">
+  <button class="photo-button" type="button" data-full="/assets/photos/large/summerlands-beach-vic-au.webp" aria-label="Open larger image: Evening colours along the shore">
+    <img class="photo-image" src="/assets/photos/thumbs/summerlands-beach-vic-au.webp" alt="Pink evening sky reflected along Summerlands Beach, Victoria" width="1000" height="750" loading="lazy" decoding="async">
+  </button>
+  <figcaption>
+    <span class="photo-caption">Evening colours along the shore</span>
+    <span class="photo-place">Summerlands Beach, VIC, Australia</span>
+  </figcaption>
+</figure>
+
+<figure class="photo-card">
+  <button class="photo-button" type="button" data-full="/assets/photos/large/cherry-blossoms-okinawa-jp.webp" aria-label="Open larger image: Spring arrives early in pink">
+    <img class="photo-image" src="/assets/photos/thumbs/cherry-blossoms-okinawa-jp.webp" alt="Cherry blossoms in Okinawa, Japan" width="750" height="1000" loading="lazy" decoding="async">
+  </button>
+  <figcaption>
+    <span class="photo-caption">Spring arrives early in pink</span>
+    <span class="photo-place">Mt. Yaedake, Okinawa, Japan</span>
+  </figcaption>
+</figure>
+
+<figure class="photo-card">
+  <button class="photo-button" type="button" data-full="/assets/photos/large/madeira-mountains-clouds-pt.webp" aria-label="Open larger image: A lone bird soaring through Madeira’s misty peaks">
+    <img class="photo-image" src="/assets/photos/thumbs/madeira-mountains-clouds-pt.webp" alt="Lone bird flying through misty mountain peaks in Madeira, Portugal" width="1000" height="576" loading="lazy" decoding="async">
+  </button>
+  <figcaption>
+    <span class="photo-caption">A lone bird soaring through Madeira’s misty peaks</span>
+    <span class="photo-place">Madeira, Portugal</span>
+  </figcaption>
+</figure>
+
+<figure class="photo-card">
+  <button class="photo-button" type="button" data-full="/assets/photos/large/madeira-mountain-valley-pt.webp" aria-label="Open larger image: Hiking across Madeira's mountain valleys">
+    <img class="photo-image" src="/assets/photos/thumbs/madeira-mountain-valley-pt.webp" alt="Hiking view across Madeira's mountain valleys" width="1000" height="563" loading="lazy" decoding="async">
+  </button>
+  <figcaption>
+    <span class="photo-caption">Hiking across Madeira's mountain valleys</span>
+    <span class="photo-place">Madeira, Portugal</span>
+  </figcaption>
+</figure>
+
+<figure class="photo-card">
+  <button class="photo-button" type="button" data-full="/assets/photos/large/booti-booti-national-park-nsw-au.webp" aria-label="Open larger image: A quiet curve of coast">
+    <img class="photo-image" src="/assets/photos/thumbs/booti-booti-national-park-nsw-au.webp" alt="A quiet curve of coast at Booti Booti National Park, New South Wales" width="1000" height="755" loading="lazy" decoding="async">
+  </button>
+  <figcaption>
+    <span class="photo-caption">A quiet curve of coast</span>
+    <span class="photo-place">Booti Booti National Park, NSW, Australia</span>
+  </figcaption>
+</figure>
+
+<figure class="photo-card">
+  <button class="photo-button" type="button" data-full="/assets/photos/large/vienna-skyline-sunset-at.webp" aria-label="Open larger image: Golden hour over Vienna">
+    <img class="photo-image" src="/assets/photos/thumbs/vienna-skyline-sunset-at.webp" alt="Vienna skyline and rooftops beneath a golden evening sky" width="1000" height="745" loading="lazy" decoding="async">
+  </button>
+  <figcaption>
+    <span class="photo-caption">Golden hour over Vienna</span>
+    <span class="photo-place">Vienna, Austria</span>
   </figcaption>
 </figure>
 
