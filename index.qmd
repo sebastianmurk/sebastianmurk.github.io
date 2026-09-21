@@ -202,13 +202,13 @@ page-layout: full
     </div>
 
     <article class="home-latest-item">
-      <time class="home-latest-date" datetime="2026-08-10">14&ndash;18 September 2026</time>
+      <time class="home-latest-date" datetime="2026-10-22">22&ndash;24 October 2026</time>
 
-      <a class="home-latest-title" href="https://indico.global/event/17643/" target="_blank" rel="noopener">
-        Conference: <em>Puzzles in the QG landscape</em>
+      <a class="home-latest-title" href="https://uni.uhk.cz/ipd/" target="_blank" rel="noopener">
+        Conference: <em>5th International Physics Days Hradec Králové</em>
       </a>
 
-      <p class="home-latest-links">Graz, Austria</p>
+      <p class="home-latest-links">Hradec Králové, Czech Republic</p>
     </article>
   </aside>
 
