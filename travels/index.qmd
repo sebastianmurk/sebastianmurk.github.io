@@ -30,7 +30,7 @@ A map of the places my research has taken me. Perhaps we crossed paths at one of
       <div id="travels-affiliation-filters"
            class="travels-affiliation-filters"
            role="group"
-           aria-label="Toggle affiliations"></div>
+           aria-label="Toggle affiliations and research visits"></div>
 
       <div id="travels-year-filters"
            class="travels-year-filters"
@@ -45,7 +45,7 @@ A map of the places my research has taken me. Perhaps we crossed paths at one of
 
       <div id="travels-map"
            class="travels-map"
-           aria-label="Interactive world map of academic events and affiliations"
+           aria-label="Interactive world map of academic events, affiliations and research visits"
            aria-describedby="travels-map-help"></div>
 
       <div class="travels-map-footer">

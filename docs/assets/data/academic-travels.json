@@ -1,9 +1,10 @@
 {
   "metadata": {
-    "schemaVersion": "1.3.0",
-    "eventCount": 34,
-    "talkCount": 36,
+    "schemaVersion": "1.4.0",
+    "eventCount": 35,
+    "talkCount": 37,
     "academicHomeCount": 6,
+    "researchVisitCount": 3,
     "years": [
       2026,
       2025,
@@ -31,6 +32,16 @@
           "period": "2015–2017"
         }
       ],
+      "thesisLinks": [
+        {
+          "label": "BSc Thesis",
+          "url": "/assets/theses/BScThesis.pdf"
+        },
+        {
+          "label": "MSc Thesis",
+          "url": "https://lup.lub.lu.se/student-papers/search/publication/8902969"
+        }
+      ],
       "location": {
         "address": "Erwin-Rommel-Straße 1, 91058 Erlangen, Germany",
         "city": "Erlangen",
@@ -48,6 +59,12 @@
           "label": "Degree",
           "title": "BSc Physics",
           "period": "2014–2015"
+        }
+      ],
+      "thesisLinks": [
+        {
+          "label": "BSc Thesis",
+          "url": "/assets/theses/BScThesis.pdf"
         }
       ],
       "location": {
@@ -69,6 +86,12 @@
           "period": "2016–2017"
         }
       ],
+      "thesisLinks": [
+        {
+          "label": "MSc Thesis",
+          "url": "https://lup.lub.lu.se/student-papers/search/publication/8902969"
+        }
+      ],
       "location": {
         "address": "Professorsgatan 1, 223 64 Lund, Sweden",
         "city": "Lund",
@@ -86,6 +109,16 @@
           "label": "Degree",
           "title": "Doctor of Philosophy (PhD), Theoretical and Mathematical Physics",
           "period": "2018–2022"
+        }
+      ],
+      "thesisLinks": [
+        {
+          "label": "PhD Thesis",
+          "url": "https://doi.org/10.25949/22672333.v1"
+        },
+        {
+          "label": "Review Article",
+          "url": "https://doi.org/10.1142/S0218271822300154"
         }
       ],
       "location": {
@@ -135,7 +168,80 @@
       }
     }
   ],
+  "researchVisits": [
+    {
+      "id": "visit-2025-pennsylvania-state",
+      "name": "Institute for Gravitation and the Cosmos, Pennsylvania State University",
+      "host": "Martin Bojowald",
+      "period": "July–August 2025",
+      "location": {
+        "address": "104 Davey Laboratory #258, Penn State, University Park, PA 16802-6300, United States of America",
+        "city": "University Park",
+        "region": "Pennsylvania",
+        "country": "United States",
+        "latitude": 40.798455994434036,
+        "longitude": -77.86304267551718
+      }
+    },
+    {
+      "id": "visit-2023-tohoku",
+      "name": "Tohoku University",
+      "host": "Masahiro Hotta",
+      "period": "October–December 2023",
+      "location": {
+        "address": "Aoba-6-3 Aramaki, Aoba Ward, Sendai, Miyagi 980-0845, Japan",
+        "city": "Sendai",
+        "region": "Miyagi",
+        "country": "Japan",
+        "latitude": 38.25523867090057,
+        "longitude": 140.8372696499553
+      }
+    },
+    {
+      "id": "visit-2019-ens-lyon",
+      "name": "Laboratoire de Physique, École normale supérieure de Lyon",
+      "host": "Etera Livine",
+      "period": "July–August 2019",
+      "location": {
+        "address": "46 Allée d’Italie, 69007 Lyon, France",
+        "city": "Lyon",
+        "region": "Auvergne-Rhône-Alpes",
+        "country": "France",
+        "latitude": 45.72937414873358,
+        "longitude": 4.82706404850341
+      }
+    }
+  ],
   "events": [
+    {
+      "id": "2026-relativity-seminar-charles-prague",
+      "name": "Relativity Seminar — Institute of Theoretical Physics, Charles University",
+      "startDate": "2026-10-06",
+      "endDate": "2026-10-06",
+      "year": 2026,
+      "type": "Seminar",
+      "hostOrganization": "Institute of Theoretical Physics, Faculty of Mathematics and Physics, Charles University",
+      "venue": "Institute of Theoretical Physics, Faculty of Mathematics and Physics, Charles University",
+      "location": {
+        "address": "V Holešovičkách 2/747, 180 00",
+        "city": "Prague",
+        "region": "Prague",
+        "country": "Czech Republic",
+        "latitude": 50.114943292028,
+        "longitude": 14.4493779558494
+      },
+      "url": "https://www.mff.cuni.cz/en/utf/seminars/relativity-seminar/past-years-of-relativity-seminar?seminarid=rel&semestr=ZS26/27",
+      "talks": [
+        {
+          "order": 1,
+          "title": "Classical-quantum gravity as quantum gravity in disguise",
+          "contributionType": "Seminar talk",
+          "presentationDate": "2026-10-06",
+          "publicationLabel": "Preprint",
+          "publicationUrl": "https://arxiv.org/abs/2506.15291"
+        }
+      ]
+    },
     {
       "id": "2026-puzzles-qg-landscape-graz",
       "name": "Puzzles in the QG landscape: viewpoints from different approaches",
@@ -333,7 +439,7 @@
         "latitude": 50.114943292028,
         "longitude": 14.4493779558494
       },
-      "url": "https://utf.mff.cuni.cz/seminare/relat-en_2025f.html",
+      "url": "https://www.mff.cuni.cz/en/utf/seminars/relativity-seminar/past-years-of-relativity-seminar?seminarid=rel&semestr=ZS25/26",
       "talks": [
         {
           "order": 1,

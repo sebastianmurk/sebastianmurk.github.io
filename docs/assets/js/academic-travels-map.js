@@ -19,25 +19,14 @@
   const mapTilerKeyPlaceholder = "PASTE_YOUR_PROTECTED_MAPTILER_KEY_HERE";
   const allowedContributionTypes = new Set(["Talk", "Seminar talk", "Poster"]);
 
+  const currentYear = new Date().getFullYear();
+  const oldestRecentYear = currentYear - 2;
+  const olderYearColour = "#b23f5d";
   const yearColours = new Map([
-  [2026, "#184e77"], // dark blue
-  [2025, "#2f6fa8"], // medium blue
-  [2024, "#76a9d4"], // light blue
-  [2023, "#7a263a"], // dark red
-  [2022, "#b23f5d"], // medium red
-  [2021, "#d98da0"], // light red — reserved
-  [2020, "#7a5a00"], // dark gold
-  [2019, "#b38616"], // medium gold
-  [2018, "#ddbe5c"], // light gold
-]);
-
-  const fallbackColours = [
-    "#375a7f",
-    "#6554a4",
-    "#2f766d",
-    "#8d4f5f",
-    "#79631c",
-  ];
+    [currentYear, "#184e77"],
+    [currentYear - 1, "#2f6fa8"],
+    [oldestRecentYear, "#76a9d4"],
+  ]);
 
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)",
@@ -52,14 +41,18 @@
   let mapTilerApiKey = "";
   let markerCluster;
   let academicHomeLayer;
+  let researchVisitLayer;
   let affiliationsToggleButton;
+  let visitsToggleButton;
   let allEvents = [];
   let academicHomes = [];
+  let researchVisits = [];
   let visibleEvents = [];
   let activeEventId = null;
   let activeYear = null;
   let activeBasemap = "streets";
   let affiliationsVisible = true;
+  let visitsVisible = true;
 
   initialise().catch(showError);
 
@@ -91,11 +84,13 @@
     const dataset = await response.json();
     allEvents = validateDataset(dataset);
     academicHomes = validateAcademicHomes(dataset.academicHomes);
+    researchVisits = validateResearchVisits(dataset.researchVisits);
 
     createMap();
     createMarkers();
     createAcademicHomeMarkers();
-    createYearFilters(dataset.metadata && dataset.metadata.years);
+    createResearchVisitMarkers();
+    createYearFilters();
     applyYearFilter(null);
     observeMapSize();
     map.on("popupopen", clampPopupInsideMap);
@@ -105,7 +100,7 @@
     }
 
     resetButton.addEventListener("click", function () {
-      fitVisibleEvents(true);
+      fitVisibleEvents(true, true);
       mapElement.focus({ preventScroll: true });
     });
   }
@@ -241,8 +236,73 @@
         }
       });
 
+      if (home.thesisLinks !== undefined && !Array.isArray(home.thesisLinks)) {
+        throw new Error(`${home.name} has invalid thesis links.`);
+      }
+      (home.thesisLinks || []).forEach(function (thesis) {
+        if (
+          !thesis ||
+          !["Thesis", "BSc Thesis", "MSc Thesis", "PhD Thesis", "Review Article"].includes(thesis.label) ||
+          !isSafeThesisUrl(thesis.url)
+        ) {
+          throw new Error(`${home.name} has an invalid thesis link.`);
+        }
+      });
+
       ids.add(home.id);
       return home;
+    });
+  }
+
+  function isSafeThesisUrl(url) {
+    if (typeof url !== "string" || /[\s\\]/.test(url)) return false;
+    if (/^\/(?!\/)/.test(url)) return true;
+    try {
+      const parsed = new URL(url);
+      return ["http:", "https:"].includes(parsed.protocol) && Boolean(parsed.host);
+    } catch (_) {
+      return false;
+    }
+  }
+
+  function validateResearchVisits(visits) {
+    if (visits === undefined) return [];
+    if (!Array.isArray(visits)) {
+      throw new Error("The research visits collection is invalid.");
+    }
+    const ids = new Set(allEvents.concat(academicHomes).map(function (item) {
+      return item.id;
+    }));
+    return visits.map(function (visit) {
+      const location = visit && visit.location;
+      const requiredText = [
+        visit && visit.id,
+        visit && visit.name,
+        visit && visit.host,
+        visit && visit.period,
+        location && location.city,
+        location && location.country,
+      ];
+      if (requiredText.some(function (value) {
+        return typeof value !== "string" || !value.trim();
+      })) {
+        throw new Error("A research visit is missing information required by the map.");
+      }
+      if (ids.has(visit.id)) {
+        throw new Error(`Duplicate map identifier: ${visit.id}`);
+      }
+      if (
+        !Number.isFinite(location.latitude) ||
+        !Number.isFinite(location.longitude) ||
+        location.latitude < -90 ||
+        location.latitude > 90 ||
+        location.longitude < -180 ||
+        location.longitude > 180
+      ) {
+        throw new Error(`Invalid coordinates for ${visit.name}.`);
+      }
+      ids.add(visit.id);
+      return visit;
     });
   }
 
@@ -262,6 +322,8 @@
 
     map.createPane("academicHomesPane");
     map.getPane("academicHomesPane").style.zIndex = "625";
+    map.createPane("researchVisitsPane");
+    map.getPane("researchVisitsPane").style.zIndex = "620";
 
     map.attributionControl.setPrefix(
       '<a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a>',
@@ -293,6 +355,7 @@
     });
     markerCluster.addTo(map);
     academicHomeLayer = window.L.layerGroup().addTo(map);
+    researchVisitLayer = window.L.layerGroup().addTo(map);
   }
 
   function createBasemapControl() {
@@ -411,6 +474,32 @@
       });
 
       academicHomeLayer.addLayer(marker);
+    });
+  }
+
+  function createResearchVisitMarkers() {
+    researchVisits.forEach(function (visit) {
+      const marker = window.L.marker(
+        [visit.location.latitude, visit.location.longitude],
+        {
+          alt: `${visit.name}, ${visit.location.city}, research visit with ${visit.host}`,
+          icon: createResearchVisitIcon(visit),
+          keyboard: true,
+          pane: "researchVisitsPane",
+          riseOnHover: true,
+          title: `${visit.name} — research visit`,
+        },
+      );
+      marker.bindPopup(buildResearchVisitPopup(visit), {
+        autoPan: false,
+        className: "travels-visit-popup",
+        maxWidth: 392,
+        minWidth: 0,
+      });
+      marker.on("click", function () {
+        setActiveEvent(null);
+      });
+      researchVisitLayer.addLayer(marker);
     });
   }
 
@@ -558,18 +647,54 @@
     return symbol;
   }
 
+  function createResearchVisitIcon(visit) {
+    const accessibleName = `${visit.name}, research visit with ${visit.host}`;
+    return window.L.divIcon({
+      className: "travels-leaflet-marker travels-leaflet-marker--visit",
+      html:
+        `<span class="travels-visit-symbol">` +
+        researchVisitIconMarkup() +
+        `<span class="visually-hidden">${escapeHtml(accessibleName)}</span></span>`,
+      // Offset the symbol to the right so a nearby event pin remains clickable.
+      // The marker itself retains the visit's exact geographic coordinates.
+      iconAnchor: [-4, 23],
+      iconSize: [24, 24],
+      popupAnchor: [16, -22],
+    });
+  }
+
+  function researchVisitIconMarkup() {
+    return (
+      `<svg class="travels-visit-briefcase" viewBox="0 0 32 28" ` +
+      `aria-hidden="true" focusable="false">` +
+      `<path class="travels-visit-handle" d="M11 8V4h10v4"></path>` +
+      `<rect class="travels-visit-case" x="3" y="8" width="26" height="17" rx="3"></rect>` +
+      `<path class="travels-visit-seam" d="M3 15c8 5 18 5 26 0"></path>` +
+      `<rect class="travels-visit-clasp" x="14" y="15" width="4" height="6" rx="1"></rect>` +
+      `</svg>`
+    );
+  }
+
+  function makeResearchVisitSymbol(className) {
+    const symbol = document.createElement("span");
+    symbol.className = className;
+    symbol.setAttribute("aria-hidden", "true");
+    symbol.innerHTML = researchVisitIconMarkup();
+    return symbol;
+  }
+
   function createClusterIcon(cluster) {
     const childMarkers = cluster.getAllChildMarkers();
-    const childYears = new Set(
+    const childColours = new Set(
       childMarkers.map(function (marker) {
         const event = eventForMarker(marker);
-        return event ? event.year : null;
+        return event ? colourForYear(event.year) : null;
       }),
     );
-    childYears.delete(null);
+    childColours.delete(null);
 
-    const colour = childYears.size === 1
-      ? colourForYear(Array.from(childYears)[0])
+    const colour = childColours.size === 1
+      ? Array.from(childColours)[0]
       : "#344d68";
     const count = cluster.getChildCount();
 
@@ -591,38 +716,57 @@
     return null;
   }
 
-  function createYearFilters(metadataYears) {
-    const years = Array.isArray(metadataYears) && metadataYears.length
-      ? metadataYears.slice()
-      : Array.from(new Set(allEvents.map(function (event) { return event.year; })));
-
-    years.sort(function (left, right) { return right - left; });
+  function createYearFilters() {
+    const years = Array.from(new Set(
+      [currentYear, currentYear - 1, oldestRecentYear].concat(
+        allEvents.map(function (event) { return Number(event.year); }),
+      ),
+    )).sort(function (left, right) { return right - left; });
     filterContainer.replaceChildren();
     affiliationFilterContainer.replaceChildren();
 
     if (academicHomes.length > 0) {
-      affiliationsToggleButton = makeAffiliationsToggleButton(
-        academicHomes.length,
-      );
+      affiliationsToggleButton = makeAffiliationsToggleButton(academicHomes.length);
       affiliationFilterContainer.appendChild(affiliationsToggleButton);
+      updateAffiliationsToggleButton();
+    }
+    if (researchVisits.length > 0) {
+      visitsToggleButton = makeVisitsToggleButton(researchVisits.length);
+      affiliationFilterContainer.appendChild(visitsToggleButton);
+      updateVisitsToggleButton();
     }
 
     filterContainer.appendChild(
-      makeFilterButton(null, "All", allEvents.length),
+      makeFilterButton(null, "All events", allEvents.length),
     );
 
-    years.forEach(function (year) {
-      const count = allEvents.filter(function (event) {
-        return event.year === Number(year);
-      }).length;
-      filterContainer.appendChild(
-        makeFilterButton(Number(year), String(year), count),
-      );
-    });
+    // Retain future years if an upcoming event has already been added.
+    years.filter(function (year) { return year >= oldestRecentYear; })
+      .forEach(function (year) {
+        const count = allEvents.filter(function (event) {
+          return Number(event.year) === year;
+        }).length;
+        filterContainer.appendChild(makeFilterButton(year, String(year), count));
+      });
 
-    if (affiliationsToggleButton) {
-      updateAffiliationsToggleButton();
+    const olderEvents = allEvents.filter(function (event) {
+      return Number(event.year) < oldestRecentYear;
+    });
+    if (olderEvents.length) {
+      filterContainer.appendChild(
+        makeFilterButton("older", olderYearsLabel(), olderEvents.length),
+      );
     }
+  }
+
+  function olderYearsLabel() {
+    const earliestYear = Math.min.apply(null, allEvents.map(function (event) {
+      return Number(event.year);
+    }));
+    const lastOlderYear = oldestRecentYear - 1;
+    return earliestYear === lastOlderYear
+      ? String(earliestYear)
+      : `${lastOlderYear}–${earliestYear}`;
   }
 
   function makeFilterButton(year, label, count) {
@@ -654,7 +798,7 @@
       "aria-label",
       year === null
         ? `Show all ${count} events`
-        : `Show ${count} events from ${year}`,
+        : `Show ${count} events from ${label}`,
     );
     button.addEventListener("click", function () {
       applyYearFilter(year);
@@ -682,6 +826,48 @@
       setAffiliationsVisible(!affiliationsVisible);
     });
     return button;
+  }
+
+  function makeVisitsToggleButton(count) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "travels-year-filter travels-visits-toggle";
+
+    const symbol = makeResearchVisitSymbol("travels-visit-key");
+    const label = document.createElement("span");
+    label.textContent = "Visits";
+    const countElement = document.createElement("span");
+    countElement.className = "travels-filter-count";
+    countElement.textContent = String(count);
+    countElement.setAttribute("aria-hidden", "true");
+    button.append(symbol, label, countElement);
+    button.addEventListener("click", function () {
+      setVisitsVisible(!visitsVisible);
+    });
+    return button;
+  }
+
+  function setVisitsVisible(visible) {
+    visitsVisible = Boolean(visible);
+    map.closePopup();
+    if (visitsVisible) {
+      if (!map.hasLayer(researchVisitLayer)) researchVisitLayer.addTo(map);
+    } else if (map.hasLayer(researchVisitLayer)) {
+      map.removeLayer(researchVisitLayer);
+    }
+    updateVisitsToggleButton();
+    updateSummary();
+    fitVisibleEvents(false);
+  }
+
+  function updateVisitsToggleButton() {
+    if (!visitsToggleButton) return;
+    visitsToggleButton.setAttribute("aria-pressed", visitsVisible ? "true" : "false");
+    visitsToggleButton.setAttribute(
+      "aria-label",
+      `${visitsVisible ? "Hide" : "Show"} ${researchVisits.length} research ` +
+        `${researchVisits.length === 1 ? "visit" : "visits"}`,
+    );
   }
 
   function setAffiliationsVisible(visible) {
@@ -725,7 +911,11 @@
 
     visibleEvents = year === null
       ? allEvents.slice()
-      : allEvents.filter(function (event) { return event.year === year; });
+      : allEvents.filter(function (event) {
+        return year === "older"
+          ? Number(event.year) < oldestRecentYear
+          : Number(event.year) === year;
+      });
 
     markerCluster.clearLayers();
     markerCluster.addLayers(
@@ -737,7 +927,7 @@
       .forEach(function (button) {
         const buttonYear = button.dataset.year === "all"
           ? null
-          : Number(button.dataset.year);
+          : button.dataset.year === "older" ? "older" : Number(button.dataset.year);
         const selected = buttonYear === activeYear;
         button.setAttribute("aria-pressed", selected ? "true" : "false");
       });
@@ -845,19 +1035,27 @@
       ? "affiliation"
       : "affiliations";
 
+    const visibleVisits = visitsVisible ? researchVisits : [];
+    const visitWord = visibleVisits.length === 1 ? "research visit" : "research visits";
     const countries = new Set(
-      visibleEvents.concat(visibleAffiliations).map(function (item) {
+      visibleEvents.concat(visibleAffiliations, visibleVisits).map(function (item) {
         return item.location.country;
       }),
     ).size;
 
     const countryWord = countries === 1 ? "country" : "countries";
-    const yearText = activeYear === null ? "" : ` from ${activeYear}`;
+    const yearText = activeYear === null
+      ? ""
+      : ` from ${activeYear === "older" ? olderYearsLabel() : activeYear}`;
     let summary = `Showing ${visibleEvents.length} ${eventWord}${yearText}`;
 
     if (visibleAffiliations.length > 0) {
       summary +=
         ` and ${visibleAffiliations.length} ${affiliationWord}`;
+    }
+
+    if (visibleVisits.length > 0) {
+      summary += ` and ${visibleVisits.length} ${visitWord}`;
     }
 
     resultSummary.textContent =
@@ -866,7 +1064,7 @@
     listCount.textContent = `${visibleEvents.length} ${eventWord}`;
   }
 
-  function fitVisibleEvents(animate) {
+  function fitVisibleEvents(animate, includeAllLayers) {
     if (!map) return;
 
     window.requestAnimationFrame(function () {
@@ -875,12 +1073,11 @@
         return [event.location.latitude, event.location.longitude];
       });
 
-      if (activeYear === null && affiliationsVisible) {
-        academicHomes.forEach(function (home) {
-          points.push([
-            home.location.latitude,
-            home.location.longitude,
-          ]);
+      if (includeAllLayers || activeYear === null || points.length === 0) {
+        const additionalPlaces = (affiliationsVisible ? academicHomes : [])
+          .concat(visitsVisible ? researchVisits : []);
+        additionalPlaces.forEach(function (place) {
+          points.push([place.location.latitude, place.location.longitude]);
         });
       }
 
@@ -942,6 +1139,44 @@
     );
 
     popup.append(meta, title, details);
+    if (home.thesisLinks && home.thesisLinks.length) {
+      const actions = document.createElement("p");
+      actions.className = "travels-popup-actions";
+      home.thesisLinks.forEach(function (thesis) {
+        actions.appendChild(makeExternalLink(thesis.url, thesis.label));
+      });
+      popup.appendChild(actions);
+    }
+    return popup;
+  }
+
+  function buildResearchVisitPopup(visit) {
+    const popup = document.createElement("article");
+    popup.className = "travels-popup travels-research-visit-popup";
+    popup.tabIndex = -1;
+    popup.setAttribute("role", "region");
+    popup.setAttribute("aria-label", `${visit.name} research visit details`);
+
+    const meta = document.createElement("p");
+    meta.className = "travels-popup-meta";
+    meta.append(
+      makeResearchVisitSymbol("travels-visit-key"),
+      document.createTextNode("Research visit"),
+    );
+    const title = document.createElement("h3");
+    title.textContent = visit.name;
+    const dates = document.createElement("p");
+    dates.className = "travels-popup-dates";
+    dates.textContent = visit.period;
+    const details = document.createElement("dl");
+    details.className = "travels-popup-details";
+    appendDetail(details, "Host", visit.host);
+    appendDetail(
+      details,
+      "Location",
+      formatAddress(visit.location) || formatLocation(visit.location),
+    );
+    popup.append(meta, title, dates, details);
     return popup;
   }
 
@@ -1154,8 +1389,9 @@
   }
 
   function colourForYear(year) {
+    if (year === "older" || Number(year) < oldestRecentYear) return olderYearColour;
     if (yearColours.has(Number(year))) return yearColours.get(Number(year));
-    return fallbackColours[Math.abs(Number(year)) % fallbackColours.length];
+    return "#184e77"; // Future events use the most recent year's blue.
   }
 
   function escapeHtml(value) {

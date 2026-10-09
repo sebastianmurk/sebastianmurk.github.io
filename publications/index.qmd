@@ -101,3 +101,8 @@ Proc. of the 16<sup>th</sup> Marcel Grossmann Meeting, pp. 1351--1358 (2023) · 
 (@) <u>S Murk</u>, DR Terno<br>
 Physical black holes in semiclassical gravity · [2110.12761](https://arxiv.org/abs/2110.12761)<br>
 Proc. of the 16<sup>th</sup> Marcel Grossmann Meeting, pp. 1196--1211 (2023) · [10.1142/9789811269776_0095](https://doi.org/10.1142/9789811269776_0095)
+
+## Articles with > 4 authors
+
+(@) S Bose, A Mazumdar, M Toroš, T Zhou, *et al.*<br>
+White paper: 1-10 Hz matter-wave interferometer to test the spin entanglement witness for quantum gravity · [2610.07422](https://arxiv.org/abs/2610.07422)
