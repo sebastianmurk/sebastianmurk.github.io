@@ -11,7 +11,7 @@ Within each category, publications are listed in reverse chronological order. Co
 Covariant variation for point-particle Lagrangians · [2606.25266](https://arxiv.org/abs/2606.25266)
 
 (@) <u>S Murk</u>, I Tan, F Müller, D Šafránek<br>
-Connecting Quantum Tomography and Quantum Retrodiction · [2606.23777](https://arxiv.org/abs/2606.23777)
+Connecting Quantum Tomography and Quantum Retrodiction · [2606.23777](https://arxiv.org/abs/2606.23777) · [{{< fa regular file-code >}} Code](https://github.com/sebastianmurk/2606.23777){.pub-action .pub-action-code target="_blank" rel="noopener"}
 
 (@) M Hotta, <u>S Murk</u>, DR Terno<br>
 Classical-quantum gravity as quantum gravity in disguise · [2506.15291](https://arxiv.org/abs/2506.15291) · [{{< fa brands youtube >}} YouTube](https://www.youtube.com/watch?v=2mq6KgKvl1I){.pub-action .pub-action-youtube target="_blank" rel="noopener"}
