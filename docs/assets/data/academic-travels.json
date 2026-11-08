@@ -1,8 +1,8 @@
 {
   "metadata": {
     "schemaVersion": "1.4.0",
-    "eventCount": 35,
-    "talkCount": 37,
+    "eventCount": 36,
+    "talkCount": 38,
     "academicHomeCount": 6,
     "researchVisitCount": 3,
     "years": [
@@ -213,6 +213,35 @@
     }
   ],
   "events": [
+    {
+      "id": "2026-giq-seminar-uab-barcelona",
+      "name": "Seminar — Grup d'Informació Quàntica, Universitat Autònoma de Barcelona",
+      "startDate": "2026-11-05",
+      "endDate": "2026-11-05",
+      "year": 2026,
+      "type": "Seminar",
+      "hostOrganization": "Department of Physics, Universitat Autònoma de Barcelona",
+      "venue": "Department of Physics, Universitat Autònoma de Barcelona",
+      "location": {
+        "address": "Carretera de Bellaterra a l'Autònoma, 08193",
+        "city": "Cerdanyola del Vallès",
+        "region": "Barcelona",
+        "country": "Spain",
+        "latitude": 41.50112162572415,
+        "longitude": 2.109074004726943
+      },
+      "talks": [
+        {
+          "order": 1,
+          "title": "Classical-quantum gravity as quantum gravity in disguise",
+          "contributionType": "Seminar talk",
+          "presentationDate": "2026-11-05",
+          "slidesUrl": "/assets/talks/20261105-uab.pdf",
+          "publicationLabel": "Preprint",
+          "publicationUrl": "https://arxiv.org/abs/2506.15291"
+        }
+      ]
+    },
     {
       "id": "2026-relativity-seminar-charles-prague",
       "name": "Relativity Seminar — Institute of Theoretical Physics, Charles University",

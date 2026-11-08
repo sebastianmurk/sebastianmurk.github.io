@@ -165,7 +165,7 @@
         [talk.recordingUrl,talk.slidesUrl,talk.posterUrl,talk.publicationUrl]
           .filter(Boolean)
           .forEach(function (url) {
-            if (typeof url !== "string" || !/^https?:\/\/\S+$/.test(url)) {
+            if (!isSafeResourceUrl(url)) {
               throw new Error(`${event.name} contains an invalid contribution link.`);
             }
           });
@@ -243,7 +243,7 @@
         if (
           !thesis ||
           !["Thesis", "BSc Thesis", "MSc Thesis", "PhD Thesis", "Review Article"].includes(thesis.label) ||
-          !isSafeThesisUrl(thesis.url)
+          !isSafeResourceUrl(thesis.url)
         ) {
           throw new Error(`${home.name} has an invalid thesis link.`);
         }
@@ -254,7 +254,7 @@
     });
   }
 
-  function isSafeThesisUrl(url) {
+  function isSafeResourceUrl(url) {
     if (typeof url !== "string" || /[\s\\]/.test(url)) return false;
     if (/^\/(?!\/)/.test(url)) return true;
     try {
