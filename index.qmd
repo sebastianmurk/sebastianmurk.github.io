@@ -68,7 +68,7 @@ page-layout: full
       ],
       "sameAs": [
         "https://arxiv.org/a/0000-0001-7296-0420.html",
-        "https://scholar.google.com/citations?hl=en&user=cduZz1QAAAAJ",
+        "https://scholar.google.com/citations?user=EaC9dMgAAAAJ",
         "https://inspirehep.net/authors/1742414",
         "https://orcid.org/0000-0001-7296-0420",
         "https://www.researchgate.net/profile/Sebastian-Murk",
@@ -121,7 +121,7 @@ page-layout: full
             <img class="profile-icon profile-icon-arxiv" src="/assets/icons/arxiv.svg" alt="" aria-hidden="true">
           </a>
 
-          <a class="profile-link" href="https://scholar.google.com/citations?hl=en&amp;user=cduZz1QAAAAJ" target="_blank" rel="noopener">
+          <a class="profile-link" href="https://scholar.google.com/citations?user=EaC9dMgAAAAJ" target="_blank" rel="noopener">
             <img class="profile-icon" src="/assets/icons/googlescholar.png" alt="" aria-hidden="true">
             <span>Google Scholar</span>
           </a>

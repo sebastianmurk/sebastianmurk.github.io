@@ -1116,10 +1116,11 @@
         "latitude": 45.7298418939061,
         "longitude": 4.82715470182465
       },
+      "url": "https://www.ens-lyon.fr/PHYSIQUE/seminars/physique-theorique/old-theo-phys-seminars?cl=fr&set_language=fr",
       "talks": [
         {
           "order": 1,
-          "title": "Black hole horizons in semiclassical gravity",
+          "title": "Quantum effects in gravitational collapse and black hole evaporation",
           "contributionType": "Seminar talk",
           "presentationDate": "2019-07-25",
           "publicationLabel": "Publication",
