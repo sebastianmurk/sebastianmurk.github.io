@@ -36,7 +36,6 @@ h1, h2, h3, h4, h5, h6,
 .pub-action,
 .news-date,
 .news-links,
-.video-label,
 .talk-preview-kicker,
 .talk-preview-text,
 .talk-card-body,
@@ -378,18 +377,6 @@ a:focus {
   font-size: 1.65rem;
   line-height: 1;
   padding-left: 0.12rem;
-}
-
-.video-label {
-  position: absolute;
-  left: 0.85rem;
-  bottom: 0.75rem;
-  padding: 0.28rem 0.48rem;
-  border-radius: 0.35rem;
-  background: rgba(0, 0, 0, 0.68);
-  color: #fff;
-  font-size: 0.82rem;
-  font-weight: 600;
 }
 
 /* Page subtitles */
@@ -1520,14 +1507,22 @@ body.photos-page.photo-lightbox-open {
 .photo-lightbox-figure {
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
-  max-width: min(94vw, 1200px);
+  max-width: min(calc(100vw - 9rem), 1200px);
   max-height: 92vh;
+}
+
+.photo-lightbox-frame {
+  position: relative;
+  width: fit-content;
 }
 
 .photo-lightbox-image {
   display: block;
-  max-width: 100%;
+  max-width: min(calc(100vw - 9rem), 1200px);
   max-height: 80vh;
   object-fit: contain;
   border-radius: 0.8rem;
@@ -1558,10 +1553,9 @@ body.photos-page.photo-lightbox-open {
   color: rgba(245, 245, 242, 0.68);
 }
 
-.photo-lightbox-close {
+.photo-lightbox-close,
+.photo-lightbox-nav {
   position: absolute;
-  top: calc(1.1rem + env(safe-area-inset-top));
-  right: calc(1.1rem + env(safe-area-inset-right));
   z-index: 2;
   width: 2.4rem;
   height: 2.4rem;
@@ -1574,12 +1568,39 @@ body.photos-page.photo-lightbox-open {
   cursor: pointer;
 }
 
+.photo-lightbox-close {
+  top: calc(1.1rem + env(safe-area-inset-top));
+  right: calc(1.1rem + env(safe-area-inset-right));
+}
+
+.photo-lightbox-nav {
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+.photo-lightbox-previous {
+  right: calc(100% + 0.75rem);
+}
+
+.photo-lightbox-next {
+  left: calc(100% + 0.75rem);
+}
+
 .photo-lightbox-close:hover,
-.photo-lightbox-close:focus {
+.photo-lightbox-close:focus,
+.photo-lightbox-nav:hover,
+.photo-lightbox-nav:focus {
   background: #ffffff;
 }
 
-.photo-lightbox-close:focus-visible {
+.photo-lightbox-close:focus-visible,
+.photo-lightbox-nav:focus-visible {
   outline: 3px solid rgba(255, 255, 255, 0.55);
   outline-offset: 4px;
 }
@@ -1632,6 +1653,21 @@ body.photos-page.photo-lightbox-open {
 
   .photo-lightbox-image {
     max-height: 76vh;
+  }
+
+  .photo-lightbox-figure,
+  .photo-lightbox-image {
+    max-width: calc(100vw - 2rem);
+  }
+
+  .photo-lightbox-previous {
+    left: 0.75rem;
+    right: auto;
+  }
+
+  .photo-lightbox-next {
+    left: auto;
+    right: 0.75rem;
   }
 }
 

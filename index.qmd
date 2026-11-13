@@ -168,6 +168,20 @@ page-layout: full
   </div>
 
   <article class="home-latest-item">
+    <time class="home-latest-date" datetime="2026-11-03">3 November 2026</time>
+
+    <a class="home-latest-title" href="/news/#ipd-2026-talk-recording">
+      Hradec Králové invited talk recording now available
+    </a>
+
+    <p class="home-latest-links">
+      <a href="https://drive.google.com/file/d/1q2LNgyLqsrZP6f855AdCUUz2nyjMg9x-/view?t=18633">
+        Recording
+      </a>
+    </p>
+  </article>
+
+  <article class="home-latest-item">
     <time class="home-latest-date" datetime="2026-08-06">6 August 2026</time>
 
     <a class="home-latest-title" href="/news/#ictp-saifr-talk-youtube">
@@ -177,20 +191,6 @@ page-layout: full
     <p class="home-latest-links">
       <a href="https://www.youtube.com/watch?v=0Y-zKNmziuc" target="_blank" rel="noopener">
         YouTube
-      </a>
-    </p>
-  </article>
-
-  <article class="home-latest-item">
-    <time class="home-latest-date" datetime="2026-06-24">24 June 2026</time>
-
-    <a class="home-latest-title" href="/news/">
-      New preprint: <em>Covariant variation for point-particle Lagrangians</em>
-    </a>
-
-    <p class="home-latest-links">
-      <a href="https://arxiv.org/abs/2606.25266" target="_blank" rel="noopener">
-        arXiv:2606.25266
       </a>
     </p>
   </article>

@@ -259,13 +259,24 @@ A small collection of photos from my travels.
 
 </div>
 
+```{=html}
 <div class="photo-lightbox" id="photo-lightbox" role="dialog" aria-modal="true" aria-label="Expanded photo" hidden>
   <button class="photo-lightbox-close" type="button" aria-label="Close enlarged photo">&times;</button>
   <figure class="photo-lightbox-figure">
-    <img class="photo-lightbox-image" id="photo-lightbox-image" src="" alt="">
-    <figcaption class="photo-lightbox-caption" id="photo-lightbox-caption"></figcaption>
+    <div class="photo-lightbox-frame">
+      <img class="photo-lightbox-image" id="photo-lightbox-image" src="" alt="">
+      <button class="photo-lightbox-nav photo-lightbox-previous" type="button" aria-label="Previous photo" aria-controls="photo-lightbox-image">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="m15 5-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="photo-lightbox-nav photo-lightbox-next" type="button" aria-label="Next photo" aria-controls="photo-lightbox-image">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+    <figcaption class="photo-lightbox-caption" id="photo-lightbox-caption" aria-live="polite" aria-atomic="true"></figcaption>
   </figure>
 </div>
+
+```
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -286,9 +297,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const closeButton = lightbox.querySelector(".photo-lightbox-close");
-  const photoButtons = document.querySelectorAll(".photo-button");
+  const previousButton = lightbox.querySelector(".photo-lightbox-previous");
+  const nextButton = lightbox.querySelector(".photo-lightbox-next");
+  const photoButtons = Array.from(document.querySelectorAll(".photo-button"));
+  const lightboxButtons = [closeButton, previousButton, nextButton];
 
   let lastFocusedElement = null;
+  let currentPhotoIndex = 0;
 
   function escapeHtml(text) {
     return text.replace(/[&<>"']/g, function (character) {
@@ -314,7 +329,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function openLightbox(button) {
+  function showPhoto(index) {
+    currentPhotoIndex = (index + photoButtons.length) % photoButtons.length;
+    const button = photoButtons[currentPhotoIndex];
     const card = button.closest(".photo-card");
     const image = button.querySelector(".photo-image");
     const captionElement = card.querySelector(".photo-caption");
@@ -323,14 +340,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const caption = captionElement ? captionElement.textContent.trim() : "";
     const place = placeElement ? placeElement.textContent.trim() : "";
 
-    lastFocusedElement = document.activeElement;
-
     lightboxImage.src = button.dataset.full;
     lightboxImage.alt = image.alt;
     lightboxCaption.innerHTML =
       '<span class="photo-lightbox-caption-main">' + escapeHtml(caption) + '</span>' +
       '<span class="photo-lightbox-place">' + escapeHtml(place) + '</span>';
+  }
 
+  function openLightbox(button) {
+    lastFocusedElement = document.activeElement;
+    showPhoto(photoButtons.indexOf(button));
     lightbox.hidden = false;
     document.body.classList.add("photo-lightbox-open");
     focusWithoutScrolling(closeButton);
@@ -355,6 +374,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   closeButton.addEventListener("click", closeLightbox);
+  previousButton.addEventListener("click", function () {
+    showPhoto(currentPhotoIndex - 1);
+  });
+  nextButton.addEventListener("click", function () {
+    showPhoto(currentPhotoIndex + 1);
+  });
 
   lightbox.addEventListener("click", function (event) {
     if (event.target === lightbox) {
@@ -363,8 +388,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.addEventListener("keydown", function (event) {
-    if (!lightbox.hidden && event.key === "Escape") {
+    if (lightbox.hidden) {
+      return;
+    }
+
+    if (event.key === "Escape") {
       closeLightbox();
+    } else if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      showPhoto(currentPhotoIndex + (event.key === "ArrowLeft" ? -1 : 1));
+    } else if (event.key === "Tab") {
+      event.preventDefault();
+      const currentIndex = lightboxButtons.indexOf(document.activeElement);
+      const nextIndex = (currentIndex + (event.shiftKey ? -1 : 1) + lightboxButtons.length) % lightboxButtons.length;
+      focusWithoutScrolling(lightboxButtons[nextIndex]);
     }
   });
 });
